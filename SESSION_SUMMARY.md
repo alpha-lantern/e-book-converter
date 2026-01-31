@@ -22,6 +22,7 @@
 - **Issue #1 Closed**: Successfully retrieved, implemented, and closed the tracking issue for "DB: Create Tables and Enums".
 - **Issue #2 Closed**: Verified and Stress-Tested RLS policies for all tables (Public & Internal).
 - **Issue #3 Closed**: Configured Storage Buckets (`raw_pdfs` [Private], `book_assets` [Public]) with strict RLS policies.
+- **Issue #4 Closed**: Initialized the Python project in `engine/` using Poetry, added core dependencies (PyMuPDF, pdfplumber, Typer), and configured dev tools (Black, Pylint, Pytest).
 
 ### 3. Production Deployment
 - **Schema Push**: Successfully pushed all local migrations to the remote Supabase project (`nlucbgajcftcnzjqcavn`).
