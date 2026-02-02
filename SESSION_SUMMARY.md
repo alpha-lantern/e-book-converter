@@ -1,4 +1,4 @@
-# Session Summary - January 31, 2026
+# Session Summary - February 2, 2026
 
 ## Work Completed
 ### 1. Database Schema & Infrastructure
@@ -23,6 +23,7 @@
 - **Issue #2 Closed**: Verified and Stress-Tested RLS policies for all tables (Public & Internal).
 - **Issue #3 Closed**: Configured Storage Buckets (`raw_pdfs` [Private], `book_assets` [Public]) with strict RLS policies.
 - **Issue #4 Closed**: Initialized the Python project in `engine/` using Poetry, added core dependencies (PyMuPDF, pdfplumber, Typer), and configured dev tools (Black, Pylint, Pytest).
+- **Issue #5 Closed**: Defined strict Pydantic models for `CodexBlock` and `CodexBBox` in `engine/codex_engine/models.py` with comprehensive unit tests.
 
 ### 3. Production Deployment
 - **Schema Push**: Successfully pushed all local migrations to the remote Supabase project (`nlucbgajcftcnzjqcavn`).
@@ -31,13 +32,13 @@
 ## Current Status
 - **Local Dev Environment**: Supabase is running locally with the schema fully applied.
 - **Remote Environment**: Production Supabase is fully synced with local schema.
-- **Database Reference**: The `Project Codex: Database Schema (MVP)` document in `context/` has been fully implemented in the migration.
+- **Python Engine**: Core block models are defined and tested. Package structure (`codex_engine`) is established.
 
 ## Next Steps
 1. **Python Semantic Parser**: This is the core engine. We need to:
-    - Create a standalone Python script/module.
-    - Integrate `PyMuPDF` (fitz) for text extraction.
+    - Define the parent `CodexManifest` models (Issue #6).
     - Implement the logic to generate the `Codex JSON` structure.
+    - Integrate `PyMuPDF` (fitz) for text extraction.
     - Test extraction against sample PDFs.
 
 ---

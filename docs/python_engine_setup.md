@@ -24,10 +24,12 @@ This command installs both runtime dependencies (like `pymupdf`, `pdfplumber`, `
 
 ```
 engine/
-├── src/                # Source code for the parser
-│   └── __init__.py
+├── codex_engine/       # Source code for the parser
+│   ├── __init__.py     # Exports public models/functions
+│   └── models.py       # Pydantic data models (CodexBlock, CodexBBox)
 ├── tests/              # Test suite
 │   ├── __init__.py
+│   ├── test_models.py  # Unit tests for data models
 │   └── test_setup.py   # Basic environment verification
 ├── pyproject.toml      # Poetry configuration & dependency definitions
 ├── poetry.lock         # Locked dependency versions
@@ -51,17 +53,17 @@ We use **Black** for code formatting and **Pylint** for linting.
 
 **Check Formatting:**
 ```bash
-poetry run black --check src tests
+poetry run black codex_engine tests
 ```
 
 **Apply Formatting:**
 ```bash
-poetry run black src tests
+poetry run black codex_engine tests
 ```
 
 **Run Linter:**
 ```bash
-poetry run pylint src tests
+poetry run pylint codex_engine tests
 ```
 
 ### Dependency Management
