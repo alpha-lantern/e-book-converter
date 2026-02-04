@@ -9,11 +9,12 @@ We will use **GitHub Actions** not only for deployment but as our primary "Compu
 * **Trigger:** Any push to main or Pull Request.  
 * **Code Integration:** \* **Flutter Admin:** flutter analyze and flutter test.  
   * **Python Parser:** pytest (focused on semantic mapping) and black.  
-  * **Next.js Renderer:** npm run lint and type-check.  
+  * **Astro Renderer:** npm run lint and astro check.  
 * **Automated Testing:** \* **Snapshot Testing:** Compare generated Codex JSON against "Gold Standard" mocks.  
-  * **SEO Audit:** Headless Lighthouse CI check (target score \>90).
+  * **Hydration Audit:** Verify that interactive React components remain dormant until client:visible triggers.  
+  * **SEO Audit:** Headless Lighthouse CI check (target FCP/SEO score \>95).
 
-### **Stage 2: The "Event-Driven" Parsing Pipeline (New in V.2)**
+### **Stage 2: The "Event-Driven" Parsing Pipeline (V.2)**
 
 To avoid serverless execution timeouts and costs, we use an asynchronous worker pattern:
 
@@ -22,17 +23,21 @@ To avoid serverless execution timeouts and costs, we use an asynchronous worker 
 3. **Compute:** A GitHub Action runner starts, downloads the PDF, runs the **Python Standalone Script**, and generates the Codex JSON.  
 4. **Callback:** The script updates the books table status in Supabase and uploads the JSON to the codex\_manifests table.
 
-### **Stage 3: Continuous Deployment**
+### **Stage 3: Continuous Deployment (Astro Optimized)**
 
 * **Admin Panel (Flutter):** Deployed to **Vercel**.  
-* **Reader (Next.js):** Deployed to **Vercel** with On-Demand Incremental Static Regeneration (ISR).  
-* **PWA Export:** A dedicated Action pulls the Renderer build, injects the user's book.json, and zips the asset for download.
+* **Reader (Astro):** Deployed to **Vercel** as a Static Site.  
+* **PWA Export (The ZIP Pipeline):** 1\. A dedicated Action runs npm run build for the Astro project.  
+  2\. The build output is collected from the dist/ directory.  
+  3\. The specific book.json is injected into dist/data/book.json.  
+  4\. @vite-pwa/astro generates the final service worker within dist/.  
+  5\. The dist/ folder is zipped and uploaded to Supabase Storage for user download.
 
 ## **2\. Infrastructure as Code (IaC) & Cloud Strategy**
 
 | Component | Provider | Cost (MVP) | Implementation |
 | :---- | :---- | :---- | :---- |
-| **Web Hosting** | Vercel | $0 (Hobby) | Managed Next.js/Flutter Web hosting. |
+| **Web Hosting** | Vercel | $0 (Hobby) | Managed Astro/Flutter Web hosting. |
 | **Database/Auth** | Supabase | $0 (Free Tier) | Schema managed via Supabase CLI migrations. |
 | **Parsing Compute** | GitHub Actions | $0 | 2,000 free minutes/month for PDF processing. |
 | **Orchestration** | Supabase Edge | $0 | Small Deno functions to trigger GitHub Actions. |
@@ -43,8 +48,8 @@ To avoid serverless execution timeouts and costs, we use an asynchronous worker 
 ## **3\. Monitoring & Production Health**
 
 * **Availability:** **UptimeRobot** (Free) monitors the Vercel production URL.  
-* **Error Tracking:** **Sentry** (Free) integrated into Flutter and Next.js.  
-* **Pipeline Health:** GitHub Action "Failure Alerts" sent to the dev team if a PDF conversion fails.  
+* **Error Tracking:** **Sentry** (Free) integrated into Flutter and Astro (client-side islands).  
+* **Performance:** Monitor **CLS (Cumulative Layout Shift)** specifically for Astro Islands to ensure React widgets don't "jump" during hydration.  
 * **Conversion Analytics:** Custom Supabase view tracking status from books table to monitor "Success vs. Failure" rates of the parsing engine.
 
 ## **4\. Security & Scalability**
@@ -56,10 +61,11 @@ To avoid serverless execution timeouts and costs, we use an asynchronous worker 
 
 ### **Scalability**
 
-* **Worker Scaling:** GitHub Actions can run multiple parsing jobs in parallel (up to 20 concurrent jobs on the free tier), handling initial user surges with ease.  
-* **Edge Delivery:** Next.js assets are served via Vercel’s Global Edge Network, ensuring fast load times regardless of user location.
+* **Worker Scaling:** GitHub Actions can run multiple parsing jobs in parallel (up to 20 concurrent jobs on the free tier).  
+* **Static Superiority:** Since Astro generates pure HTML for the majority of the book, the "Reader" can handle massive traffic spikes with near-zero latency and minimal server load.
 
 ## **5\. Developer Experience (DX)**
 
-* **Local Development:** Use supabase start to run a local backend and npm run dev for the frontend.  
+* **Local Development:** Use supabase start for the backend and npm run dev for the Astro frontend.  
+* **State Management:** **Nano Stores** used for lightweight, cross-framework state (e.g., syncing reading progress between Astro and React).  
 * **Deployment:** git push origin main triggers the full suite of tests and atomic deployments.
