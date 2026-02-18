@@ -26,3 +26,21 @@ class CodexBlock(BaseModel):
     content: str
     style: dict = Field(default_factory=dict)
     bbox: CodexBBox
+
+
+class CodexMeta(BaseModel):
+    """Metadata for a codex document."""
+    title: str
+    author: str
+    base_size: int
+
+
+class CodexManifest(BaseModel):
+    """The root container for a codex document."""
+    meta: CodexMeta
+    blocks: list[CodexBlock] = Field(default_factory=list)
+    assets: dict = Field(default_factory=dict)
+
+    def to_json(self) -> str:
+        """Serialize the manifest to a JSON string."""
+        return self.model_dump_json()

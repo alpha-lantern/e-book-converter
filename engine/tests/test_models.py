@@ -1,7 +1,8 @@
 import pytest
+import json
 from uuid import UUID
 from pydantic import ValidationError
-from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox
+from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox, CodexMeta, CodexManifest
 
 def test_codex_bbox_creation():
     """Test creating a valid CodexBBox."""
@@ -79,3 +80,49 @@ def test_codex_block_bbox_typing():
             content="Content",
             bbox={"x0": 1, "y0": 2} # Missing fields
         )
+
+
+def test_codex_meta_creation():
+    """Test creating a valid CodexMeta."""
+    meta = CodexMeta(title="Test Title", author="Test Author", base_size=12)
+    assert meta.title == "Test Title"
+    assert meta.author == "Test Author"
+    assert meta.base_size == 12
+
+
+def test_codex_manifest_creation():
+    """Test creating a valid CodexManifest."""
+    meta = CodexMeta(title="Test Title", author="Test Author", base_size=12)
+    bbox = CodexBBox(x0=0.0, y0=0.0, x1=10.0, y1=10.0)
+    block = CodexBlock(type=CodexBlockType.P, content="Test", bbox=bbox)
+    manifest = CodexManifest(meta=meta, blocks=[block], assets={"icon": "icon.png"})
+
+    assert manifest.meta == meta
+    assert len(manifest.blocks) == 1
+    assert manifest.blocks[0].content == "Test"
+    assert manifest.assets == {"icon": "icon.png"}
+
+
+def test_codex_manifest_to_json():
+    """Test the to_json method of CodexManifest."""
+    meta = CodexMeta(title="Test Title", author="Test Author", base_size=12)
+    manifest = CodexManifest(meta=meta)
+    json_str = manifest.to_json()
+
+    # Verify it's valid JSON and has expected structure
+    data = json.loads(json_str)
+    assert data["meta"]["title"] == "Test Title"
+    assert data["meta"]["author"] == "Test Author"
+    assert data["meta"]["base_size"] == 12
+    assert isinstance(data["blocks"], list)
+    assert isinstance(data["assets"], dict)
+
+
+def test_codex_manifest_to_json_format():
+    """Test that to_json matches the expected serialization format (no extra indentation)."""
+    meta = CodexMeta(title="T", author="A", base_size=1)
+    manifest = CodexManifest(meta=meta)
+    json_str = manifest.to_json()
+
+    # Pydantic 2's model_dump_json() by default has no indentation
+    assert "\n" not in json_str
