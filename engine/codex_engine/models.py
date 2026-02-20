@@ -1,6 +1,7 @@
 from enum import Enum
+from typing import Optional
 from uuid import UUID, uuid4
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 class CodexBlockType(str, Enum):
     """Enum for the different types of blocks in a codex."""
@@ -19,12 +20,26 @@ class CodexBBox(BaseModel):
     y1: float
 
 
+class CodexStyle(BaseModel):
+    """Specialized model for CSS-like block styles to reduce memory overhead."""
+    font_size: Optional[float] = None
+    font_weight: Optional[str] = None
+    line_height: Optional[float] = None
+    color: Optional[str] = None
+    text_align: Optional[str] = None
+    margin_top: Optional[float] = None
+    margin_bottom: Optional[float] = None
+    font_family: Optional[str] = None
+    text_decoration: Optional[str] = None
+    font_style: Optional[str] = None
+
+
 class CodexBlock(BaseModel):
     """A block of content in a codex."""
     id: UUID = Field(default_factory=uuid4)
     type: CodexBlockType
     content: str
-    style: dict = Field(default_factory=dict)
+    style: CodexStyle = Field(default_factory=CodexStyle)
     bbox: CodexBBox
 
 
@@ -40,6 +55,12 @@ class CodexManifest(BaseModel):
     meta: CodexMeta
     blocks: list[CodexBlock] = Field(default_factory=list)
     assets: dict = Field(default_factory=dict)
+
+    @computed_field
+    @property
+    def block_map(self) -> dict[UUID, CodexBlock]:
+        """Returns a cached mapping of block IDs for O(1) lookups during synthesis."""
+        return {block.id: block for block in self.blocks}
 
     def to_json(self) -> str:
         """Serialize the manifest to a JSON string."""

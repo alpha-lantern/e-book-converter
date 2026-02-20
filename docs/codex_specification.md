@@ -1,0 +1,53 @@
+# Codex Specification
+
+This document defines the semantic data structure of a **Codex Manifest**, the core output of the Project Codex Semantic Parser.
+
+## 1. Overview
+
+A Codex Manifest is a JSON-serializable structure that represents the structured content of a book. It is designed for high-performance rendering and efficient synthesis in the frontend.
+
+## 2. Core Models
+
+### `CodexManifest`
+The root container for a document.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `meta` | `CodexMeta` | Document metadata (title, author, etc). |
+| `blocks` | `List[CodexBlock]` | Ordered sequence of content blocks. |
+| `assets` | `Dict` | Mapping of asset names to their optimized URLs or identifiers. |
+| `block_map` | `Dict[UUID, CodexBlock]` | **(Optimization)** Computed mapping of block IDs for O(1) lookups. |
+
+### `CodexBlock`
+The atomic unit of content.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `id` | `UUID` | Unique identifier (V4). |
+| `type` | `CodexBlockType` | Enum: `h1`, `h2`, `p`, `image`, `widget`. |
+| `content` | `str` | The raw text or asset reference. |
+| `style` | `CodexStyle` | Specialized style model. |
+| `bbox` | `CodexBBox` | Physical coordinates `(x0, y0, x1, y1)`. |
+
+### `CodexStyle`
+A specialized model for CSS-like attributes to minimize memory footprint.
+
+- `font_size`: float (points/pixels)
+- `font_weight`: string (e.g., "bold", "normal")
+- `line_height`: float
+- `color`: string (hex/rgba)
+- `text_align`: string ("left", "center", "right", "justify")
+- `margin_top` / `margin_bottom`: float
+- `font_family`: string
+- `text_decoration`: string
+- `font_style`: string
+
+## 3. Performance Optimizations
+
+### O(1) Block Lookups
+The `CodexManifest` includes a `block_map` property (implemented via Pydantic `@computed_field`). This avoids O(N) list traversals when the renderer needs to access a specific block by its UUID (e.g., when resolving widget anchors).
+
+### Memory Efficiency
+Styles are enforced via the `CodexStyle` model rather than arbitrary dictionaries. This provides:
+1. **Type Safety**: Validation happens at the parser level.
+2. **Reduced Footprint**: Pre-defined slots in the model are more memory-efficient than dynamic hash maps for thousands of blocks.

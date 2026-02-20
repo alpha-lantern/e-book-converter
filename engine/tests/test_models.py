@@ -2,7 +2,7 @@ import pytest
 import json
 from uuid import UUID
 from pydantic import ValidationError
-from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox, CodexMeta, CodexManifest
+from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox, CodexMeta, CodexManifest, CodexStyle
 
 def test_codex_bbox_creation():
     """Test creating a valid CodexBBox."""
@@ -22,7 +22,8 @@ def test_codex_block_creation_valid():
     assert isinstance(block.id, UUID)
     assert block.type == CodexBlockType.H1
     assert block.content == "Chapter 1"
-    assert block.style == {}
+    # style should be an empty CodexStyle model (all None)
+    assert block.style.model_dump(exclude_unset=True) == {}
     assert block.bbox == bbox
     assert block.bbox.x0 == 10.0
 
@@ -54,14 +55,27 @@ def test_codex_block_invalid_type():
         )
 
 def test_codex_block_style_default():
-    """Test that style defaults to an empty dict."""
+    """Test that style defaults to an empty CodexStyle."""
     bbox = CodexBBox(x0=0, y0=0, x1=0, y1=0)
     block = CodexBlock(
         type=CodexBlockType.P,
         content="Content",
         bbox=bbox
     )
-    assert block.style == {}
+    assert block.style.model_dump(exclude_unset=True) == {}
+
+def test_codex_block_style_specialization():
+    """Test that style dict is coerced to CodexStyle."""
+    bbox = CodexBBox(x0=0, y0=0, x1=0, y1=0)
+    block = CodexBlock(
+        type=CodexBlockType.P,
+        content="Content",
+        bbox=bbox,
+        style={"font_size": 12.0, "font_weight": "bold"}
+    )
+    assert isinstance(block.style, CodexStyle)
+    assert block.style.font_size == 12.0
+    assert block.style.font_weight == "bold"
 
 def test_codex_block_bbox_typing():
     """Test that bbox requires a CodexBBox object or compatible dict."""
@@ -126,3 +140,16 @@ def test_codex_manifest_to_json_format():
 
     # Pydantic 2's model_dump_json() by default has no indentation
     assert "\n" not in json_str
+
+def test_codex_manifest_block_map():
+    """Test the block_map property for O(1) block lookups."""
+    meta = CodexMeta(title="Test", author="Author", base_size=12)
+    bbox = CodexBBox(x0=0, y0=0, x1=0, y1=0)
+    block1 = CodexBlock(type=CodexBlockType.P, content="B1", bbox=bbox)
+    block2 = CodexBlock(type=CodexBlockType.P, content="B2", bbox=bbox)
+    manifest = CodexManifest(meta=meta, blocks=[block1, block2])
+    
+    assert len(manifest.block_map) == 2
+    assert manifest.block_map[block1.id] == block1
+    assert manifest.block_map[block2.id] == block2
+    assert isinstance(manifest.block_map, dict)
