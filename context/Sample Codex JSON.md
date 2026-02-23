@@ -5,16 +5,19 @@
 "title": "The Future of Digital Publishing",  
 "author": "Codex Editorial Team",  
 "description": "A technical whitepaper on the shift from PDF to Web-Native PWAs.",  
+"base_size": 16,
 "language": "en-US",  
 "seo": {  
-"keywords": \["PWA", "SEO", "Digital Publishing", "Interactive PDF"\],  
-"canonical\_url": "https://www.google.com/search?q=https://project-codex.io/view/future-of-publishing",  
-"og\_image": "https://www.google.com/search?q=https://supabase-assets.com/codex-sample/og-cover.webp"  
+"title": "The Future of Digital Publishing | Project Codex",
+"description": "Learn how to convert PDFs to SEO-optimized PWAs with Project Codex.",
+"keywords": ["PWA", "SEO", "Digital Publishing", "Interactive PDF"],  
+"canonical_url": "https://project-codex.io/view/future-of-publishing",  
+"og_image": "https://supabase-assets.com/codex-sample/og-cover.webp"  
 },  
 "theme": {  
-"primary\_color": "\#2563eb",  
-"font\_base\_size": 16,  
-"typography\_system": "sans-serif"  
+"primary_color": "#2563eb",  
+"font_base_size": 16,  
+"typography_system": "sans-serif"  
 }  
 },  
 "structure": \[  

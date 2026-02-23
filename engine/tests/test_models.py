@@ -2,7 +2,7 @@ import pytest
 import json
 from uuid import UUID
 from pydantic import ValidationError
-from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox, CodexMeta, CodexManifest, CodexStyle
+from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox, CodexMeta, CodexManifest, CodexStyle, CodexSEO
 
 def test_codex_bbox_creation():
     """Test creating a valid CodexBBox."""
@@ -96,12 +96,28 @@ def test_codex_block_bbox_typing():
         )
 
 
+def test_codex_seo_creation():
+    """Test creating a valid CodexSEO."""
+    seo = CodexSEO(title="SEO Title", description="SEO Desc", keywords=["A", "B"])
+    assert seo.title == "SEO Title"
+    assert seo.description == "SEO Desc"
+    assert seo.keywords == ["A", "B"]
+
 def test_codex_meta_creation():
-    """Test creating a valid CodexMeta."""
-    meta = CodexMeta(title="Test Title", author="Test Author", base_size=12)
+    """Test creating a valid CodexMeta with optional fields and SEO."""
+    seo = CodexSEO(title="SEO Title")
+    meta = CodexMeta(
+        title="Test Title", 
+        author="Test Author", 
+        description="Test Desc", 
+        base_size=12,
+        seo=seo
+    )
     assert meta.title == "Test Title"
     assert meta.author == "Test Author"
+    assert meta.description == "Test Desc"
     assert meta.base_size == 12
+    assert meta.seo.title == "SEO Title"
 
 
 def test_codex_manifest_creation():
@@ -119,7 +135,14 @@ def test_codex_manifest_creation():
 
 def test_codex_manifest_to_json():
     """Test the to_json method of CodexManifest."""
-    meta = CodexMeta(title="Test Title", author="Test Author", base_size=12)
+    seo = CodexSEO(title="SEO T", description="SEO D", keywords=["K"])
+    meta = CodexMeta(
+        title="Test Title", 
+        author="Test Author", 
+        description="Test Desc", 
+        base_size=12,
+        seo=seo
+    )
     manifest = CodexManifest(meta=meta)
     json_str = manifest.to_json()
 
@@ -127,7 +150,11 @@ def test_codex_manifest_to_json():
     data = json.loads(json_str)
     assert data["meta"]["title"] == "Test Title"
     assert data["meta"]["author"] == "Test Author"
+    assert data["meta"]["description"] == "Test Desc"
     assert data["meta"]["base_size"] == 12
+    assert data["meta"]["seo"]["title"] == "SEO T"
+    assert data["meta"]["seo"]["description"] == "SEO D"
+    assert data["meta"]["seo"]["keywords"] == ["K"]
     assert isinstance(data["blocks"], list)
     assert isinstance(data["assets"], dict)
 

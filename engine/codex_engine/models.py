@@ -43,11 +43,22 @@ class CodexBlock(BaseModel):
     bbox: CodexBBox
 
 
+class CodexSEO(BaseModel):
+    """Crawler-specific metadata for SEO optimization."""
+    title: Optional[str] = None
+    description: Optional[str] = None
+    keywords: list[str] = Field(default_factory=list)
+    canonical_url: Optional[str] = None
+    og_image: Optional[str] = None
+
+
 class CodexMeta(BaseModel):
     """Metadata for a codex document."""
     title: str
     author: str
+    description: Optional[str] = None
     base_size: int
+    seo: CodexSEO = Field(default_factory=CodexSEO)
 
 
 class CodexManifest(BaseModel):

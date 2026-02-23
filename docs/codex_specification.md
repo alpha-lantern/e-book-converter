@@ -18,6 +18,26 @@ The root container for a document.
 | `assets` | `Dict` | Mapping of asset names to their optimized URLs or identifiers. |
 | `block_map` | `Dict[UUID, CodexBlock]` | **(Optimization)** Computed mapping of block IDs for O(1) lookups. |
 
+### `CodexMeta`
+The document-level metadata container.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `title` | `str` | The display title of the book. |
+| `author` | `str` | The credited author. |
+| `description`| `str` | Internal/Technical summary. |
+| `base_size` | `int` | Reference font size for heuristic scoring. |
+| `seo` | `CodexSEO` | Nested SEO optimization fields. |
+
+### `CodexSEO`
+Crawler-specific metadata.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `title` | `str` | SEO Title (max 60 chars). |
+| `description`| `str` | Meta description (max 160 chars). |
+| `keywords` | `List[str]` | Semantic tags for indexing. |
+
 ### `CodexBlock`
 The atomic unit of content.
 
