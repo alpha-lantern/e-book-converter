@@ -1,7 +1,8 @@
 import pytest
+import json
 from uuid import UUID
 from pydantic import ValidationError
-from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox
+from codex_engine.models import CodexBlock, CodexBlockType, CodexBBox, CodexMeta, CodexManifest, CodexStyle, CodexSEO
 
 def test_codex_bbox_creation():
     """Test creating a valid CodexBBox."""
@@ -21,7 +22,8 @@ def test_codex_block_creation_valid():
     assert isinstance(block.id, UUID)
     assert block.type == CodexBlockType.H1
     assert block.content == "Chapter 1"
-    assert block.style == {}
+    # style should be an empty CodexStyle model (all None)
+    assert block.style.model_dump(exclude_unset=True) == {}
     assert block.bbox == bbox
     assert block.bbox.x0 == 10.0
 
@@ -53,14 +55,27 @@ def test_codex_block_invalid_type():
         )
 
 def test_codex_block_style_default():
-    """Test that style defaults to an empty dict."""
+    """Test that style defaults to an empty CodexStyle."""
     bbox = CodexBBox(x0=0, y0=0, x1=0, y1=0)
     block = CodexBlock(
         type=CodexBlockType.P,
         content="Content",
         bbox=bbox
     )
-    assert block.style == {}
+    assert block.style.model_dump(exclude_unset=True) == {}
+
+def test_codex_block_style_specialization():
+    """Test that style dict is coerced to CodexStyle."""
+    bbox = CodexBBox(x0=0, y0=0, x1=0, y1=0)
+    block = CodexBlock(
+        type=CodexBlockType.P,
+        content="Content",
+        bbox=bbox,
+        style={"font_size": 12.0, "font_weight": "bold"}
+    )
+    assert isinstance(block.style, CodexStyle)
+    assert block.style.font_size == 12.0
+    assert block.style.font_weight == "bold"
 
 def test_codex_block_bbox_typing():
     """Test that bbox requires a CodexBBox object or compatible dict."""
@@ -79,3 +94,89 @@ def test_codex_block_bbox_typing():
             content="Content",
             bbox={"x0": 1, "y0": 2} # Missing fields
         )
+
+
+def test_codex_seo_creation():
+    """Test creating a valid CodexSEO."""
+    seo = CodexSEO(title="SEO Title", description="SEO Desc", keywords=["A", "B"])
+    assert seo.title == "SEO Title"
+    assert seo.description == "SEO Desc"
+    assert seo.keywords == ["A", "B"]
+
+def test_codex_meta_creation():
+    """Test creating a valid CodexMeta with optional fields and SEO."""
+    seo = CodexSEO(title="SEO Title")
+    meta = CodexMeta(
+        title="Test Title", 
+        author="Test Author", 
+        description="Test Desc", 
+        base_size=12,
+        seo=seo
+    )
+    assert meta.title == "Test Title"
+    assert meta.author == "Test Author"
+    assert meta.description == "Test Desc"
+    assert meta.base_size == 12
+    assert meta.seo.title == "SEO Title"
+
+
+def test_codex_manifest_creation():
+    """Test creating a valid CodexManifest."""
+    meta = CodexMeta(title="Test Title", author="Test Author", base_size=12)
+    bbox = CodexBBox(x0=0.0, y0=0.0, x1=10.0, y1=10.0)
+    block = CodexBlock(type=CodexBlockType.P, content="Test", bbox=bbox)
+    manifest = CodexManifest(meta=meta, blocks=[block], assets={"icon": "icon.png"})
+
+    assert manifest.meta == meta
+    assert len(manifest.blocks) == 1
+    assert manifest.blocks[0].content == "Test"
+    assert manifest.assets == {"icon": "icon.png"}
+
+
+def test_codex_manifest_to_json():
+    """Test the to_json method of CodexManifest."""
+    seo = CodexSEO(title="SEO T", description="SEO D", keywords=["K"])
+    meta = CodexMeta(
+        title="Test Title", 
+        author="Test Author", 
+        description="Test Desc", 
+        base_size=12,
+        seo=seo
+    )
+    manifest = CodexManifest(meta=meta)
+    json_str = manifest.to_json()
+
+    # Verify it's valid JSON and has expected structure
+    data = json.loads(json_str)
+    assert data["meta"]["title"] == "Test Title"
+    assert data["meta"]["author"] == "Test Author"
+    assert data["meta"]["description"] == "Test Desc"
+    assert data["meta"]["base_size"] == 12
+    assert data["meta"]["seo"]["title"] == "SEO T"
+    assert data["meta"]["seo"]["description"] == "SEO D"
+    assert data["meta"]["seo"]["keywords"] == ["K"]
+    assert isinstance(data["blocks"], list)
+    assert isinstance(data["assets"], dict)
+
+
+def test_codex_manifest_to_json_format():
+    """Test that to_json matches the expected serialization format (no extra indentation)."""
+    meta = CodexMeta(title="T", author="A", base_size=1)
+    manifest = CodexManifest(meta=meta)
+    json_str = manifest.to_json()
+
+    # Pydantic 2's model_dump_json() by default has no indentation
+    assert "\n" not in json_str
+
+def test_codex_manifest_block_map():
+    """Test the block_map property for O(1) block lookups."""
+    meta = CodexMeta(title="Test", author="Author", base_size=12)
+    bbox = CodexBBox(x0=0, y0=0, x1=0, y1=0)
+    block1 = CodexBlock(type=CodexBlockType.P, content="B1", bbox=bbox)
+    block2 = CodexBlock(type=CodexBlockType.P, content="B2", bbox=bbox)
+    manifest = CodexManifest(meta=meta, blocks=[block1, block2])
+    
+    assert len(manifest.block_map) == 2
+    assert manifest.block_map[block1.id] == block1
+    assert manifest.block_map[block2.id] == block2
+    assert isinstance(manifest.block_map, dict)

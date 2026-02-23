@@ -26,7 +26,7 @@ This command installs both runtime dependencies (like `pymupdf`, `pdfplumber`, `
 engine/
 ├── codex_engine/       # Source code for the parser
 │   ├── __init__.py     # Exports public models/functions
-│   └── models.py       # Pydantic data models (CodexBlock, CodexBBox)
+│   └── models.py       # Pydantic data models (CodexBlock, CodexStyle, CodexManifest)
 ├── tests/              # Test suite
 │   ├── __init__.py
 │   ├── test_models.py  # Unit tests for data models

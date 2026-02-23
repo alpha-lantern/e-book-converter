@@ -21,6 +21,13 @@ CREATE TABLE books (
     title TEXT NOT NULL,
     slug TEXT UNIQUE NOT NULL, -- URL-friendly ID: project-codex.io/view/slug
     description TEXT,
+    author TEXT, -- Extracted from PDF, editable in Dashboard
+    
+    -- SEO Metadata (Disassociated for crawler optimization)
+    seo_title TEXT, -- Defaults to 'title' if null
+    seo_description TEXT, -- Defaults to 'description' if null
+    seo_tags TEXT[] DEFAULT '{}', -- Keywords for meta tags
+    
     original_pdf_url TEXT, -- Link to the raw file in Supabase Storage
     
     -- Status Management for Asynchronous Parsing
@@ -68,6 +75,58 @@ CREATE INDEX idx_books_owner ON books(owner_id);
 CREATE INDEX idx_books_slug ON books(slug);
 CREATE INDEX idx_books_status ON books(job_status);
 CREATE INDEX idx_manifest_data ON codex_manifests USING GIN (manifest_data);
+
+-- 1. Foreign Key Indexes for RLS/Joins
+CREATE INDEX idx_widgets_book_id ON widgets(book_id);
+CREATE INDEX idx_analytics_logs_book_id ON analytics_logs(book_id);
+
+-- 2. Metadata Field Indexes
+CREATE INDEX idx_books_author ON books(author);
+CREATE INDEX idx_manifest_meta_title ON codex_manifests ((manifest_data->'meta'->>'title'));
+CREATE INDEX idx_manifest_meta_author ON codex_manifests ((manifest_data->'meta'->>'author'));
+
+-- HYBRID METADATA SYNCHRONIZATION TRIGGER
+-- Ensures that when a user edits metadata in the 'books' table, 
+-- the change is automatically pushed into the 'codex_manifests' JSON.
+CREATE OR REPLACE FUNCTION public.sync_books_to_manifest()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+    -- Patch the manifest_data JSONB object
+    -- 1. We merge the existing 'meta' object with new values
+    -- 2. We preserve 'base_size' and other existing meta fields
+    -- 3. We use COALESCE for SEO defaults
+    UPDATE codex_manifests
+    SET manifest_data = manifest_data || jsonb_build_object(
+        'meta', (manifest_data->'meta') || jsonb_build_object(
+            'title', NEW.title,
+            'description', NEW.description,
+            'author', NEW.author,
+            'seo', jsonb_build_object(
+                'title', COALESCE(NEW.seo_title, NEW.title),
+                'description', COALESCE(NEW.seo_description, NEW.description),
+                'keywords', NEW.seo_tags,
+                -- Preserve existing canonical and og_image if they exist
+                'canonical_url', (manifest_data->'meta'->'seo'->>'canonical_url'),
+                'og_image', (manifest_data->'meta'->'seo'->>'og_image')
+            )
+        ),
+        'last_updated', to_jsonb(NOW()::text)
+    )
+    WHERE book_id = NEW.id;
+
+    RETURN NEW;
+END;
+$$;
+
+CREATE TRIGGER trg_sync_books_to_manifest
+AFTER UPDATE OF title, description, author, seo_title, seo_description, seo_tags
+ON books
+FOR EACH ROW
+EXECUTE FUNCTION sync_books_to_manifest();
 
 -- ROW LEVEL SECURITY (RLS)
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;

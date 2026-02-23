@@ -6,6 +6,7 @@ Welcome to the technical documentation for **Project Codex**, the PDF-to-PWA con
 
 ### Architecture & Database
 - **[Database Schema](./database_schema.md)**: Detailed reference for the PostgreSQL schema, including tables, relationships, RLS policies, and enums.
+- **[Codex Specification](./codex_specification.md)**: Technical reference for the semantic data structure and performance optimizations.
 
 ### Workflow Guides
 - **[Python Engine Setup](./python_engine_setup.md)**: Instructions for setting up the Python development environment, managing dependencies, and running tests.

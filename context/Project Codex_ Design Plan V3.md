@@ -19,24 +19,24 @@
 
 ### **Screen B: The Interactive Overlay Editor (Updated for Islands)**
 
-Focuses on identifying which components are "Static" (Astro) vs. "Interactive" (React Islands).
+Focuses on identifying which components are "Static" (Astro) vs. "Interactive" (React Islands), and managing metadata.
 
-\+-------------------------------------------------------------+  
-| \[ \< Back \]   Project: Annual Report '24      \[ Export/ZIP \] |  
-\+-------------------------------------------------------------+  
-| MAIN VIEW (ASTRO PREVIEW)      | ISLANDS SIDEBAR            |  
++-------------------------------------------------------------+  
+| [ < Back ]   Project: Annual Report '24      [ Export/ZIP ] |  
++-------------------------------------------------------------+  
+| MAIN VIEW (ASTRO PREVIEW)      | SETTINGS SIDEBAR           |  
 |                                |                            |  
-| \[ Title: The Future of... \]    | \[i\] ACTIVE ISLANDS (3)     |  
-| (Static HTML Block)            |                            |  
-|                                | 1\. Video\_Island (Page 2\)   |  
-| \[ Image: Chart.webp \]          |    \[ Type: React Widget \]  |  
-|                                |    \[ Strategy: Visible  \]  |  
-| \[ Skeleton: Video\_Island \] \<---|    \[ Dimensions: 16:9   \]  |  
-|                                |                            |  
-| \[ Body: "This year we saw..." \]| 2\. Quote\_Block (Page 5\)    |  
-| (Static HTML Block)            |    \[ Type: Pure Astro   \]  |  
-|                                |                            |  
-\+-------------------------------------------------------------+
+| [ Title: The Future of... ]    | [i] ISLANDS (3) | [S] SEO  |  
+| (Static HTML Block)            | -------------------------- |  
+|                                | [ SEO TITLE:            ]  |  
+| [ Image: Chart.webp ]          | [ (Placeholder from Title)]  |  
+|                                | [ SEO DESCRIPTION:      ]  |  
+| [ Skeleton: Video_Island ] <---| [ (Placeholder from Desc) ]  |  
+|                                | [ KEYWORDS: [+][+][+]    ]  |  
+| [ Body: "This year we saw..." ]|                            |  
+| (Static HTML Block)            | 1. Video_Island (Page 2)   |  
+|                                |    [ Type: React Widget ]  |  
++-------------------------------------------------------------+
 
 ### **Screen C: The Reader View (Astro Hydration UX)**
 

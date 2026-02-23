@@ -22,7 +22,9 @@ The Renderer iterates through the structure array in the Codex JSON. Unlike Next
 ### **2.1 Lighthouse Targets**
 
 * **SEO Score:** 100 (Astro provides native metadata support via standard HTML tags).  
-* **First Contentful Paint (FCP):** \< 0.8s (due to zero-JS for the initial text render).  
+    * **Dynamic Injection:** The renderer will inject `<title>` and `<meta name="description">` from the `meta.seo` object in the manifest.
+    * **Fallback:** If `meta.seo` values are missing, it falls back to root `meta.title` and `meta.description`.
+* **First Contentful Paint (FCP):** < 0.8s (due to zero-JS for the initial text render).  
 * **Accessibility:** 90+ (Standard semantic output).
 
 ### **2.2 Static Asset Handling**

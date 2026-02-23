@@ -75,6 +75,7 @@ Editorial designers create high-value content in tools like InDesign or Canva, b
 
 * **Placeholder Mapping:** Detect specific hex-coded boxes or labeled objects in the PDF to serve as widget containers.  
 * **Inline Editing:** Allow raw text modification within the web view to fix typos without re-uploading the PDF.
+* **Metadata Management (SEO Control):** A dedicated interface to refine extracted Title/Author and configure dissociated SEO fields (SEO Title, Meta Description, Keywords).
 
 ### **7.3. Distribution Engine**
 
@@ -116,6 +117,8 @@ Editorial designers create high-value content in tools like InDesign or Canva, b
 ### **✅ Completed**
 1.  **Database Layer (Milestone 1)**
     *   **Core Schema:** `profiles`, `books`, `codex_manifests`, `widgets`, `analytics_logs` tables implemented.
+    *   **Metadata Optimization:** Dissociated SEO fields (SEO Title/Desc) and `author` columns added.
+    *   **Hybrid Sync Trigger:** PostgreSQL trigger implemented to sync `books` metadata to `codex_manifests` JSON.
     *   **Security (RLS):** Policies verified for public/private access and data isolation.
     *   **Storage:** `raw_pdfs` (Private) and `book_assets` (Public) buckets configured with folder-based RLS.
     *   **Environment:** Local development synchronized with Production (Supabase Cloud).
