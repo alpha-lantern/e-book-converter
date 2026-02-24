@@ -83,7 +83,7 @@ Stores the "Single Source of Truth" for the book's content—a JSON structure ge
 - **Key Columns:**
   - `manifest_data`: The raw JSONB data used by the Renderer.
 - **Indexes:** 
-  - GIN index on `manifest_data` for high-performance querying.
+  - **GIN Index**: `jsonb_path_ops` on `manifest_data` for optimized block-level existence and path lookups (Fastest for `@>` operator).
   - `manifest_data->'meta'->>'title'` (Functional Index).
   - `manifest_data->'meta'->>'author'` (Functional Index).
 

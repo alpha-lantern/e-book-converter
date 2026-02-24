@@ -26,9 +26,11 @@ This command installs both runtime dependencies (like `pymupdf`, `pdfplumber`, `
 engine/
 ├── codex_engine/       # Source code for the parser
 │   ├── __init__.py     # Exports public models/functions
+│   ├── extractor.py    # PDF text extraction layer (PyMuPDF-based)
 │   └── models.py       # Pydantic data models (CodexBlock, CodexStyle, CodexManifest)
 ├── tests/              # Test suite
 │   ├── __init__.py
+│   ├── test_extractor.py # Tests for the PDF extraction layer
 │   ├── test_models.py  # Unit tests for data models
 │   └── test_setup.py   # Basic environment verification
 ├── pyproject.toml      # Poetry configuration & dependency definitions

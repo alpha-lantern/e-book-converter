@@ -1,7 +1,7 @@
-feat: optimize extraction and JSONB lookup performance
+docs: document pdf extraction and indexing optimizations
 
-Implement memory-efficient PDF text streaming and advanced GIN indexing to improve system scalability and query performance.
+Update documentation and performance tracking to reflect the latest engineering improvements in PDF processing and database search.
 
-- What: Refactored the text extractor to use generators and added a jsonb_path_ops GIN index to the database.
-- How: Introduced stream_text_with_metadata in the Python engine to yield spans iteratively and created a Supabase migration for the manifest indexing.
-- Why: To prevent memory exhaustion during large PDF processing and to optimize block-level lookups within complex codex manifests.
+- What: Updated database schema, technical specifications, setup guides, and performance roadmaps.
+- How: Added sections for the generator-based extraction pipeline, detailed the jsonb_path_ops GIN index usage, and updated the project file structure.
+- Why: To maintain synchronization between the codebase and its technical documentation, providing a clear reference for the newly implemented high-performance layers.
