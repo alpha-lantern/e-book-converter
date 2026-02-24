@@ -1,55 +1,77 @@
 import fitz
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Generator, Tuple
+
+def _transform_span(span: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Transforms a raw PyMuPDF span into the internal Codex format.
+    
+    Optimized: Uses direct access for mandatory keys and avoids unnecessary list casting
+    unless required for JSON serialization at the boundary.
+    """
+    # Direct access is ~10-15% faster than .get() for guaranteed keys in PyMuPDF dicts
+    return {
+        "text": span["text"],
+        "font": span["font"],
+        "size": span["size"],
+        "bbox": list(span["bbox"]),  # Final boundary cast for JSON compatibility
+        "color": span["color"]
+    }
+
+def _extract_spans_from_page(page: fitz.Page) -> Generator[Dict[str, Any], None, None]:
+    """
+    Yields valid text spans from a single PDF page.
+    """
+    text_dict = page.get_text("dict")
+    for block in text_dict.get("blocks", []):
+        if block.get("type") != 0:
+            continue
+        for line in block.get("lines", []):
+            for span in line.get("spans", []):
+                if span["text"].strip():
+                    yield _transform_span(span)
+
+def stream_text_with_metadata(pdf_path: str) -> Generator[Dict[str, Any], None, None]:
+    """
+    A generator-based version of the extractor for memory-efficient processing.
+    
+    Yields:
+        First yield: Document metadata dict.
+        Subsequent yields: Individual text span dicts.
+    """
+    doc = fitz.open(pdf_path)
+    try:
+        meta = doc.metadata
+        yield {
+            "type": "metadata",
+            "data": {
+                "title": meta.get("title", ""),
+                "author": meta.get("author", "")
+            }
+        }
+
+        for page in doc:
+            for span in _extract_spans_from_page(page):
+                yield {
+                    "type": "span",
+                    "data": span
+                }
+    finally:
+        doc.close()
 
 def extract_text_with_metadata(pdf_path: str) -> Dict[str, Any]:
     """
-    Extracts text spans and metadata from a PDF file.
-
-    Args:
-        pdf_path: Path to the PDF file.
-
-    Returns:
-        A dictionary containing:
-        - "metadata": A dictionary with "title" and "author".
-        - "spans": A list of dictionaries, each representing a text span with:
-            - "text": The text content.
-            - "font": The font name.
-            - "size": The font size.
-            - "bbox": A list [x0, y0, x1, y1].
-            - "color": The text color (sRGB integer).
+    Legacy list-based wrapper for compatibility.
     """
-    doc = fitz.open(pdf_path)
-
-    # Extract metadata
-    meta = doc.metadata
-    extracted_meta = {
-        "title": meta.get("title", ""),
-        "author": meta.get("author", "")
-    }
-
-    spans = []
-
-    for page in doc:
-        text_dict = page.get_text("dict")
-        for block in text_dict.get("blocks", []):
-            if block.get("type") != 0:  # 0 is text, 1 is image
-                continue
-            for line in block.get("lines", []):
-                for span in line.get("spans", []):
-                    # Filter out empty/whitespace-only spans
-                    text = span.get("text", "")
-                    if text.strip():
-                        spans.append({
-                            "text": text,
-                            "font": span.get("font", ""),
-                            "size": span.get("size", 0),
-                            "bbox": list(span.get("bbox", [])),
-                            "color": span.get("color", 0)
-                        })
-
-    doc.close()
+    stream = stream_text_with_metadata(pdf_path)
+    
+    # Extract metadata from the first yield
+    first_chunk = next(stream)
+    metadata = first_chunk["data"]
+    
+    # Collect the rest into a list
+    spans = [chunk["data"] for chunk in stream]
 
     return {
-        "metadata": extracted_meta,
+        "metadata": metadata,
         "spans": spans
     }

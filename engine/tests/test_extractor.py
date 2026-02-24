@@ -1,7 +1,7 @@
 import os
 import pytest
 import fitz
-from codex_engine.extractor import extract_text_with_metadata
+from codex_engine.extractor import extract_text_with_metadata, stream_text_with_metadata
 
 @pytest.fixture(scope="module")
 def sample_pdf(tmp_path_factory):
@@ -58,3 +58,18 @@ def test_extract_text_filter_whitespace(sample_pdf):
 
     for span in result["spans"]:
         assert span["text"].strip() != ""
+
+def test_stream_text_with_metadata(sample_pdf):
+    stream = stream_text_with_metadata(sample_pdf)
+    
+    # Check metadata chunk
+    meta_chunk = next(stream)
+    assert meta_chunk["type"] == "metadata"
+    assert meta_chunk["data"]["title"] == "Sample PDF Title"
+    
+    # Check span chunks
+    span_chunks = list(stream)
+    assert len(span_chunks) >= 2
+    for chunk in span_chunks:
+        assert chunk["type"] == "span"
+        assert "text" in chunk["data"]
