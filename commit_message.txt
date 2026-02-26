@@ -1,7 +1,7 @@
-feat: implement disassociated metadata & hybrid sync
+docs: document pdf extraction and indexing optimizations
 
-Implement a disassociated metadata architecture to decouple functional book data from crawler-optimized SEO fields. This ensures the Dashboard UI and search engine crawlers can have independent, optimized content.
+Update documentation and performance tracking to reflect the latest engineering improvements in PDF processing and database search.
 
-What: Introduced new metadata columns in the 'books' table and a 'Hybrid-Sync' PostgreSQL trigger to automate JSON manifest updates.
-How: Added columns ('author', 'seo_title', 'seo_description', 'seo_tags') and implemented a 'SECURITY DEFINER' trigger function using JSONB merge operators. Updated Python Pydantic models and added comprehensive tests.
-Why: To provide a production-ready system for metadata management where the parser's "best guess" can be easily overridden by users in the dashboard without manual JSON manipulation.
+- What: Updated database schema, technical specifications, setup guides, and performance roadmaps.
+- How: Added sections for the generator-based extraction pipeline, detailed the jsonb_path_ops GIN index usage, and updated the project file structure.
+- Why: To maintain synchronization between the codebase and its technical documentation, providing a clear reference for the newly implemented high-performance layers.

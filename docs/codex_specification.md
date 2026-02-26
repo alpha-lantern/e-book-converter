@@ -62,7 +62,16 @@ A specialized model for CSS-like attributes to minimize memory footprint.
 - `text_decoration`: string
 - `font_style`: string
 
-## 3. Performance Optimizations
+## 3. Data Extraction Pipeline
+
+### Streaming Extraction
+To handle large PDF files without memory exhaustion, the engine uses a **generator-based extraction layer** (`extractor.py`).
+
+1. **Metadata Yield**: The stream starts by yielding the PDF's internal metadata (Title, Author).
+2. **Span Yielding**: Individual text spans are transformed into the internal Codex format and yielded page-by-page.
+3. **Lazy Processing**: This allows the semantic parser to begin processing the first pages before the entire document is loaded into memory.
+
+## 4. Performance Optimizations
 
 ### O(1) Block Lookups
 The `CodexManifest` includes a `block_map` property (implemented via Pydantic `@computed_field`). This avoids O(N) list traversals when the renderer needs to access a specific block by its UUID (e.g., when resolving widget anchors).
