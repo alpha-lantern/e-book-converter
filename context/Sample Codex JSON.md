@@ -5,7 +5,7 @@
 "title": "The Future of Digital Publishing",  
 "author": "Codex Editorial Team",  
 "description": "A technical whitepaper on the shift from PDF to Web-Native PWAs.",  
-"base_size": 16,
+"base_size": 16.0,
 "language": "en-US",  
 "seo": {  
 "title": "The Future of Digital Publishing | Project Codex",
@@ -16,7 +16,7 @@
 },  
 "theme": {  
 "primary_color": "#2563eb",  
-"font_base_size": 16,  
+"font_base_size": 16.0,  
 "typography_system": "sans-serif"  
 }  
 },  

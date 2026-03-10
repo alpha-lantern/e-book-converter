@@ -26,7 +26,7 @@ The document-level metadata container.
 | `title` | `str` | The display title of the book. |
 | `author` | `str` | The credited author. |
 | `description`| `str` | Internal/Technical summary. |
-| `base_size` | `int` | Reference font size for heuristic scoring. |
+| `base_size` | `float` | Reference font size for heuristic scoring (calculated as a mode rounded to 1 decimal place). |
 | `seo` | `CodexSEO` | Nested SEO optimization fields. |
 
 ### `CodexSEO`
