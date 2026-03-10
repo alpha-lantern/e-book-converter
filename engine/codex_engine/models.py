@@ -57,7 +57,7 @@ class CodexMeta(BaseModel):
     title: str
     author: str
     description: Optional[str] = None
-    base_size: int
+    base_size: float
     seo: CodexSEO = Field(default_factory=CodexSEO)
 
 

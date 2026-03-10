@@ -10,8 +10,6 @@
 
 ## **2\. The Heuristic Scoring Model**
 
-*Note on **BaseSize**: The `BaseSize` represents the mode (most frequent) font size of the document. To support large PDFs efficiently, this is calculated using a generator-based stream of text spans. Font sizes are rounded to 1 decimal place before counting to mitigate floating-point precision issues, and the resulting `BaseSize` is stored as a float.*
-
 ### **2.1 Rule A: Font Size Hierarchy**
 
 * **H1:** Size \>= BaseSize \* 2.0 AND Weight \== Bold.  
