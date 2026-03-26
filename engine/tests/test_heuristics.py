@@ -1,5 +1,78 @@
 import pytest
-from codex_engine.heuristics import calculate_base_size
+from codex_engine.heuristics import calculate_base_size, cluster_spans_by_y
+
+def test_cluster_spans_by_y_basic():
+    spans = [
+        {"text": "World", "bbox": [100, 10, 150, 20]},
+        {"text": "Hello", "bbox": [10, 10, 60, 20]},
+        {"text": "Line 2", "bbox": [10, 30, 60, 40]},
+    ]
+    clusters = cluster_spans_by_y(spans)
+
+    assert len(clusters) == 2
+    # First cluster (Line 1) should have Hello then World (sorted by x0)
+    assert clusters[0][0]["text"] == "Hello"
+    assert clusters[0][1]["text"] == "World"
+    # Second cluster (Line 2)
+    assert clusters[1][0]["text"] == "Line 2"
+
+def test_cluster_spans_by_y_tolerance():
+    spans = [
+        {"text": "Span 1", "bbox": [10, 10, 60, 20]},
+        {"text": "Span 2", "bbox": [70, 11.5, 120, 21.5]}, # Within 2.0 tolerance
+        {"text": "Span 3", "bbox": [10, 12.0, 60, 22.0]}, # Within tolerance of Span 1 (ref) and Span 2 (sliding)
+        {"text": "Span 4", "bbox": [10, 15.0, 60, 25.0]}, # Outside tolerance
+    ]
+    clusters = cluster_spans_by_y(spans, tolerance=2.0)
+
+    assert len(clusters) == 2
+    assert len(clusters[0]) == 3
+    assert len(clusters[1]) == 1
+    assert clusters[1][0]["text"] == "Span 4"
+
+def test_cluster_spans_by_y_sliding_reference():
+    # Demonstrates that sliding reference allows handling vertical drift
+    # Span 1 (10) -> Span 2 (11.5) -> Span 3 (13.0) -> Span 4 (14.5)
+    # Each is within 2.0 of its immediate predecessor, but Span 4 is 4.5 from Span 1.
+    spans = [
+        {"text": "1", "bbox": [0, 10.0, 0, 0]},
+        {"text": "2", "bbox": [0, 11.5, 0, 0]},
+        {"text": "3", "bbox": [0, 13.0, 0, 0]},
+        {"text": "4", "bbox": [0, 14.5, 0, 0]},
+    ]
+    clusters = cluster_spans_by_y(spans, tolerance=2.0)
+    assert len(clusters) == 1
+    assert len(clusters[0]) == 4
+
+def test_cluster_spans_by_y_malformed_input():
+    # Missing bbox
+    with pytest.raises(KeyError):
+        cluster_spans_by_y([{"text": "no bbox"}])
+    # Empty bbox (IndexError for bbox[1])
+    with pytest.raises(IndexError):
+        cluster_spans_by_y([{"bbox": []}])
+
+def test_cluster_spans_by_y_negative_tolerance():
+    with pytest.raises(ValueError, match="Tolerance must be non-negative"):
+        cluster_spans_by_y([], tolerance=-1.0)
+
+def test_cluster_spans_by_y_out_of_order():
+    spans = [
+        {"text": "Bottom", "bbox": [10, 50, 60, 60]},
+        {"text": "Top", "bbox": [10, 10, 60, 20]},
+    ]
+    clusters = cluster_spans_by_y(spans)
+    assert clusters[0][0]["text"] == "Top"
+    assert clusters[1][0]["text"] == "Bottom"
+
+def test_cluster_spans_by_y_empty():
+    assert cluster_spans_by_y([]) == []
+
+def test_cluster_spans_by_y_single():
+    span = {"text": "Single", "bbox": [10, 10, 60, 20]}
+    clusters = cluster_spans_by_y([span])
+    assert len(clusters) == 1
+    assert clusters[0][0]["text"] == "Single"
 
 def test_calculate_base_size_mode():
     spans = [
