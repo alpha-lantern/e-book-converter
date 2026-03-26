@@ -20,8 +20,8 @@ def test_cluster_spans_by_y_tolerance():
     spans = [
         {"text": "Span 1", "bbox": [10, 10, 60, 20]},
         {"text": "Span 2", "bbox": [70, 11.5, 120, 21.5]}, # Within 2.0 tolerance
-        {"text": "Span 3", "bbox": [10, 12.0, 60, 22.0]}, # Exactly 2.0 tolerance from reference (10.0)
-        {"text": "Span 4", "bbox": [10, 15.0, 60, 25.0]}, # Outside tolerance of reference (10.0)
+        {"text": "Span 3", "bbox": [10, 12.0, 60, 22.0]}, # Within tolerance of Span 1 (ref) and Span 2 (sliding)
+        {"text": "Span 4", "bbox": [10, 15.0, 60, 25.0]}, # Outside tolerance
     ]
     clusters = cluster_spans_by_y(spans, tolerance=2.0)
 
@@ -29,6 +29,32 @@ def test_cluster_spans_by_y_tolerance():
     assert len(clusters[0]) == 3
     assert len(clusters[1]) == 1
     assert clusters[1][0]["text"] == "Span 4"
+
+def test_cluster_spans_by_y_sliding_reference():
+    # Demonstrates that sliding reference allows handling vertical drift
+    # Span 1 (10) -> Span 2 (11.5) -> Span 3 (13.0) -> Span 4 (14.5)
+    # Each is within 2.0 of its immediate predecessor, but Span 4 is 4.5 from Span 1.
+    spans = [
+        {"text": "1", "bbox": [0, 10.0, 0, 0]},
+        {"text": "2", "bbox": [0, 11.5, 0, 0]},
+        {"text": "3", "bbox": [0, 13.0, 0, 0]},
+        {"text": "4", "bbox": [0, 14.5, 0, 0]},
+    ]
+    clusters = cluster_spans_by_y(spans, tolerance=2.0)
+    assert len(clusters) == 1
+    assert len(clusters[0]) == 4
+
+def test_cluster_spans_by_y_malformed_input():
+    # Missing bbox
+    with pytest.raises(KeyError):
+        cluster_spans_by_y([{"text": "no bbox"}])
+    # Empty bbox (IndexError for bbox[1])
+    with pytest.raises(IndexError):
+        cluster_spans_by_y([{"bbox": []}])
+
+def test_cluster_spans_by_y_negative_tolerance():
+    with pytest.raises(ValueError, match="Tolerance must be non-negative"):
+        cluster_spans_by_y([], tolerance=-1.0)
 
 def test_cluster_spans_by_y_out_of_order():
     spans = [

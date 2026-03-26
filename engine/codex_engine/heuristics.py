@@ -1,9 +1,9 @@
 from collections import Counter
-from typing import Iterable, Dict, Any, List
+from typing import Iterable, Any
 
-def cluster_spans_by_y(spans: List[Dict[str, Any]], tolerance: float = 2.0) -> List[List[Dict[str, Any]]]:
+def cluster_spans_by_y(spans: list[dict[str, Any]], tolerance: float = 2.0) -> list[list[dict[str, Any]]]:
     """
-    Groups spans into horizontal lines based on their Y-coordinate.
+    Groups spans into horizontal lines based on their Y-coordinate using a sliding reference.
 
     Args:
         spans: A list of span dictionaries, each containing a "bbox" key [x0, y0, x1, y1].
@@ -11,20 +11,34 @@ def cluster_spans_by_y(spans: List[Dict[str, Any]], tolerance: float = 2.0) -> L
 
     Returns:
         A list of clusters, where each cluster is a list of spans sorted by X-coordinate.
+
+    Raises:
+        ValueError: If tolerance is negative.
+        KeyError: If a span is missing the "bbox" key.
+        IndexError: If a bbox has fewer than 2 elements.
     """
+    if tolerance < 0:
+        raise ValueError("Tolerance must be non-negative.")
+
     if not spans:
         return []
 
     # Sort spans by y0 (top coordinate)
-    sorted_spans = sorted(spans, key=lambda s: s["bbox"][1])
+    # This also serves as initial validation: each span must have bbox[1]
+    try:
+        sorted_spans = sorted(spans, key=lambda s: s["bbox"][1])
+    except (KeyError, IndexError) as e:
+        raise type(e)(f"Malformed span: {e}") from e
 
     clusters = []
     current_cluster = [sorted_spans[0]]
-    reference_y = sorted_spans[0]["bbox"][1]
 
     for i in range(1, len(sorted_spans)):
         span = sorted_spans[i]
-        if abs(span["bbox"][1] - reference_y) <= tolerance:
+        # Sliding reference: compare to the last span added to the cluster
+        last_span = current_cluster[-1]
+
+        if abs(span["bbox"][1] - last_span["bbox"][1]) <= tolerance:
             current_cluster.append(span)
         else:
             # Sort the completed cluster by x0
@@ -32,7 +46,6 @@ def cluster_spans_by_y(spans: List[Dict[str, Any]], tolerance: float = 2.0) -> L
             clusters.append(current_cluster)
             # Start new cluster
             current_cluster = [span]
-            reference_y = span["bbox"][1]
 
     # Sort and add the last cluster
     current_cluster.sort(key=lambda s: s["bbox"][0])
@@ -40,7 +53,7 @@ def cluster_spans_by_y(spans: List[Dict[str, Any]], tolerance: float = 2.0) -> L
 
     return clusters
 
-def calculate_base_size(spans: Iterable[Dict[str, Any]]) -> float:
+def calculate_base_size(spans: Iterable[dict[str, Any]]) -> float:
     """
     Calculates the BaseSize (most frequent font size) from a stream of PDF spans.
 
