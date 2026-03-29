@@ -32,7 +32,7 @@ def test_classify_block_p():
 def test_classify_block_multi_span():
     base_size = 12.0
     line = [
-        {"text": "Part 1", "size": 12.0, "bbox": [0, 10, 50, 25]},
+        {"text": "Part 1 ", "size": 12.0, "bbox": [0, 10, 50, 25]},
         {"text": "Part 2", "size": 14.0, "bbox": [60, 10, 110, 25]}
     ]
     block = classify_block(line, base_size)
@@ -44,6 +44,30 @@ def test_classify_block_multi_span():
     assert block.bbox.x1 == 110
     assert block.bbox.y1 == 25
     assert block.style.font_size == 14.0
+
+def test_classify_block_spacing_preservation():
+    base_size = 12.0
+    # Spans with native spacing
+    line = [
+        {"text": "Hello ", "size": 12.0, "bbox": [0, 0, 50, 20]},
+        {"text": "World", "size": 12.0, "bbox": [55, 0, 105, 20]}
+    ]
+    block = classify_block(line, base_size)
+    assert block.content == "Hello World" # Single space preserved from Span 1
+
+    # Spans with no spacing (should not add any)
+    line = [
+        {"text": "No", "size": 12.0, "bbox": [0, 0, 20, 20]},
+        {"text": "Space", "size": 12.0, "bbox": [21, 0, 50, 20]}
+    ]
+    block = classify_block(line, base_size)
+    assert block.content == "NoSpace"
+
+def test_classify_block_invalid_base_size():
+    with pytest.raises(ValueError, match="base_size must be positive"):
+        classify_block([{"text": "T", "size": 12.0, "bbox": [0,0,0,0]}], 0.0)
+    with pytest.raises(ValueError, match="base_size must be positive"):
+        classify_block([{"text": "T", "size": 12.0, "bbox": [0,0,0,0]}], -1.0)
 
 def test_classify_block_thresholds():
     base_size = 10.0

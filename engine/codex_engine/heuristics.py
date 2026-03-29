@@ -7,7 +7,8 @@ def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
     Classifies a line of spans into a CodexBlock (H1, H2, or P) based on font size.
 
     Args:
-        line: A list of span dictionaries.
+        line: A list of span dictionaries. Expected schema:
+              {"text": str, "size": float, "bbox": [x0, y0, x1, y1]}
         base_size: The document's base font size (rounded to 1 decimal place).
 
     Returns:
@@ -16,11 +17,17 @@ def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
     if not line:
         raise ValueError("Cannot classify an empty line.")
 
+    if base_size <= 0:
+        raise ValueError("base_size must be positive.")
+
+    # Round base_size internally for stable float comparison
+    base_size = round(float(base_size), 1)
+
     # Determine the maximum font size in the line to represent the block's style
     max_size = round(max(float(span["size"]) for span in line), 1)
 
-    # Concatenate text from all spans
-    content = " ".join(span["text"] for span in line)
+    # Concatenate text from all spans. Use empty join to preserve PDF-native spacing.
+    content = "".join(span["text"] for span in line)
 
     # Calculate the union bounding box
     x0 = min(span["bbox"][0] for span in line)
@@ -37,6 +44,7 @@ def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
     else:
         block_type = CodexBlockType.P
 
+    # TODO: Enrich CodexStyle with weight and alignment metrics once OCR layer is ready.
     return CodexBlock(
         type=block_type,
         content=content,
