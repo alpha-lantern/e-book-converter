@@ -1,5 +1,68 @@
 import pytest
-from codex_engine.heuristics import calculate_base_size, cluster_spans_by_y
+from codex_engine.heuristics import calculate_base_size, cluster_spans_by_y, classify_block
+from codex_engine.models import CodexBlockType
+
+def test_classify_block_h1():
+    base_size = 12.0
+    # Size > 2.0 * 12.0 = 24.0
+    line = [{"text": "Title", "size": 25.0, "bbox": [0, 0, 100, 30]}]
+    block = classify_block(line, base_size)
+    assert block.type == CodexBlockType.H1
+    assert block.content == "Title"
+    assert block.style.font_size == 25.0
+
+def test_classify_block_h2():
+    base_size = 12.0
+    # Size > 1.5 * 12.0 = 18.0
+    line = [{"text": "Subtitle", "size": 19.0, "bbox": [0, 0, 100, 20]}]
+    block = classify_block(line, base_size)
+    assert block.type == CodexBlockType.H2
+    assert block.content == "Subtitle"
+    assert block.style.font_size == 19.0
+
+def test_classify_block_p():
+    base_size = 12.0
+    # Size <= 1.5 * 12.0 = 18.0
+    line = [{"text": "Paragraph", "size": 12.0, "bbox": [0, 0, 100, 15]}]
+    block = classify_block(line, base_size)
+    assert block.type == CodexBlockType.P
+    assert block.content == "Paragraph"
+    assert block.style.font_size == 12.0
+
+def test_classify_block_multi_span():
+    base_size = 12.0
+    line = [
+        {"text": "Part 1", "size": 12.0, "bbox": [0, 10, 50, 25]},
+        {"text": "Part 2", "size": 14.0, "bbox": [60, 10, 110, 25]}
+    ]
+    block = classify_block(line, base_size)
+    # max_size = 14.0, which is <= 18.0 (1.5 * 12.0)
+    assert block.type == CodexBlockType.P
+    assert block.content == "Part 1 Part 2"
+    assert block.bbox.x0 == 0
+    assert block.bbox.y0 == 10
+    assert block.bbox.x1 == 110
+    assert block.bbox.y1 == 25
+    assert block.style.font_size == 14.0
+
+def test_classify_block_thresholds():
+    base_size = 10.0
+    # H1 threshold: 20.0
+    # H2 threshold: 15.0
+
+    # Exactly 20.0 -> H2 (since logic is > 2.0 * base)
+    assert classify_block([{"text": "T", "size": 20.0, "bbox": [0,0,0,0]}], base_size).type == CodexBlockType.H2
+
+    # Exactly 15.0 -> P (since logic is > 1.5 * base)
+    assert classify_block([{"text": "T", "size": 15.0, "bbox": [0,0,0,0]}], base_size).type == CodexBlockType.P
+
+    # Just above
+    assert classify_block([{"text": "T", "size": 20.1, "bbox": [0,0,0,0]}], base_size).type == CodexBlockType.H1
+    assert classify_block([{"text": "T", "size": 15.1, "bbox": [0,0,0,0]}], base_size).type == CodexBlockType.H2
+
+def test_classify_block_empty():
+    with pytest.raises(ValueError, match="Cannot classify an empty line"):
+        classify_block([], 12.0)
 
 def test_cluster_spans_by_y_basic():
     spans = [
