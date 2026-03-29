@@ -17,11 +17,11 @@ def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
     if not line:
         raise ValueError("Cannot classify an empty line.")
 
-    if base_size <= 0:
-        raise ValueError("base_size must be positive.")
-
     # Round base_size internally for stable float comparison
     base_size = round(float(base_size), 1)
+
+    if base_size <= 0:
+        raise ValueError(f"base_size must be positive, got {base_size}.")
 
     # Determine the maximum font size in the line to represent the block's style
     max_size = round(max(float(span["size"]) for span in line), 1)

@@ -64,10 +64,15 @@ def test_classify_block_spacing_preservation():
     assert block.content == "NoSpace"
 
 def test_classify_block_invalid_base_size():
-    with pytest.raises(ValueError, match="base_size must be positive"):
+    # Test zero
+    with pytest.raises(ValueError, match="base_size must be positive, got 0.0"):
         classify_block([{"text": "T", "size": 12.0, "bbox": [0,0,0,0]}], 0.0)
-    with pytest.raises(ValueError, match="base_size must be positive"):
+    # Test negative
+    with pytest.raises(ValueError, match="base_size must be positive, got -1.0"):
         classify_block([{"text": "T", "size": 12.0, "bbox": [0,0,0,0]}], -1.0)
+    # Test small positive that rounds to zero
+    with pytest.raises(ValueError, match="base_size must be positive, got 0.0"):
+        classify_block([{"text": "T", "size": 12.0, "bbox": [0,0,0,0]}], 0.04)
 
 def test_classify_block_thresholds():
     base_size = 10.0
