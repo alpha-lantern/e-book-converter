@@ -19,7 +19,8 @@ def create_test_pdf(output_path: str):
 
     doc.save(output_path)
     doc.close()
-    print(f"Test PDF created at: {output_path}")
+    print(f"Test PDF created at: {output_path} (git-ignored, do not commit)")
+    print("Please run the calibration script: python3 scripts/calibrate.py test.pdf")
 
 if __name__ == "__main__":
     create_test_pdf("test.pdf")

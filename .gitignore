@@ -188,3 +188,7 @@ poetry.lock
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# Generated test artifacts
+scripts/*.pdf
+test.pdf
