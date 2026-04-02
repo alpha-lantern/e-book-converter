@@ -55,6 +55,10 @@ def stream_text_with_metadata(pdf_path: str) -> Generator[Dict[str, Any], None, 
                     "type": "span",
                     "data": span
                 }
+            yield {
+                "type": "page_break",
+                "data": {"page": page.number}
+            }
     finally:
         doc.close()
 
@@ -68,8 +72,8 @@ def extract_text_with_metadata(pdf_path: str) -> Dict[str, Any]:
     first_chunk = next(stream)
     metadata = first_chunk["data"]
     
-    # Collect the rest into a list
-    spans = [chunk["data"] for chunk in stream]
+    # Collect the rest into a list, filtering only for individual spans
+    spans = [chunk["data"] for chunk in stream if chunk["type"] == "span"]
 
     return {
         "metadata": metadata,
