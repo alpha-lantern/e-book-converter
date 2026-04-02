@@ -28,26 +28,24 @@ def main(
     print("=" * 50)
 
     # Pass 2: Identify the first 10 blocks using the public streaming API
+    # Note: We materialize the stream into a list here because the current clustering
+    # heuristic requires the full set of spans (to sort by Y-coordinate).
     blocks_found = []
-    current_page_spans = []
+    all_spans = []
 
     # Restart the stream for the second pass
     stream = stream_text_with_metadata(filename)
-    next(stream) # Skip metadata again
+    try:
+        next(stream) # Skip metadata again
+    except StopIteration:
+        return
 
     for chunk in stream:
-        # In a real scenario, we'd need to know when a page ends.
-        # Since stream_text_with_metadata doesn't currently yield page boundaries,
-        # and cluster_spans_by_y expects a list of spans, we'll collect all spans
-        # and process them. For a debug CLI, this is acceptable, but we'll still
-        # try to be efficient by stopping early.
         if chunk["type"] == "span":
-            current_page_spans.append(chunk["data"])
+            all_spans.append(chunk["data"])
 
-    # For this CLI, we'll just cluster all spans found so far (up to first 10 blocks)
-    # Note: If the PDF is huge, this might be slow, but it's better than using private APIs.
-    if current_page_spans:
-        lines = cluster_spans_by_y(current_page_spans)
+    if all_spans:
+        lines = cluster_spans_by_y(all_spans)
         for line in lines:
             block = classify_block(line, base_size)
             blocks_found.append(block)
