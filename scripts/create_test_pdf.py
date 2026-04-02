@@ -3,18 +3,23 @@ import os
 
 def create_test_pdf(output_path: str):
     doc = fitz.open()
-    page = doc.new_page()
 
-    # H1
-    page.insert_text(fitz.Point(50, 50), "Document Title", fontsize=30, fontname="helv")
+    # Page 1
+    page1 = doc.new_page()
+    page1.insert_text(fitz.Point(50, 50), "Document Title", fontsize=30, fontname="helv")
+    page1.insert_text(fitz.Point(50, 100), "Section 1", fontsize=20, fontname="helv")
 
-    # H2
-    page.insert_text(fitz.Point(50, 100), "Section 1", fontsize=20, fontname="helv")
-
-    # Body P (BaseSize should be 12.0)
     y = 130
-    for i in range(15):
-        page.insert_text(fitz.Point(50, y), f"This is a line of body text, number {i+1}.", fontsize=12, fontname="helv")
+    for i in range(5):
+        page1.insert_text(fitz.Point(50, y), f"Page 1 body text, line {i+1}.", fontsize=12, fontname="helv")
+        y += 20
+
+    # Page 2
+    page2 = doc.new_page()
+    page2.insert_text(fitz.Point(50, 50), "Section 2", fontsize=20, fontname="helv")
+    y = 80
+    for i in range(10):
+        page2.insert_text(fitz.Point(50, y), f"Page 2 body text, line {i+1}.", fontsize=12, fontname="helv")
         y += 20
 
     doc.save(output_path)

@@ -71,5 +71,34 @@ def test_stream_text_with_metadata(sample_pdf):
     span_chunks = list(stream)
     assert len(span_chunks) >= 2
     for chunk in span_chunks:
-        assert chunk["type"] == "span"
-        assert "text" in chunk["data"]
+        assert chunk["type"] in ["span", "page_break"]
+        if chunk["type"] == "span":
+            assert "text" in chunk["data"]
+        else:
+            assert "page" in chunk["data"]
+
+def test_stream_text_page_breaks(sample_pdf):
+    # Update sample_pdf to have two pages
+    pdf_path = sample_pdf
+    doc = fitz.open(pdf_path)
+    page = doc.new_page()
+    page.insert_text(fitz.Point(50, 50), "Page 2 Text", fontsize=12)
+    doc.save(pdf_path, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP)
+    doc.close()
+
+    stream = stream_text_with_metadata(pdf_path)
+    next(stream) # metadata
+
+    chunks = list(stream)
+
+    # Assert we have page_break chunks and they follow spans
+    page_breaks = [i for i, chunk in enumerate(chunks) if chunk["type"] == "page_break"]
+    assert len(page_breaks) == 2
+
+    # Assert each page_break has a page number
+    assert chunks[page_breaks[0]]["data"]["page"] == 0
+    assert chunks[page_breaks[1]]["data"]["page"] == 1
+
+    # Assert first page_break is after some spans
+    assert page_breaks[0] > 0
+    assert chunks[page_breaks[0] - 1]["type"] == "span"

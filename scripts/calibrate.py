@@ -28,10 +28,9 @@ def main(
     print("=" * 50)
 
     # Pass 2: Identify the first 10 blocks using the public streaming API
-    # Note: We materialize the stream into a list here because the current clustering
-    # heuristic requires the full set of spans (to sort by Y-coordinate).
+    # Memory-efficient: Processes spans page-by-page and exits once 10 blocks are found.
     blocks_found = []
-    all_spans = []
+    current_page_spans = []
 
     # Restart the stream for the second pass
     stream = stream_text_with_metadata(filename)
@@ -42,18 +41,33 @@ def main(
 
     for chunk in stream:
         if chunk["type"] == "span":
-            all_spans.append(chunk["data"])
+            current_page_spans.append(chunk["data"])
+        elif chunk["type"] == "page_break":
+            if current_page_spans:
+                # Clustering is done page-by-page to prevent massive memory usage
+                page_lines = cluster_spans_by_y(current_page_spans)
+                for line in page_lines:
+                    block = classify_block(line, base_size)
+                    blocks_found.append(block)
+                    if len(blocks_found) >= 10:
+                        break
+                # Discard processed spans to free memory
+                current_page_spans = []
 
-    if all_spans:
-        lines = cluster_spans_by_y(all_spans)
-        for line in lines:
+            if len(blocks_found) >= 10:
+                break
+
+    # Flush remaining spans if the stream ends without a final page_break
+    if current_page_spans and len(blocks_found) < 10:
+        remaining_lines = cluster_spans_by_y(current_page_spans)
+        for line in remaining_lines:
             block = classify_block(line, base_size)
             blocks_found.append(block)
             if len(blocks_found) >= 10:
                 break
 
     print(f"First {len(blocks_found)} identified blocks:\n")
-    for i, block in enumerate(blocks_found, 1):
+    for i, block in enumerate(blocks_found[:10], 1):
         content_snippet = block.content[:50].replace("\n", " ")
         if len(block.content) > 50:
             content_snippet += "..."
