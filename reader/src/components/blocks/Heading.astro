@@ -29,11 +29,11 @@ const baseStyles: Record<string, string> = {
   h6: 'text-base font-medium text-gray-900',
 };
 
-const inlineStyles: Record<string, any> = {};
+const inlineStyles: Record<string, string> = {};
 if (style) {
   if (style.font_size !== undefined) inlineStyles['font-size'] = `${style.font_size}px`;
   if (style.font_weight !== undefined) inlineStyles['font-weight'] = style.font_weight;
-  if (style.line_height !== undefined) inlineStyles['line-height'] = style.line_height;
+  if (style.line_height !== undefined) inlineStyles['line-height'] = String(style.line_height);
   if (style.color !== undefined) inlineStyles['color'] = style.color;
   if (style.text_align !== undefined) inlineStyles['text-align'] = style.text_align;
   if (style.margin_top !== undefined) inlineStyles['margin-top'] = `${style.margin_top}px`;
