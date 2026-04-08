@@ -1,0 +1,51 @@
+---
+import Heading from '../components/blocks/Heading.astro';
+import Paragraph from '../components/blocks/Paragraph.astro';
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Typography Test</title>
+  </head>
+  <body class="max-w-4xl mx-auto p-8 bg-white">
+    <section class="space-y-8">
+      <div>
+        <Heading level={1} content="Heading 1" />
+        <Heading level={2} content="Heading 2" />
+        <Heading level={3} content="Heading 3" />
+        <Heading level={4} content="Heading 4" />
+        <Heading level={5} content="Heading 5" />
+        <Heading level={6} content="Heading 6" />
+      </div>
+
+      <hr class="border-gray-200" />
+
+      <div>
+        <Heading level="h2" content="Paragraph Section" />
+        <Paragraph content="This is a standard paragraph with default styles. It should be easy to read and have appropriate line height." />
+        <Paragraph
+          content="This paragraph has custom styles applied via props."
+          style={{ color: '#2563eb', font_weight: 'bold', font_style: 'italic' }}
+        />
+      </div>
+
+      <hr class="border-gray-200" />
+
+      <div>
+        <Heading level="h2" content="Advanced Styling" />
+        <Heading
+          level={3}
+          content="Heading with custom font size and margin"
+          style={{ font_size: 48, margin_top: 40, margin_bottom: 20, text_align: 'center' }}
+        />
+        <Paragraph
+          content="This paragraph is center-aligned and has a larger margin top."
+          style={{ text_align: 'center', margin_top: 24 }}
+        />
+      </div>
+    </section>
+  </body>
+</html>
