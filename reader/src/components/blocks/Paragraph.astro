@@ -1,0 +1,37 @@
+---
+interface Props {
+  content: string;
+  style?: {
+    font_size?: number;
+    font_weight?: string;
+    line_height?: number;
+    color?: string;
+    text_align?: string;
+    margin_top?: number;
+    margin_bottom?: number;
+    font_family?: string;
+    text_decoration?: string;
+    font_style?: string;
+  };
+}
+
+const { content, style } = Astro.props;
+
+const inlineStyles: Record<string, string> = {};
+if (style) {
+  if (style.font_size !== undefined) inlineStyles['font-size'] = `${style.font_size}px`;
+  if (style.font_weight !== undefined) inlineStyles['font-weight'] = style.font_weight;
+  if (style.line_height !== undefined) inlineStyles['line-height'] = String(style.line_height);
+  if (style.color !== undefined) inlineStyles['color'] = style.color;
+  if (style.text_align !== undefined) inlineStyles['text-align'] = style.text_align;
+  if (style.margin_top !== undefined) inlineStyles['margin-top'] = `${style.margin_top}px`;
+  if (style.margin_bottom !== undefined) inlineStyles['margin-bottom'] = `${style.margin_bottom}px`;
+  if (style.font_family !== undefined) inlineStyles['font-family'] = style.font_family;
+  if (style.text_decoration !== undefined) inlineStyles['text-decoration'] = style.text_decoration;
+  if (style.font_style !== undefined) inlineStyles['font-style'] = style.font_style;
+}
+---
+
+<p class="text-base leading-relaxed text-gray-700" style={inlineStyles}>
+  {content}
+</p>
