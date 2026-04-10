@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useStore } from '@nanostores/react';
 import { $isSidebarOpen, $currentPage } from '../stores/codexStore';
 import { X } from 'lucide-react';
@@ -20,9 +20,14 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ chapters }) => {
   const isOpen = useStore($isSidebarOpen);
   const currentPage = useStore($currentPage);
+  const isFirstRender = useRef(true);
 
-  // Close sidebar when page changes
+  // Close sidebar when page changes, but skip the first render
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     $isSidebarOpen.set(false);
   }, [currentPage]);
 
