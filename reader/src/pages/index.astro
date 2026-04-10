@@ -1,5 +1,14 @@
 ---
 import '../styles/global.css';
+import { SidebarToggle } from '../components/SidebarToggle';
+import { Sidebar } from '../components/Sidebar';
+
+const mockChapters = [
+  { title: 'Introduction', page: 1 },
+  { title: 'Chapter 1: Getting Started', page: 5 },
+  { title: 'Chapter 2: Advanced Topics', page: 12 },
+  { title: 'Conclusion', page: 20 },
+];
 ---
 
 <html lang="en">
@@ -9,9 +18,29 @@ import '../styles/global.css';
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Codex Reader</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen">
+		<header class="sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 h-16 flex items-center justify-between">
+			<div class="flex items-center gap-4">
+				<SidebarToggle client:load />
+				<h1 class="text-xl font-bold tracking-tight">Codex</h1>
+			</div>
+		</header>
+
+		<Sidebar client:load chapters={mockChapters} />
+
+		<main class="max-w-3xl mx-auto py-12 px-6">
+			<section class="space-y-6">
+				<h2 class="text-3xl font-extrabold tracking-tight lg:text-4xl">Sample Document</h2>
+				<p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+					This is a sample page to demonstrate the Sidebar and SidebarToggle islands.
+					Click the hamburger menu in the top-left to open the Table of Contents.
+				</p>
+				<div class="p-8 border-2 border-dashed border-gray-200 dark:border-gray-800 rounded-xl text-center">
+					<p class="text-gray-500 italic">Reading content area...</p>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>
