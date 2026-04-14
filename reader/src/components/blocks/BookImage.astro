@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: string | ImageMetadata;
+  alt: string;
+  aspectRatio?: number | string;
+  width?: number;
+  height?: number;
+  style?: {
+    margin_top?: number;
+    margin_bottom?: number;
+    text_align?: 'left' | 'center' | 'right';
+  };
+}
+
+const { src, alt, aspectRatio, width, height, style } = Astro.props;
+
+const containerStyle: Record<string, string> = {};
+if (style) {
+  if (style.margin_top !== undefined) containerStyle['margin-top'] = `${style.margin_top}px`;
+  if (style.margin_bottom !== undefined) containerStyle['margin-bottom'] = `${style.margin_bottom}px`;
+  if (style.text_align !== undefined) containerStyle['text-align'] = style.text_align;
+}
+
+const imageStyle: Record<string, string> = {};
+if (aspectRatio) {
+  imageStyle['aspect-ratio'] = String(aspectRatio);
+  imageStyle['object-fit'] = 'cover';
+}
+
+// Determine alignment classes
+let alignmentClass = "mx-auto"; // default
+if (style?.text_align === 'left') {
+  alignmentClass = "mr-auto ml-0";
+} else if (style?.text_align === 'right') {
+  alignmentClass = "ml-auto mr-0";
+}
+---
+
+<div class="w-full overflow-hidden" style={containerStyle}>
+  <Image
+    src={src}
+    alt={alt}
+    width={width || 1200}
+    height={height}
+    class={`rounded-lg shadow-sm block ${alignmentClass} bg-gray-100 dark:bg-gray-800 w-full h-auto`}
+    style={imageStyle}
+  />
+</div>
