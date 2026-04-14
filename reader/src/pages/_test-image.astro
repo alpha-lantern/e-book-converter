@@ -1,0 +1,66 @@
+---
+import BookImage from '../components/blocks/BookImage.astro';
+import testImage from '../assets/test.png';
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Image Component Test</title>
+  </head>
+  <body class="max-w-4xl mx-auto p-8 bg-white dark:bg-gray-950">
+    <section class="space-y-12">
+      <div>
+        <h1 class="text-3xl font-bold mb-4 dark:text-white">BookImage Component Test</h1>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Testing the optimized image component with various configurations.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">1. Default Image (Optimized)</h2>
+        <BookImage
+          src={testImage}
+          alt="A test placeholder image"
+        />
+        <p class="text-sm text-gray-500 mt-2">Should render at its natural size (up to 1200px) with default styling.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">2. Image with Aspect Ratio (16/9)</h2>
+        <div class="max-w-md border border-red-200">
+           <BookImage
+            src={testImage}
+            alt="Image with 16:9 aspect ratio"
+            aspectRatio="16/9"
+          />
+        </div>
+        <p class="text-sm text-gray-500 mt-2">Should maintain a 16:9 aspect ratio even if the container changes. Border shows container.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">3. Image with Aspect Ratio (1/1) and Custom Margins</h2>
+        <div class="max-w-xs border border-red-200">
+          <BookImage
+            src={testImage}
+            alt="Square image"
+            aspectRatio="1/1"
+            style={{ margin_top: 40, margin_bottom: 40, text_align: 'center' }}
+          />
+        </div>
+        <p class="text-sm text-gray-500 mt-2">Should be square and have 40px margins top and bottom.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">4. Image with Specific Width/Height</h2>
+        <BookImage
+          src={testImage}
+          alt="Small image"
+          width={200}
+          height={100}
+        />
+        <p class="text-sm text-gray-500 mt-2">Should be 200x100 (optimized by Astro).</p>
+      </div>
+    </section>
+  </body>
+</html>
