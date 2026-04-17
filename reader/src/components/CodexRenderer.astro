@@ -1,0 +1,60 @@
+---
+import Heading from './blocks/Heading.astro';
+import Paragraph from './blocks/Paragraph.astro';
+import BookImage from './blocks/BookImage.astro';
+import Widget from './blocks/Widget.tsx';
+import type { CodexBlock } from '../types/codex';
+
+interface Props {
+  blocks: CodexBlock[];
+}
+
+const { blocks } = Astro.props;
+---
+
+<div class="codex-content space-y-4">
+  {blocks.map((block) => {
+    switch (block.type) {
+      case 'h1':
+      case 'h2':
+      case 'h3':
+      case 'h4':
+      case 'h5':
+      case 'h6':
+        return (
+          <Heading
+            level={block.level || parseInt(block.type.substring(1)) as any}
+            content={block.content || ''}
+            style={block.style}
+          />
+        );
+      case 'p':
+        return (
+          <Paragraph
+            content={block.content || ''}
+            style={block.style}
+          />
+        );
+      case 'image':
+        return (
+          <BookImage
+            src={block.src || ''}
+            alt={block.alt || ''}
+            aspectRatio={block.aspect_ratio}
+            style={block.style as any}
+          />
+        );
+      case 'widget':
+        return (
+          <Widget
+            client:visible
+            type={block.properties?.widget_type || 'default'}
+            properties={block.properties}
+            style={block.style}
+          />
+        );
+      default:
+        return <div class="bg-red-50 text-red-500 p-4 rounded">Unknown block type: {block.type}</div>;
+    }
+  })}
+</div>
