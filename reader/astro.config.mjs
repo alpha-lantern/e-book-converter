@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     AstroPwa({
       registerType: 'autoUpdate',
-      injectRegister: 'script',
+      injectRegister: false, // Manually injected in Layout.astro
       manifest: {
         name: 'Project Codex Reader',
         short_name: 'Codex',
@@ -20,19 +20,24 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
+            src: 'icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'icons/icon-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
             src: 'favicon.svg',
             sizes: 'any',
             type: 'image/svg+xml',
           },
-          {
-            src: 'favicon.ico',
-            sizes: '32x32',
-            type: 'image/x-icon',
-          }
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{html,js,css,svg,png,ico,json}'],
+        globPatterns: ['**/*.{html,js,css,svg,png,ico}'],
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.pathname.endsWith('.json'),
