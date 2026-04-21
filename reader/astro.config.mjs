@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     AstroPwa({
       registerType: 'autoUpdate',
-      injectRegister: false, // Manually injected in Layout.astro
+      injectRegister: false, // Manually injected in Layout.astro to maintain control
       manifest: {
         name: 'Project Codex Reader',
         short_name: 'Codex',

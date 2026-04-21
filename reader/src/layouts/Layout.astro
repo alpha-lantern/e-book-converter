@@ -23,7 +23,6 @@ const { title, description, keywords } = Astro.props;
     {description && <meta name="description" content={description} />}
     {keywords && <meta name="keywords" content={keywords.join(', ')} />}
 
-    <link rel="manifest" href="/manifest.webmanifest" />
     <script is:inline>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
