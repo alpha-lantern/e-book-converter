@@ -1,16 +1,11 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import Heading from '../components/blocks/Heading.astro';
 import Paragraph from '../components/blocks/Paragraph.astro';
-import '../styles/global.css';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Typography Test</title>
-  </head>
-  <body class="max-w-4xl mx-auto p-8 bg-white">
+<Layout title="Typography Test">
+  <main class="max-w-4xl mx-auto p-8 bg-white dark:bg-gray-900">
     <section class="space-y-8">
       <div>
         <Heading level={1} content="Heading 1" />
@@ -21,7 +16,7 @@ import '../styles/global.css';
         <Heading level={6} content="Heading 6" />
       </div>
 
-      <hr class="border-gray-200" />
+      <hr class="border-gray-200 dark:border-gray-800" />
 
       <div>
         <Heading level="h2" content="Paragraph Section" />
@@ -32,7 +27,7 @@ import '../styles/global.css';
         />
       </div>
 
-      <hr class="border-gray-200" />
+      <hr class="border-gray-200 dark:border-gray-800" />
 
       <div>
         <Heading level="h2" content="Advanced Styling" />
@@ -47,5 +42,5 @@ import '../styles/global.css';
         />
       </div>
     </section>
-  </body>
-</html>
+  </main>
+</Layout>

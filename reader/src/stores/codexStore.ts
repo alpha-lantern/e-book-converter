@@ -48,3 +48,10 @@ export const $currentPage = atom<number>(1);
  * @see Issue #45 — Reader: Build Sidebar Island
  */
 export const $isSidebarOpen = atom<boolean>(false);
+
+// --- PWA ---
+
+/**
+ * PWA registration state.
+ */
+export const $pwaStatus = atom<'registered' | 'unregistered' | 'error'>('unregistered');
