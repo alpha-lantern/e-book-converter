@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 import { SidebarToggle } from '../components/SidebarToggle';
 import { Sidebar } from '../components/Sidebar';
 import { NavigationControls } from '../components/NavigationControls';
@@ -11,7 +11,7 @@ const { meta, blocks } = mockManifest;
 // SEO Metadata Extraction with Fallbacks
 const seoTitle = meta.seo?.title || meta.title;
 const seoDescription = meta.seo?.description || meta.description;
-const seoKeywords = meta.seo?.keywords?.join(', ');
+const seoKeywords = meta.seo?.keywords;
 
 const mockChapters = [
   { title: 'Introduction', page: 1 },
@@ -21,37 +21,23 @@ const mockChapters = [
 ];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+<Layout title={seoTitle} description={seoDescription} keywords={seoKeywords}>
+	<header class="sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 h-16 flex items-center justify-between">
+		<div class="flex items-center gap-4">
+			<SidebarToggle client:load />
+			<h1 class="text-xl font-bold tracking-tight hidden sm:block">Codex</h1>
+		</div>
 
-		<!-- SEO Injection -->
-		<title>{seoTitle}</title>
-		<meta name="description" content={seoDescription} />
-		{seoKeywords && <meta name="keywords" content={seoKeywords} />}
-	</head>
-	<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen">
-		<header class="sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 h-16 flex items-center justify-between">
-			<div class="flex items-center gap-4">
-				<SidebarToggle client:load />
-				<h1 class="text-xl font-bold tracking-tight hidden sm:block">Codex</h1>
-			</div>
+		<NavigationControls client:load totalPages={20} />
 
-			<NavigationControls client:load totalPages={20} />
+		<div class="w-10 sm:hidden"></div>
+	</header>
 
-			<div class="w-10 sm:hidden"></div>
-		</header>
+	<Sidebar client:load chapters={mockChapters} />
 
-		<Sidebar client:load chapters={mockChapters} />
-
-		<main class="max-w-3xl mx-auto py-12 px-6">
-			<section class="space-y-6">
-				<CodexRenderer blocks={blocks as any} />
-			</section>
-		</main>
-	</body>
-</html>
+	<main class="max-w-3xl mx-auto py-12 px-6">
+		<section class="space-y-6">
+			<CodexRenderer blocks={blocks as any} />
+		</section>
+	</main>
+</Layout>
