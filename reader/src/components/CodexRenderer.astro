@@ -23,7 +23,7 @@ const { blocks } = Astro.props;
       case 'h6':
         return (
           <Heading
-            level={block.level || parseInt(block.type.substring(1)) as any}
+            level={block.level || (parseInt(block.type[1]) as 1 | 2 | 3 | 4 | 5 | 6)}
             content={block.content || ''}
             style={block.style}
           />
@@ -41,14 +41,14 @@ const { blocks } = Astro.props;
             src={block.src || ''}
             alt={block.alt || ''}
             aspectRatio={block.aspect_ratio}
-            style={block.style as any}
+            style={block.style}
           />
         );
       case 'widget':
         return (
           <Widget
-            client:visible
-            type={block.properties?.widget_type || 'default'}
+            client:load
+            type={(block.properties?.widget_type as string) || 'default'}
             properties={block.properties}
             style={block.style}
           />

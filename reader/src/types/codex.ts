@@ -20,7 +20,7 @@ export interface CodexBlock {
   alt?: string;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   style?: CodexStyle;
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
   aspect_ratio?: number;
 }
 

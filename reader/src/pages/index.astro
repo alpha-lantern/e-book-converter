@@ -4,7 +4,7 @@ import { SidebarToggle } from '../components/SidebarToggle';
 import { Sidebar } from '../components/Sidebar';
 import { NavigationControls } from '../components/NavigationControls';
 import CodexRenderer from '../components/CodexRenderer.astro';
-import mockManifest from '../mock_manifest.json';
+import mockManifest from '../fixtures/mock_manifest.json';
 
 const { meta, blocks } = mockManifest;
 
@@ -50,7 +50,7 @@ const mockChapters = [
 
 		<main class="max-w-3xl mx-auto py-12 px-6">
 			<section class="space-y-6">
-				<CodexRenderer blocks={blocks} />
+				<CodexRenderer blocks={blocks as any} />
 			</section>
 		</main>
 	</body>

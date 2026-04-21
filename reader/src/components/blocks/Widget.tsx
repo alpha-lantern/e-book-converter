@@ -1,10 +1,11 @@
 import React from 'react';
 import { snakeToCamel } from '../../utils/styleUtils';
+import type { CodexStyle } from '../../types/codex';
 
 interface WidgetProps {
   type: string;
-  properties?: Record<string, any>;
-  style?: Record<string, any>;
+  properties?: Record<string, unknown>;
+  style?: CodexStyle;
 }
 
 const Widget: React.FC<WidgetProps> = ({ type, properties, style }) => {
