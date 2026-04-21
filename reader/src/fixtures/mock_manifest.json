@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "meta": {
+    "title": "The Art of Codex",
+    "author": "Jules",
+    "description": "A deep dive into the architecture of Project Codex.",
+    "base_size": 16.0,
+    "seo": {
+      "title": "SEO Optimized Art of Codex",
+      "description": "Learn all about Project Codex with this SEO-friendly guide.",
+      "keywords": ["codex", "astro", "renderer", "pwa"]
+    }
+  },
+  "blocks": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "type": "h1",
+      "content": "Welcome to Project Codex",
+      "style": {
+        "text_align": "center",
+        "margin_bottom": 40
+      },
+      "bbox": { "x0": 0, "y0": 0, "x1": 100, "y1": 20 }
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "type": "p",
+      "content": "This is a paragraph demonstrating the static rendering capabilities of the Astro renderer. Zero JS is shipped for this text.",
+      "style": {
+        "line_height": 1.6
+      },
+      "bbox": { "x0": 0, "y0": 25, "x1": 100, "y1": 40 }
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "type": "image",
+      "src": "https://picsum.photos/seed/codex/1200/800",
+      "alt": "Sample Codex Image",
+      "aspect_ratio": 1.5,
+      "style": {
+        "margin_top": 20,
+        "margin_bottom": 20
+      },
+      "bbox": { "x0": 0, "y0": 45, "x1": 100, "y1": 80 }
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "type": "h2",
+      "content": "Interactive Features",
+      "style": {
+        "margin_top": 30
+      },
+      "bbox": { "x0": 0, "y0": 85, "x1": 100, "y1": 95 }
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440004",
+      "type": "widget",
+      "content": "This is an interactive widget powered by React.",
+      "properties": {
+        "widget_type": "info_card"
+      },
+      "style": {
+        "margin_top": 10
+      },
+      "bbox": { "x0": 0, "y0": 100, "x1": 100, "y1": 120 }
+    }
+  ],
+  "assets": {}
+}

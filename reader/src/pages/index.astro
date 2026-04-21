@@ -3,7 +3,15 @@ import '../styles/global.css';
 import { SidebarToggle } from '../components/SidebarToggle';
 import { Sidebar } from '../components/Sidebar';
 import { NavigationControls } from '../components/NavigationControls';
-import { ReadingContent } from '../components/ReadingContent';
+import CodexRenderer from '../components/CodexRenderer.astro';
+import mockManifest from '../fixtures/mock_manifest.json';
+
+const { meta, blocks } = mockManifest;
+
+// SEO Metadata Extraction with Fallbacks
+const seoTitle = meta.seo?.title || meta.title;
+const seoDescription = meta.seo?.description || meta.description;
+const seoKeywords = meta.seo?.keywords?.join(', ');
 
 const mockChapters = [
   { title: 'Introduction', page: 1 },
@@ -20,7 +28,11 @@ const mockChapters = [
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Codex Reader</title>
+
+		<!-- SEO Injection -->
+		<title>{seoTitle}</title>
+		<meta name="description" content={seoDescription} />
+		{seoKeywords && <meta name="keywords" content={seoKeywords} />}
 	</head>
 	<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen">
 		<header class="sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 h-16 flex items-center justify-between">
@@ -38,7 +50,7 @@ const mockChapters = [
 
 		<main class="max-w-3xl mx-auto py-12 px-6">
 			<section class="space-y-6">
-				<ReadingContent client:load />
+				<CodexRenderer blocks={blocks as any} />
 			</section>
 		</main>
 	</body>
