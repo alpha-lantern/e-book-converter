@@ -6,6 +6,16 @@ import 'core/config.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Guard against missing configuration
+  assert(
+    AppConfig.supabaseUrl.isNotEmpty,
+    'SUPABASE_URL must be provided via --dart-define',
+  );
+  assert(
+    AppConfig.supabaseAnonKey.isNotEmpty,
+    'SUPABASE_ANON_KEY must be provided via --dart-define',
+  );
+
   await Supabase.initialize(
     url: AppConfig.supabaseUrl,
     anonKey: AppConfig.supabaseAnonKey,

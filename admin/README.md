@@ -1,17 +1,27 @@
-# admin
+# Project Codex Admin Dashboard
 
-A new Flutter project.
+The Admin Dashboard is a Flutter-based management interface for Project Codex, used to manage book conversion, editing, and interactive widget tagging.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project uses **Supabase** for authentication and data storage. Credentials must be provided at compile-time using `--dart-define`.
 
-A few resources to get you started if this is your first Flutter project:
+### Running the App
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+To run the application locally, use the following command:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter run -d chrome \
+  --dart-define=SUPABASE_URL=YOUR_SUPABASE_URL \
+  --dart-define=SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+```
+
+### Development
+
+This project uses `riverpod_generator` for state management and `build_runner` for code generation.
+
+To generate the necessary code, run:
+
+```bash
+dart run build_runner build --delete-conflicting-outputs
+```
