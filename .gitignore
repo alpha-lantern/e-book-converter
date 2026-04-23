@@ -154,7 +154,10 @@ dist/
 downloads/
 eggs/
 .eggs/
+# lib/ is often used for Python dependencies.
 lib/
+# Explicitly unignore Flutter's lib/ directory for the admin project.
+!admin/lib/
 lib64/
 parts/
 sdist/
