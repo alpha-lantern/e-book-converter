@@ -12,7 +12,8 @@ class BookCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: ListTile(
         title: Text(book.title),
-        subtitle: Text('Status: ${book.status.name}'),
+        subtitle: Text(
+            'Status: ${book.status.name[0].toUpperCase()}${book.status.name.substring(1)}'),
         trailing: _getStatusIcon(book.status),
       ),
     );

@@ -26,8 +26,8 @@ class BookListView extends ConsumerWidget {
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, stack) => Center(
-        child: Text('Error loading books: $error'),
+      error: (error, stack) => const Center(
+        child: Text('Failed to load books. Please try again later.'),
       ),
     );
   }

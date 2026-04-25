@@ -79,5 +79,5 @@ BookRepository bookRepository(BookRepositoryRef ref) {
 
 @riverpod
 Future<List<Book>> bookList(BookListRef ref) async {
-  return ref.watch(bookRepositoryProvider).getBooks();
+  return ref.read(bookRepositoryProvider).getBooks();
 }
