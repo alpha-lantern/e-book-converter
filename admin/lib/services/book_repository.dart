@@ -76,3 +76,8 @@ class BookRepository {
 BookRepository bookRepository(BookRepositoryRef ref) {
   return BookRepository(Supabase.instance.client);
 }
+
+@riverpod
+Future<List<Book>> bookList(BookListRef ref) async {
+  return ref.watch(bookRepositoryProvider).getBooks();
+}
