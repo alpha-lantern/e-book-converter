@@ -30,14 +30,18 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     try {
       await ref.read(authRepositoryProvider).signIn(
             _emailController.text.trim(),
-            _passwordController.text.trim(),
+            _passwordController.text,
           );
-      // Success is handled by auth state changes in main.dart or similar,
-      // but for now we just show a message if needed or the user will be redirected.
+      if (mounted) {
+        Navigator.of(context).pushReplacementNamed('/dashboard');
+      }
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Login failed: ${e.toString()}')),
+          const SnackBar(
+            content: Text(
+                'Login failed. Please check your credentials and try again.'),
+          ),
         );
       }
     } finally {
@@ -79,6 +83,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your email';
                       }
+                      if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+                        return 'Please enter a valid email address';
+                      }
                       return null;
                     },
                   ),
@@ -94,6 +101,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your password';
                       }
+                      if (value.length < 6) {
+                        return 'Password must be at least 6 characters';
+                      }
                       return null;
                     },
                   ),
@@ -104,7 +114,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       padding: const EdgeInsets.symmetric(vertical: 16),
                     ),
                     child: _isLoading
-                        ? const CircularProgressIndicator()
+                        ? const SizedBox(
+                            height: 20,
+                            width: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
                         : const Text('Login'),
                   ),
                 ],
