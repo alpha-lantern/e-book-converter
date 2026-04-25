@@ -1,3 +1,5 @@
+enum BookStatus { processing, completed, failed }
+
 class Book {
   final String id;
   final String ownerId;
@@ -5,7 +7,7 @@ class Book {
   final String slug;
   final String? description;
   final String? originalPdfUrl;
-  final String status; // 'processing', 'completed', 'failed'
+  final BookStatus status;
   final bool isPublished;
   final String? author;
   final String? seoTitle;
@@ -39,7 +41,10 @@ class Book {
       slug: json['slug'] as String,
       description: json['description'] as String?,
       originalPdfUrl: json['original_pdf_url'] as String?,
-      status: json['status'] as String,
+      status: BookStatus.values.firstWhere(
+        (e) => e.name == json['status'],
+        orElse: () => BookStatus.processing,
+      ),
       isPublished: json['is_published'] as bool? ?? false,
       author: json['author'] as String?,
       seoTitle: json['seo_title'] as String?,
@@ -58,7 +63,7 @@ class Book {
       'slug': slug,
       'description': description,
       'original_pdf_url': originalPdfUrl,
-      'status': status,
+      'status': status.name,
       'is_published': isPublished,
       'author': author,
       'seo_title': seoTitle,
@@ -76,7 +81,7 @@ class Book {
     String? slug,
     String? description,
     String? originalPdfUrl,
-    String? status,
+    BookStatus? status,
     bool? isPublished,
     String? author,
     String? seoTitle,
@@ -102,4 +107,18 @@ class Book {
       updatedAt: updatedAt ?? this.updatedAt,
     );
   }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Book &&
+          runtimeType == other.runtimeType &&
+          id == other.id &&
+          updatedAt == other.updatedAt;
+
+  @override
+  int get hashCode => id.hashCode ^ updatedAt.hashCode;
+
+  @override
+  String toString() => 'Book(id: $id, title: $title, status: $status)';
 }

@@ -11,9 +11,13 @@ class BookRepository {
   BookRepository(this._supabase);
 
   Future<List<Book>> getBooks() async {
+    final user = _supabase.auth.currentUser;
+    if (user == null) throw Exception('User not authenticated');
+
     final response = await _supabase
         .from('books')
         .select()
+        .eq('owner_id', user.id)
         .order('created_at', ascending: false);
 
     return (response as List).map((json) => Book.fromJson(json)).toList();
@@ -25,36 +29,46 @@ class BookRepository {
     final user = _supabase.auth.currentUser;
     if (user == null) throw Exception('User not authenticated');
 
+    final baseName = fileName.contains('.')
+        ? fileName.substring(0, fileName.lastIndexOf('.'))
+        : fileName;
+
     final storagePath = '${user.id}/$fileName';
 
-    // 1. Upload PDF to storage
-    await _supabase.storage.from('raw_pdfs').upload(
-          storagePath,
-          file,
-          fileOptions: const FileOptions(cacheControl: '3600', upsert: false),
-        );
+    // 1. Upload PDF to storage with error handling
+    try {
+      await _supabase.storage.from('raw_pdfs').upload(
+            storagePath,
+            file,
+            fileOptions: const FileOptions(cacheControl: '3600', upsert: false),
+          );
+    } catch (e) {
+      throw Exception('Failed to upload PDF to storage: $e');
+    }
 
     final publicUrl = _supabase.storage.from('raw_pdfs').getPublicUrl(storagePath);
 
     // 2. Create database record
     final response = await _supabase.from('books').insert({
       'owner_id': user.id,
-      'title': fileName.replaceAll('.pdf', ''),
-      'slug': '${fileName.replaceAll('.pdf', '').toLowerCase()}-${DateTime.now().millisecondsSinceEpoch}',
+      'title': baseName,
+      'slug': '${baseName.toLowerCase().replaceAll(' ', '-')}-${DateTime.now().millisecondsSinceEpoch}',
       'original_pdf_url': publicUrl,
-      'status': 'processing',
+      'status': BookStatus.processing.name,
     }).select().single();
 
     return Book.fromJson(response);
   }
 
-  Future<void> updateBookMetadata(Book book) async {
-    await _supabase.from('books').update({
+  Future<Book> updateBookMetadata(Book book) async {
+    final response = await _supabase.from('books').update({
       'author': book.author,
       'seo_title': book.seoTitle,
       'seo_description': book.seoDescription,
       'seo_tags': book.seoTags,
-    }).eq('id', book.id);
+    }).eq('id', book.id).select().single();
+
+    return Book.fromJson(response);
   }
 }
 
