@@ -2,7 +2,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 class FileUploadZone extends StatefulWidget {
-  final Function(PlatformFile?) onFileSelected;
+  final void Function(PlatformFile?) onFileSelected;
 
   const FileUploadZone({super.key, required this.onFileSelected});
 
@@ -12,18 +12,26 @@ class FileUploadZone extends StatefulWidget {
 
 class _FileUploadZoneState extends State<FileUploadZone> {
   PlatformFile? _selectedFile;
+  bool _isLoading = false;
 
   Future<void> _pickFile() async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: ['pdf'],
-    );
+    setState(() => _isLoading = true);
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['pdf'],
+      );
 
-    if (result != null) {
-      setState(() {
-        _selectedFile = result.files.first;
-      });
-      widget.onFileSelected(_selectedFile);
+      if (result != null) {
+        setState(() {
+          _selectedFile = result.files.first;
+        });
+        widget.onFileSelected(_selectedFile);
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
     }
   }
 
@@ -35,6 +43,8 @@ class _FileUploadZoneState extends State<FileUploadZone> {
   }
 
   String _formatSize(int bytes) {
+    if (bytes < 1024) return '$bytes B';
+    if (bytes < 1024 * 1024) return '${(bytes / 1024).toStringAsFixed(1)} KB';
     return '${(bytes / (1024 * 1024)).toStringAsFixed(2)} MB';
   }
 
@@ -60,8 +70,14 @@ class _FileUploadZoneState extends State<FileUploadZone> {
             ),
             const SizedBox(height: 16),
             ElevatedButton.icon(
-              onPressed: _pickFile,
-              icon: const Icon(Icons.add),
+              onPressed: _isLoading ? null : _pickFile,
+              icon: _isLoading
+                  ? const SizedBox(
+                      width: 16,
+                      height: 16,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
+                  : const Icon(Icons.add),
               label: const Text('Pick File'),
             ),
           ] else ...[

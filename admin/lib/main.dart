@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -62,7 +63,7 @@ class DashboardScreen extends StatelessWidget {
         children: [
           FileUploadZone(
             onFileSelected: (file) {
-              if (file != null) {
+              if (kDebugMode && file != null) {
                 debugPrint('Selected file: ${file.path}');
               }
             },
