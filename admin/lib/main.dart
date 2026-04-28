@@ -1,9 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/config.dart';
 import 'screens/login_screen.dart';
 import 'widgets/book_list_view.dart';
+import 'widgets/file_upload_zone.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -57,7 +59,20 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Dashboard')),
-      body: const BookListView(),
+      body: Column(
+        children: [
+          FileUploadZone(
+            onFileSelected: (file) {
+              if (kDebugMode && file != null) {
+                debugPrint('Selected file: ${file.path}');
+              }
+            },
+          ),
+          const Expanded(
+            child: BookListView(),
+          ),
+        ],
+      ),
     );
   }
 }
