@@ -17,8 +17,8 @@ class _EditorScreenState extends State<EditorScreen> {
     super.initState();
     _controller = MultiSplitViewController(
       areas: [
-        Area(flex: 0.4),
         Area(flex: 0.6),
+        Area(flex: 0.4),
       ],
     );
   }
@@ -60,7 +60,7 @@ class _EditorScreenState extends State<EditorScreen> {
 
   Widget _buildMainContent() {
     return const Center(
-      child: Text('Main Editor Content (40%)'),
+      child: Text('Main Editor Content (60%)'),
     );
   }
 
