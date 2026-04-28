@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/config.dart';
+import 'screens/editor_screen.dart';
 import 'screens/login_screen.dart';
 import 'widgets/book_list_view.dart';
 import 'widgets/file_upload_zone.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoginScreen(),
         '/dashboard': (context) => const DashboardScreen(),
+        '/editor': (context) => const EditorScreen(),
       },
     );
   }

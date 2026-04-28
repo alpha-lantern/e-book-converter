@@ -15,6 +15,13 @@ class BookCard extends StatelessWidget {
         subtitle: Text(
             'Status: ${book.status.name[0].toUpperCase()}${book.status.name.substring(1)}'),
         trailing: _getStatusIcon(book.status),
+        onTap: () {
+          Navigator.pushNamed(
+            context,
+            '/editor',
+            arguments: book,
+          );
+        },
       ),
     );
   }
