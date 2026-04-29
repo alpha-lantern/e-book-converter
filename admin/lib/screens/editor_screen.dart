@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:multi_split_view/multi_split_view.dart';
 import '../models/book.dart';
+import '../widgets/pdf_panel.dart';
 
 class EditorScreen extends StatefulWidget {
   const EditorScreen({super.key});
@@ -48,7 +49,7 @@ class _EditorScreenState extends State<EditorScreen> {
           controller: _controller,
           builder: (context, area) {
             if (area.index == 0) {
-              return _buildMainContent();
+              return _buildMainContent(book);
             } else {
               return _buildSettingsSidebar();
             }
@@ -58,10 +59,8 @@ class _EditorScreenState extends State<EditorScreen> {
     );
   }
 
-  Widget _buildMainContent() {
-    return const Center(
-      child: Text('Main Editor Content (60%)'),
-    );
+  Widget _buildMainContent(Book? book) {
+    return PdfPanel(pdfUrl: book?.originalPdfUrl);
   }
 
   Widget _buildSettingsSidebar() {
