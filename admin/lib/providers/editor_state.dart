@@ -31,7 +31,7 @@ class EditorState {
           selectedBlockId == other.selectedBlockId;
 
   @override
-  int get hashCode => currentPage.hashCode ^ selectedBlockId.hashCode;
+  int get hashCode => Object.hash(currentPage, selectedBlockId);
 }
 
 @riverpod
