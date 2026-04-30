@@ -1,0 +1,33 @@
+name: Parser Workflow
+
+on:
+  repository_dispatch:
+    types: [parse-pdf]
+
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: 'engine/requirements.txt'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r engine/requirements.txt
+          pip install engine/
+
+      - name: Run parser
+        run: |
+          echo "Received repository dispatch for PDF parsing."
+          echo "Payload: ${{ toJson(github.event.client_payload) }}"
+          # The actual parser execution logic will be added here
