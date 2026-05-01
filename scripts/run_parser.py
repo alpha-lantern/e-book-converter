@@ -2,7 +2,6 @@ import os
 import sys
 import tempfile
 import traceback
-from typing import Optional
 import requests
 import typer
 from supabase import create_client, Client
@@ -60,7 +59,11 @@ def main(
 
         # Pass 1: BaseSize
         stream = stream_text_with_metadata(temp_path)
-        first_chunk = next(stream)
+        try:
+            first_chunk = next(stream)
+        except StopIteration:
+            typer.echo("Error: PDF stream is empty or could not be read.", err=True)
+            raise typer.Exit(code=1)
         doc_meta = first_chunk["data"]
 
         span_generator = (chunk["data"] for chunk in stream if chunk["type"] == "span")
@@ -70,7 +73,11 @@ def main(
         blocks = []
         current_page_spans = []
         stream = stream_text_with_metadata(temp_path)
-        next(stream) # Skip metadata
+        try:
+            next(stream) # Skip metadata
+        except StopIteration:
+            typer.echo("Error: PDF stream is empty on second pass.", err=True)
+            raise typer.Exit(code=1)
 
         for chunk in stream:
             if chunk["type"] == "span":
