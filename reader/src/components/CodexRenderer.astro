@@ -3,6 +3,7 @@ import Heading from './blocks/Heading.astro';
 import Paragraph from './blocks/Paragraph.astro';
 import BookImage from './blocks/BookImage.astro';
 import Widget from './blocks/Widget.tsx';
+import YouTubeEmbed from './widgets/YouTubeEmbed.tsx';
 import type { CodexBlock } from '../types/codex';
 
 interface Props {
@@ -45,10 +46,23 @@ const { blocks } = Astro.props;
           />
         );
       case 'widget':
+        const widgetType = (block.properties?.widget_type as string) || 'default';
+
+        if (widgetType === 'youtube') {
+          return (
+            <YouTubeEmbed
+              client:visible
+              videoId={(block.properties?.video_id as string) || ''}
+              title={(block.properties?.title as string) || block.content}
+              style={block.style}
+            />
+          );
+        }
+
         return (
           <Widget
             client:load
-            type={(block.properties?.widget_type as string) || 'default'}
+            type={widgetType}
             properties={block.properties}
             style={block.style}
           />
