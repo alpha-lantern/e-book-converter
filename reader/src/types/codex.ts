@@ -34,7 +34,7 @@ export interface CodexSEO {
 
 export interface CodexMeta {
   title: string;
-  description: string;
+  description?: string;
   author?: string;
   date?: string;
   seo?: CodexSEO;

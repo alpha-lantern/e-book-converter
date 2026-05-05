@@ -35,19 +35,27 @@ if (style?.text_align === 'left') {
   alignmentClass = "ml-auto mr-0";
 }
 
-// Handle image source typing for Astro's Image component
-// If src is a string, it must be an external URL or a public path.
-// If it's ImageMetadata, it's a statically imported local image.
-const imageSrc = src as any;
+const commonClass = `rounded-lg shadow-sm block ${alignmentClass} bg-gray-100 dark:bg-gray-800 w-full h-auto`;
 ---
 
 <div class="w-full overflow-hidden" style={containerStyle}>
-  <Image
-    src={imageSrc}
-    alt={alt}
-    width={width || 1200}
-    height={height || 800}
-    class={`rounded-lg shadow-sm block ${alignmentClass} bg-gray-100 dark:bg-gray-800 w-full h-auto`}
-    style={imageStyle}
-  />
+  {typeof src === 'string' ? (
+    <img
+      src={src}
+      alt={alt}
+      width={width || 1200}
+      height={height || 800}
+      class={commonClass}
+      style={imageStyle}
+    />
+  ) : (
+    <Image
+      src={src}
+      alt={alt}
+      width={width || 1200}
+      height={height || 800}
+      class={commonClass}
+      style={imageStyle}
+    />
+  )}
 </div>

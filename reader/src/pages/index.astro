@@ -8,9 +8,10 @@ import mockManifest from '../fixtures/mock_manifest.json';
 import { loadManifest } from '../utils/manifestLoader';
 
 // Load the manifest using the loader utility.
-// In a real production scenario, the source could be an external URL
-// from Astro.props, an environment variable, or a dynamic API endpoint.
-const manifest = await loadManifest(mockManifest);
+// It prioritizes a public environment variable if provided,
+// falling back to the local mock manifest in development.
+const manifestUrl = import.meta.env.PUBLIC_MANIFEST_URL;
+const manifest = await loadManifest(manifestUrl || mockManifest);
 const { meta, blocks } = manifest;
 
 // SEO Metadata Extraction with Fallbacks

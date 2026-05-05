@@ -23,8 +23,8 @@ export function validateManifest(data: any): asserts data is CodexManifest {
     throw new Error('Manifest meta must have a string title');
   }
 
-  if (typeof data.meta.description !== 'string') {
-    throw new Error('Manifest meta must have a string description');
+  if (data.meta.description !== undefined && typeof data.meta.description !== 'string') {
+    throw new Error('Manifest meta description must be a string if provided');
   }
 
   if (!Array.isArray(data.blocks)) {
