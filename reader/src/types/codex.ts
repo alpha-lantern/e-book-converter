@@ -1,3 +1,5 @@
+import type { ImageMetadata } from 'astro';
+
 export interface CodexStyle {
   font_size?: number;
   font_weight?: string;
@@ -16,7 +18,7 @@ export type CodexBlockType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'im
 export interface CodexBlock {
   type: CodexBlockType;
   content?: string;
-  src?: string;
+  src?: string | ImageMetadata;
   alt?: string;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   style?: CodexStyle;

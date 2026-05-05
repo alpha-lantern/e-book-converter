@@ -5,8 +5,13 @@ import { Sidebar } from '../components/Sidebar';
 import { NavigationControls } from '../components/NavigationControls';
 import CodexRenderer from '../components/CodexRenderer.astro';
 import mockManifest from '../fixtures/mock_manifest.json';
+import { loadManifest } from '../utils/manifestLoader';
 
-const { meta, blocks } = mockManifest;
+// Load the manifest using the loader utility.
+// In a real production scenario, the source could be an external URL
+// from Astro.props, an environment variable, or a dynamic API endpoint.
+const manifest = await loadManifest(mockManifest);
+const { meta, blocks } = manifest;
 
 // SEO Metadata Extraction with Fallbacks
 const seoTitle = meta.seo?.title || meta.title;
@@ -37,7 +42,7 @@ const mockChapters = [
 
 	<main class="max-w-3xl mx-auto py-12 px-6">
 		<section class="space-y-6">
-			<CodexRenderer blocks={blocks as any} />
+			<CodexRenderer blocks={blocks} />
 		</section>
 	</main>
 </Layout>

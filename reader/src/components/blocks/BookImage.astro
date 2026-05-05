@@ -1,5 +1,7 @@
 ---
 import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import type { CodexStyle } from '../../types/codex';
 
 interface Props {
   src: string | ImageMetadata;
@@ -7,11 +9,7 @@ interface Props {
   aspectRatio?: number | string;
   width?: number;
   height?: number;
-  style?: {
-    margin_top?: number;
-    margin_bottom?: number;
-    text_align?: 'left' | 'center' | 'right';
-  };
+  style?: CodexStyle;
 }
 
 const { src, alt, aspectRatio, width, height, style } = Astro.props;
@@ -36,11 +34,16 @@ if (style?.text_align === 'left') {
 } else if (style?.text_align === 'right') {
   alignmentClass = "ml-auto mr-0";
 }
+
+// Handle image source typing for Astro's Image component
+// If src is a string, it must be an external URL or a public path.
+// If it's ImageMetadata, it's a statically imported local image.
+const imageSrc = src as any;
 ---
 
 <div class="w-full overflow-hidden" style={containerStyle}>
   <Image
-    src={src}
+    src={imageSrc}
     alt={alt}
     width={width || 1200}
     height={height || 800}
