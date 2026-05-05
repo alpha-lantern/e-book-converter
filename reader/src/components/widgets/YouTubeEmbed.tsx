@@ -9,12 +9,12 @@ interface YouTubeEmbedProps {
   style?: CodexStyle;
 }
 
-const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, title = 'YouTube Video', style }) => {
+const YouTubeEmbed = ({ videoId, title = 'YouTube Video', style }: YouTubeEmbedProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const camelStyle = snakeToCamel(style);
 
   const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
   if (isLoaded) {
     return (
@@ -51,6 +51,9 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, title = 'YouTube V
       <img
         src={thumbnailUrl}
         alt={title}
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`;
+        }}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         loading="lazy"
       />

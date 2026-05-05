@@ -49,10 +49,13 @@ const { blocks } = Astro.props;
         const widgetType = (block.properties?.widget_type as string) || 'default';
 
         if (widgetType === 'youtube') {
+          const videoId = block.properties?.video_id as string | undefined;
+          if (!videoId) return null;
+
           return (
             <YouTubeEmbed
               client:visible
-              videoId={(block.properties?.video_id as string) || ''}
+              videoId={videoId}
               title={(block.properties?.title as string) || block.content}
               style={block.style}
             />
