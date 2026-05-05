@@ -63,6 +63,20 @@
         "margin_top": 10
       },
       "bbox": { "x0": 0, "y0": 100, "x1": 100, "y1": 120 }
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440005",
+      "type": "widget",
+      "properties": {
+        "widget_type": "youtube",
+        "video_id": "dQw4w9WgXcQ",
+        "title": "Never Gonna Give You Up"
+      },
+      "style": {
+        "margin_top": 20,
+        "margin_bottom": 20
+      },
+      "bbox": { "x0": 0, "y0": 125, "x1": 100, "y1": 150 }
     }
   ],
   "assets": {}
