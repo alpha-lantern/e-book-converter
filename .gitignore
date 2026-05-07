@@ -194,4 +194,4 @@ dmypy.json
 
 # Generated test artifacts
 scripts/*.pdf
-test.pdf
+test.pdfbook_export.zip
