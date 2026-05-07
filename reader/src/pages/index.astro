@@ -5,8 +5,14 @@ import { Sidebar } from '../components/Sidebar';
 import { NavigationControls } from '../components/NavigationControls';
 import CodexRenderer from '../components/CodexRenderer.astro';
 import mockManifest from '../fixtures/mock_manifest.json';
+import { loadManifest } from '../utils/manifestLoader';
 
-const { meta, blocks } = mockManifest;
+// Load the manifest using the loader utility.
+// It prioritizes a public environment variable if provided,
+// falling back to the local mock manifest in development.
+const manifestUrl = import.meta.env.PUBLIC_MANIFEST_URL;
+const manifest = await loadManifest(manifestUrl || mockManifest);
+const { meta, blocks } = manifest;
 
 // SEO Metadata Extraction with Fallbacks
 const seoTitle = meta.seo?.title || meta.title;
@@ -37,7 +43,7 @@ const mockChapters = [
 
 	<main class="max-w-3xl mx-auto py-12 px-6">
 		<section class="space-y-6">
-			<CodexRenderer blocks={blocks as any} />
+			<CodexRenderer blocks={blocks} />
 		</section>
 	</main>
 </Layout>

@@ -1,19 +1,10 @@
 ---
+import type { CodexStyle } from '../../types/codex';
+
 interface Props {
   level: 1 | 2 | 3 | 4 | 5 | 6 | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   content: string;
-  style?: {
-    font_size?: number;
-    font_weight?: string;
-    line_height?: number;
-    color?: string;
-    text_align?: string;
-    margin_top?: number;
-    margin_bottom?: number;
-    font_family?: string;
-    text_decoration?: string;
-    font_style?: string;
-  };
+  style?: CodexStyle;
 }
 
 const { level, content, style } = Astro.props;

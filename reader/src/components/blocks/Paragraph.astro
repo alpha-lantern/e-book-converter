@@ -1,18 +1,9 @@
 ---
+import type { CodexStyle } from '../../types/codex';
+
 interface Props {
   content: string;
-  style?: {
-    font_size?: number;
-    font_weight?: string;
-    line_height?: number;
-    color?: string;
-    text_align?: string;
-    margin_top?: number;
-    margin_bottom?: number;
-    font_family?: string;
-    text_decoration?: string;
-    font_style?: string;
-  };
+  style?: CodexStyle;
 }
 
 const { content, style } = Astro.props;
