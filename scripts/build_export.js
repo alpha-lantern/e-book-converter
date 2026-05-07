@@ -42,7 +42,7 @@ function run() {
     console.log(`Artifacts available in: ${distDir}`);
   } catch (error) {
     console.error('--- Build Export Failed ---');
-    console.error(error.message);
+    console.error(error);
     process.exit(1);
   }
 }
