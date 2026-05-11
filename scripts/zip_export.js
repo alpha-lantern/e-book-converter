@@ -63,7 +63,7 @@ function run() {
     console.log(`Archive created at: ${zipFilePath}`);
   } catch (error) {
     console.error('--- Zip Export Failed ---');
-    console.error(error.message);
+    console.error(error);
     process.exit(1);
   }
 }
