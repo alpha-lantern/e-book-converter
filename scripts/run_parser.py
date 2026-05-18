@@ -28,11 +28,11 @@ def main(
     Backend Parser Entry Point.
     Downloads PDF, extracts semantic blocks, and updates Supabase.
     """
-    supabase_url = os.environ.get("SUPABASE_URL")
+    supabase_url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL")
     supabase_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
 
     if not supabase_url or not supabase_key:
-        typer.echo("Error: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set.", err=True)
+        typer.echo("Error: NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set.", err=True)
         raise typer.Exit(code=1)
 
     supabase: Client = create_client(supabase_url, supabase_key)
