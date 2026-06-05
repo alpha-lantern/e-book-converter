@@ -16,8 +16,10 @@ export interface CodexStyle {
 export type CodexBlockType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'image' | 'widget';
 
 export interface CodexBlock {
+  id: string;
   type: CodexBlockType;
   content?: string;
+  page: number;
   src?: string | ImageMetadata;
   alt?: string;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -32,11 +34,17 @@ export interface CodexSEO {
   keywords?: string[];
 }
 
+export interface CodexChapter {
+  title: string;
+  page: number;
+}
+
 export interface CodexMeta {
   title: string;
   description?: string;
   author?: string;
   date?: string;
+  chapters: CodexChapter[];
   seo?: CodexSEO;
 }
 

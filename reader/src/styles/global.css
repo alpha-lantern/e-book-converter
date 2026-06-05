@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg-main: var(--color-gray-50);
+  --color-text-main: var(--color-gray-900);
+  --color-text-muted: var(--color-gray-600);
+  --color-border-main: var(--color-gray-200);
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+.dark {
+  --color-bg-main: var(--color-gray-950);
+  --color-text-main: var(--color-gray-100);
+  --color-text-muted: var(--color-gray-400);
+  --color-border-main: var(--color-gray-800);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-main text-text-main antialiased transition-colors duration-200;
+  }
+}

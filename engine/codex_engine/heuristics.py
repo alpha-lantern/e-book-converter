@@ -2,7 +2,7 @@ from collections import Counter
 from typing import Iterable, Any
 from .models import CodexBlock, CodexBlockType, CodexBBox, CodexStyle
 
-def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
+def classify_block(line: list[dict[str, Any]], base_size: float, page_number: int = 1) -> CodexBlock:
     """
     Classifies a line of spans into a CodexBlock (H1, H2, or P) based on font size.
 
@@ -10,9 +10,10 @@ def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
         line: A list of span dictionaries. Expected schema:
               {"text": str, "size": float, "bbox": [x0, y0, x1, y1]}
         base_size: The document's base font size (rounded to 1 decimal place).
+        page_number: The physical page number in the PDF.
 
     Returns:
-        A CodexBlock object with assigned semantic type.
+        A CodexBlock object with assigned semantic type and page reference.
     """
     if not line:
         raise ValueError("Cannot classify an empty line.")
@@ -37,9 +38,10 @@ def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
     bbox = CodexBBox(x0=x0, y0=y0, x1=x1, y1=y1)
 
     # Assign semantic type based on size thresholds
-    if max_size > 2.0 * base_size:
+    # Calibrated for Major Third scale (1.25x)
+    if max_size >= 1.4 * base_size:
         block_type = CodexBlockType.H1
-    elif max_size > 1.5 * base_size:
+    elif max_size >= 1.1 * base_size:
         block_type = CodexBlockType.H2
     else:
         block_type = CodexBlockType.P
@@ -48,8 +50,9 @@ def classify_block(line: list[dict[str, Any]], base_size: float) -> CodexBlock:
     return CodexBlock(
         type=block_type,
         content=content,
-        bbox=bbox,
-        style=CodexStyle(font_size=max_size)
+        page=page_number,
+        style=CodexStyle(font_size=max_size),
+        bbox=bbox
     )
 
 def cluster_spans_by_y(spans: list[dict[str, Any]], tolerance: float = 2.0) -> list[list[dict[str, Any]]]:
@@ -74,10 +77,9 @@ def cluster_spans_by_y(spans: list[dict[str, Any]], tolerance: float = 2.0) -> l
     if not spans:
         return []
 
-    # Sort spans by y0 (top coordinate)
-    # This also serves as initial validation: each span must have bbox[1]
+    # Sort spans primarily by page, then by y0 (top coordinate)
     try:
-        sorted_spans = sorted(spans, key=lambda s: s["bbox"][1])
+        sorted_spans = sorted(spans, key=lambda s: (s.get("page", 0), s["bbox"][1]))
     except (KeyError, IndexError) as e:
         raise type(e)(f"Malformed span: {e}") from e
 
@@ -89,7 +91,9 @@ def cluster_spans_by_y(spans: list[dict[str, Any]], tolerance: float = 2.0) -> l
         # Sliding reference: compare to the last span added to the cluster
         last_span = current_cluster[-1]
 
-        if abs(span["bbox"][1] - last_span["bbox"][1]) <= tolerance:
+        # Spans must be on the same page AND within vertical tolerance to cluster
+        if (span.get("page") == last_span.get("page") and 
+            abs(span["bbox"][1] - last_span["bbox"][1]) <= tolerance):
             current_cluster.append(span)
         else:
             # Sort the completed cluster by x0

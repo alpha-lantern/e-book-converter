@@ -3,47 +3,40 @@ import Layout from '../layouts/Layout.astro';
 import { SidebarToggle } from '../components/SidebarToggle';
 import { Sidebar } from '../components/Sidebar';
 import { NavigationControls } from '../components/NavigationControls';
-import CodexRenderer from '../components/CodexRenderer.astro';
+import ReadingView from '../components/ReadingView';
 import mockManifest from '../fixtures/mock_manifest.json';
 import { loadManifest } from '../utils/manifestLoader';
 
 // Load the manifest using the loader utility.
-// It prioritizes a public environment variable if provided,
-// falling back to the local mock manifest in development.
 const manifestUrl = import.meta.env.PUBLIC_MANIFEST_URL;
 const manifest = await loadManifest(manifestUrl || mockManifest);
 const { meta, blocks } = manifest;
 
-// SEO Metadata Extraction with Fallbacks
+// SEO Metadata Extraction
 const seoTitle = meta.seo?.title || meta.title;
 const seoDescription = meta.seo?.description || meta.description;
 const seoKeywords = meta.seo?.keywords;
 
-const mockChapters = [
-  { title: 'Introduction', page: 1 },
-  { title: 'Chapter 1: Getting Started', page: 5 },
-  { title: 'Chapter 2: Advanced Topics', page: 12 },
-  { title: 'Conclusion', page: 20 },
-];
+const chapters = meta.chapters || [];
+// Logical Paging: Total sections equals number of chapters
+const totalPages = chapters.length || 1;
 ---
 
 <Layout title={seoTitle} description={seoDescription} keywords={seoKeywords}>
-	<header class="sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 h-16 flex items-center justify-between">
+	<header class="sticky top-0 z-30 bg-bg-main/80 backdrop-blur-md border-b border-border-main px-4 h-16 flex items-center justify-between">
 		<div class="flex items-center gap-4">
 			<SidebarToggle client:load />
 			<h1 class="text-xl font-bold tracking-tight hidden sm:block">Codex</h1>
 		</div>
 
-		<NavigationControls client:load totalPages={20} />
+		<NavigationControls client:load totalPages={totalPages} />
 
 		<div class="w-10 sm:hidden"></div>
 	</header>
 
-	<Sidebar client:load chapters={mockChapters} />
+	<Sidebar client:load chapters={chapters} />
 
 	<main class="max-w-3xl mx-auto py-12 px-6">
-		<section class="space-y-6">
-			<CodexRenderer blocks={blocks} />
-		</section>
+		<ReadingView client:load blocks={blocks} chapters={chapters} />
 	</main>
 </Layout>

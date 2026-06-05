@@ -63,14 +63,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ chapters }) => {
               <li key={index}>
                 <button
                   onClick={() => {
-                    $currentPage.set(chapter.page);
+                    $currentPage.set(index + 1);
                   }}
                   className={`w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors flex justify-between items-center ${
-                    currentPage === chapter.page ? 'font-bold bg-gray-50 dark:bg-gray-800 text-blue-600 dark:text-blue-400' : ''
+                    currentPage === index + 1 ? 'font-bold bg-gray-50 dark:bg-gray-800 text-blue-600 dark:text-blue-400' : ''
                   }`}
                 >
                   <span className="truncate mr-2">{chapter.title}</span>
-                  <span className="text-gray-500 text-xs flex-shrink-0">p. {chapter.page}</span>
+                  <span className="text-gray-500 text-xs flex-shrink-0 italic">p. {chapter.page}</span>
                 </button>
               </li>
             ))}

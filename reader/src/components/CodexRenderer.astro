@@ -11,67 +11,104 @@ interface Props {
 }
 
 const { blocks } = Astro.props;
+
+// Group blocks by page
+const pages = blocks.reduce((acc, block) => {
+  const page = block.page || 1;
+  if (!acc[page]) acc[page] = [];
+  acc[page].push(block);
+  return acc;
+}, {} as Record<number, CodexBlock[]>);
+
+const pageNumbers = Object.keys(pages).map(Number).sort((a, b) => a - b);
 ---
 
-<div class="codex-content space-y-4">
-  {blocks.map((block) => {
-    switch (block.type) {
-      case 'h1':
-      case 'h2':
-      case 'h3':
-      case 'h4':
-      case 'h5':
-      case 'h6':
-        return (
-          <Heading
-            level={block.level || (parseInt(block.type[1]) as 1 | 2 | 3 | 4 | 5 | 6)}
-            content={block.content || ''}
-            style={block.style}
-          />
-        );
-      case 'p':
-        return (
-          <Paragraph
-            content={block.content || ''}
-            style={block.style}
-          />
-        );
-      case 'image':
-        return (
-          <BookImage
-            src={block.src || ''}
-            alt={block.alt || ''}
-            aspectRatio={block.aspect_ratio}
-            style={block.style}
-          />
-        );
-      case 'widget':
-        const widgetType = (block.properties?.widget_type as string) || 'default';
+<div class="codex-reader-container relative min-h-[60vh]">
+  {pageNumbers.map((pageNumber) => (
+    <div 
+      class="codex-page-view hidden space-y-6 animate-in fade-in duration-300" 
+      data-page={pageNumber}
+    >
+      {pages[pageNumber].map((block) => {
+        switch (block.type) {
+          case 'h1':
+          case 'h2':
+          case 'h3':
+          case 'h4':
+          case 'h5':
+          case 'h6':
+            return (
+              <Heading
+                level={block.level || (parseInt(block.type[1]) as 1 | 2 | 3 | 4 | 5 | 6)}
+                content={block.content || ''}
+                style={block.style}
+              />
+            );
+          case 'p':
+            return (
+              <Paragraph
+                content={block.content || ''}
+                style={block.style}
+              />
+            );
+          case 'image':
+            return (
+              <BookImage
+                src={block.src || ''}
+                alt={block.alt || ''}
+                aspectRatio={block.aspect_ratio}
+                style={block.style}
+              />
+            );
+          case 'widget':
+            const widgetType = (block.properties?.widget_type as string) || 'default';
 
-        if (widgetType === 'youtube') {
-          const videoId = block.properties?.video_id as string | undefined;
-          if (!videoId) return null;
+            if (widgetType === 'youtube') {
+              const videoId = block.properties?.video_id as string | undefined;
+              if (!videoId) return null;
 
-          return (
-            <YouTubeEmbed
-              client:visible
-              videoId={videoId}
-              title={(block.properties?.title as string) || block.content}
-              style={block.style}
-            />
-          );
+              return (
+                <YouTubeEmbed
+                  client:visible
+                  videoId={videoId}
+                  title={(block.properties?.title as string) || block.content}
+                  style={block.style}
+                />
+              );
+            }
+
+            return (
+              <Widget
+                client:load
+                type={widgetType}
+                properties={block.properties}
+                style={block.style}
+              />
+            );
+          default:
+            return <div class="bg-red-50 text-red-500 p-4 rounded">Unknown block type: {block.type}</div>;
         }
-
-        return (
-          <Widget
-            client:load
-            type={widgetType}
-            properties={block.properties}
-            style={block.style}
-          />
-        );
-      default:
-        return <div class="bg-red-50 text-red-500 p-4 rounded">Unknown block type: {block.type}</div>;
-    }
-  })}
+      })}
+    </div>
+  ))}
 </div>
+
+<script>
+  import { $currentPage } from '../stores/codexStore';
+
+  // Synchronize visibility with the global page store
+  const pages = document.querySelectorAll('.codex-page-view');
+  
+  $currentPage.subscribe((page) => {
+    pages.forEach((el) => {
+      const pageNum = parseInt(el.getAttribute('data-page') || '0');
+      if (pageNum === page) {
+        el.classList.remove('hidden');
+        // Scroll to top of content on page change
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  });
+</script>

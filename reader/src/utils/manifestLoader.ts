@@ -23,8 +23,12 @@ export function validateManifest(data: any): asserts data is CodexManifest {
     throw new Error('Manifest meta must have a string title');
   }
 
-  if (data.meta.description !== undefined && typeof data.meta.description !== 'string') {
+  if (data.meta.description !== undefined && data.meta.description !== null && typeof data.meta.description !== 'string') {
     throw new Error('Manifest meta description must be a string if provided');
+  }
+
+  if (!Array.isArray(data.meta.chapters)) {
+    throw new Error('Manifest meta chapters must be an array');
   }
 
   if (!Array.isArray(data.blocks)) {
@@ -35,6 +39,9 @@ export function validateManifest(data: any): asserts data is CodexManifest {
     const block = data.blocks[i];
     if (!block || typeof block !== 'object') {
       throw new Error(`Block at index ${i} must be an object`);
+    }
+    if (typeof block.page !== 'number') {
+      throw new Error(`Block at index ${i} must have a page number`);
     }
     if (!VALID_BLOCK_TYPES.includes(block.type)) {
       throw new Error(`Invalid block type at index ${i}: ${block.type}`);

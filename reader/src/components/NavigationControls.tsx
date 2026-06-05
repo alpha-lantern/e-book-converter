@@ -39,10 +39,10 @@ export const NavigationControls: React.FC<NavigationControlsProps> = ({ totalPag
       </button>
 
       <div className="text-xs sm:text-sm font-medium min-w-[4rem] sm:min-w-[5rem] text-center">
-        <span className="hidden sm:inline">Page </span>
-        <span className="text-blue-600 dark:text-blue-400">{currentPage}</span>
-        <span className="mx-1">/</span>
-        <span>{totalPages}</span>
+        <span className="hidden sm:inline text-text-muted">Section </span>
+        <span className="text-blue-600 dark:text-blue-400 font-bold">{currentPage}</span>
+        <span className="mx-1 text-text-muted">/</span>
+        <span className="text-text-muted">{totalPages}</span>
       </div>
 
       <button

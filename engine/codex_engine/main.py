@@ -6,7 +6,7 @@ from rich.console import Console
 
 from .extractor import stream_text_with_metadata
 from .heuristics import calculate_base_size, cluster_spans_by_y, classify_block
-from .models import CodexManifest, CodexMeta, CodexSEO
+from .models import CodexManifest, CodexMeta, CodexSEO, CodexChapter, CodexBlockType
 
 app = typer.Typer(help="Project Codex: PDF to JSON Semantic Parser")
 console = Console()
@@ -27,10 +27,6 @@ def parse(
     console.print(f"[blue]Processing:[/blue] {pdf_path.name}")
 
     # 1. First pass: Calculate Base Size for the document
-    # We consume the generator to collect all spans for base_size calculation
-    # and subsequent clustering. 
-    # NOTE: For extremely large documents, we might want to do this per-page,
-    # but base_size is usually document-wide for consistency.
     all_spans = []
     metadata = {"title": "", "author": ""}
     
@@ -51,16 +47,22 @@ def parse(
 
     # 2. Second pass: Cluster spans and classify blocks
     blocks = []
+    chapters = []
     with console.status("[bold green]Classifying semantic blocks..."):
-        # We cluster all spans together for simplicity in MVP, 
-        # though clustering per page is more robust for complex layouts.
         lines = cluster_spans_by_y(all_spans)
         for line in lines:
             try:
-                block = classify_block(line, base_size)
+                # Every span in the line should have the same page number
+                # thanks to our update to cluster_spans_by_y
+                page_number = line[0].get("page", 1) + 1 # fitz uses 0-based indexing
+                
+                block = classify_block(line, base_size, page_number=page_number)
                 blocks.append(block)
+
+                # Automatic TOC detection: Detect chapters from H1 and H2 blocks
+                if block.type in [CodexBlockType.H1, CodexBlockType.H2]:
+                    chapters.append(CodexChapter(title=block.content, page=block.page))
             except ValueError as e:
-                # Skip empty lines or malformed content
                 continue
 
     # 3. Assemble the Manifest
@@ -69,6 +71,7 @@ def parse(
             title=metadata.get("title") or pdf_path.stem.replace("_", " ").title(),
             author=metadata.get("author") or "Unknown Author",
             base_size=base_size,
+            chapters=chapters,
             seo=CodexSEO(
                 title=metadata.get("title"),
                 description=f"Digitized version of {pdf_path.name}"

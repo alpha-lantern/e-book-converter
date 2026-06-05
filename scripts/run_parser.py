@@ -71,6 +71,7 @@ def main(
 
         # Pass 2: Blocks
         blocks = []
+        chapters = []
         current_page_spans = []
         stream = stream_text_with_metadata(temp_path)
         try:
@@ -84,15 +85,26 @@ def main(
                 current_page_spans.append(chunk["data"])
             elif chunk["type"] == "page_break":
                 if current_page_spans:
+                    # fitz uses 0-based indexing for page number in chunk["data"]["page"]
+                    page_num = chunk["data"]["page"] + 1
                     page_lines = cluster_spans_by_y(current_page_spans)
                     for line in page_lines:
-                        blocks.append(classify_block(line, base_size))
+                        block = classify_block(line, base_size, page_number=page_num)
+                        blocks.append(block)
+                        # TOC Detection: Include H1 and H2
+                        if block.type in ["h1", "h2"]:
+                            chapters.append({"title": block.content, "page": block.page})
                     current_page_spans = []
 
         if current_page_spans:
+            # Handle last page
+            page_num = blocks[-1].page if blocks else 1
             page_lines = cluster_spans_by_y(current_page_spans)
             for line in page_lines:
-                blocks.append(classify_block(line, base_size))
+                block = classify_block(line, base_size, page_number=page_num)
+                blocks.append(block)
+                if block.type in ["h1", "h2"]:
+                    chapters.append({"title": block.content, "page": block.page})
 
         # 4. Construct Manifest
         manifest = CodexManifest(
@@ -100,10 +112,45 @@ def main(
                 title=doc_meta.get("title") or "Untitled",
                 author=doc_meta.get("author") or "Unknown",
                 base_size=base_size,
+                chapters=chapters,
                 seo=CodexSEO(title=doc_meta.get("title"))
             ),
             blocks=blocks
         )
+
+        # 5. Upsert Manifest and Update Status
+        typer.echo("Saving manifest to database...")
+        manifest_dict = manifest.model_dump(mode="json")
+
+        supabase.table("codex_manifests").upsert({
+            "book_id": book_id,
+            "manifest_data": manifest_dict,
+            "parser_version": "0.1.0"
+        }).execute()
+
+        supabase.table("books").update({
+            "status": "completed"
+        }).eq("id", book_id).execute()
+
+        typer.echo("Parsing completed successfully.")
+
+    except Exception as e:
+        error_msg = f"Error during parsing: {e}\n{traceback.format_exc()}"
+        typer.echo(error_msg, err=True)
+        try:
+            supabase.table("books").update({
+                "status": "failed",
+                "error_log": error_msg
+            }).eq("id", book_id).execute()
+        except Exception as db_e:
+            typer.echo(f"Failed to log error to database: {db_e}", err=True)
+        raise typer.Exit(code=1)
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+
+if __name__ == "__main__":
+    app()
 
         # 5. Upsert Manifest and Update Status
         typer.echo("Saving manifest to database...")

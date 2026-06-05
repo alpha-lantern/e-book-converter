@@ -53,7 +53,7 @@ def stream_text_with_metadata(pdf_path: str) -> Generator[Dict[str, Any], None, 
             for span in _extract_spans_from_page(page):
                 yield {
                     "type": "span",
-                    "data": span
+                    "data": {**span, "page": page.number}
                 }
             yield {
                 "type": "page_break",

@@ -39,6 +39,7 @@ class CodexBlock(BaseModel):
     id: UUID = Field(default_factory=uuid4)
     type: CodexBlockType
     content: str
+    page: int = 1
     style: CodexStyle = Field(default_factory=CodexStyle)
     bbox: CodexBBox
 
@@ -52,17 +53,25 @@ class CodexSEO(BaseModel):
     og_image: Optional[str] = None
 
 
+class CodexChapter(BaseModel):
+    """Represents a chapter in the table of contents."""
+    title: str
+    page: int
+
+
 class CodexMeta(BaseModel):
     """Metadata for a codex document."""
     title: str
     author: str
     description: Optional[str] = None
     base_size: float
+    chapters: list[CodexChapter] = Field(default_factory=list)
     seo: CodexSEO = Field(default_factory=CodexSEO)
 
 
 class CodexManifest(BaseModel):
     """The root container for a codex document."""
+    version: str = Field(default_factory=lambda: __import__("codex_engine").__version__)
     meta: CodexMeta
     blocks: list[CodexBlock] = Field(default_factory=list)
     assets: dict = Field(default_factory=dict)
