@@ -14,7 +14,8 @@ def _transform_span(span: Dict[str, Any]) -> Dict[str, Any]:
         "font": span["font"],
         "size": span["size"],
         "bbox": list(span["bbox"]),  # Final boundary cast for JSON compatibility
-        "color": span["color"]
+        "color": span["color"],
+        "flags": span["flags"]
     }
 
 def _extract_spans_from_page(page: fitz.Page) -> Generator[Dict[str, Any], None, None]:

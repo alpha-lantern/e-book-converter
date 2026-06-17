@@ -61,7 +61,9 @@ def parse(
 
                 # Automatic TOC detection: Detect chapters from H1 and H2 blocks
                 if block.type in [CodexBlockType.H1, CodexBlockType.H2]:
-                    chapters.append(CodexChapter(title=block.content, page=block.page))
+                    import re
+                    clean_title = re.sub(r'\*+', '', block.content).strip()
+                    chapters.append(CodexChapter(title=clean_title, page=block.page))
             except ValueError as e:
                 continue
 

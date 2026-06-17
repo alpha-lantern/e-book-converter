@@ -8,6 +8,16 @@ interface ReadingViewProps {
   chapters: CodexChapter[];
 }
 
+const parseMarkdown = (text: string | undefined) => {
+  if (!text) return { __html: '' };
+  
+  let html = text.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  
+  return { __html: html };
+};
+
 /**
  * ReadingView Component
  * Implements "Logical Sectioning" by grouping blocks into unified chapters.
@@ -57,24 +67,28 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ blocks, chapters }) =>
         {activeBlocks.map((block) => (
           <div key={block.id} className="block-content">
              {block.type === 'h1' && (
-               <h1 className="text-4xl font-bold tracking-tight text-text-main leading-tight">
-                 {block.content}
-               </h1>
+               <h1 
+                 className="text-4xl font-bold tracking-tight text-text-main leading-tight"
+                 dangerouslySetInnerHTML={parseMarkdown(block.content)}
+               />
              )}
              {block.type === 'h2' && (
-               <h2 className="text-2xl font-bold tracking-tight text-text-main border-b border-border-main pb-2">
-                 {block.content}
-               </h2>
+               <h2 
+                 className="text-2xl font-bold tracking-tight text-text-main border-b border-border-main pb-2"
+                 dangerouslySetInnerHTML={parseMarkdown(block.content)}
+               />
              )}
              {(block.type === 'h3' || block.type === 'h4' || block.type === 'h5' || block.type === 'h6') && (
-               <h3 className="text-xl font-semibold text-text-main">
-                 {block.content}
-               </h3>
+               <h3 
+                 className="text-xl font-semibold text-text-main"
+                 dangerouslySetInnerHTML={parseMarkdown(block.content)}
+               />
              )}
              {block.type === 'p' && (
-               <p className="text-lg leading-relaxed text-text-muted whitespace-pre-wrap">
-                 {block.content}
-               </p>
+               <p 
+                 className="text-lg leading-relaxed text-text-muted whitespace-pre-wrap"
+                 dangerouslySetInnerHTML={parseMarkdown(block.content)}
+               />
              )}
              {block.type === 'image' && (
                <figure className="my-8">

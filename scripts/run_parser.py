@@ -93,7 +93,9 @@ def main(
                         blocks.append(block)
                         # TOC Detection: Include H1 and H2
                         if block.type in ["h1", "h2"]:
-                            chapters.append({"title": block.content, "page": block.page})
+                            import re
+                            clean_title = re.sub(r'\*+', '', block.content).strip()
+                            chapters.append({"title": clean_title, "page": block.page})
                     current_page_spans = []
 
         if current_page_spans:
@@ -104,7 +106,9 @@ def main(
                 block = classify_block(line, base_size, page_number=page_num)
                 blocks.append(block)
                 if block.type in ["h1", "h2"]:
-                    chapters.append({"title": block.content, "page": block.page})
+                    import re
+                    clean_title = re.sub(r'\*+', '', block.content).strip()
+                    chapters.append({"title": clean_title, "page": block.page})
 
         # 4. Construct Manifest
         manifest = CodexManifest(

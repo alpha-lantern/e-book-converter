@@ -2,6 +2,42 @@ from collections import Counter
 from typing import Iterable, Any
 from .models import CodexBlock, CodexBlockType, CodexBBox, CodexStyle
 
+def _format_span_text(span: dict[str, Any]) -> str:
+    """Wraps text in markdown based on PyMuPDF font flags and font names."""
+    text = span["text"]
+    flags = span.get("flags", 0)
+    
+    is_italic = bool(flags & 2)
+    is_bold = bool(flags & 16)
+    
+    # Fallback to font name heuristics
+    font_name = span.get("font", "").lower()
+    if not is_bold and any(w in font_name for w in ["bold", "black", "heavy"]):
+        is_bold = True
+    if not is_italic and any(w in font_name for w in ["italic", "oblique"]):
+        is_italic = True
+        
+    if not text.strip():
+        return text
+        
+    # Preserve leading/trailing spaces when wrapping
+    l_space = len(text) - len(text.lstrip())
+    r_space = len(text) - len(text.rstrip())
+    
+    stripped = text.strip()
+    
+    if is_bold and is_italic:
+        wrapped = f"***{stripped}***"
+    elif is_bold:
+        wrapped = f"**{stripped}**"
+    elif is_italic:
+        wrapped = f"*{stripped}*"
+    else:
+        wrapped = stripped
+        
+    return (" " * l_space) + wrapped + (" " * r_space)
+
+
 def classify_block(line: list[dict[str, Any]], base_size: float, page_number: int = 1) -> CodexBlock:
     """
     Classifies a line of spans into a CodexBlock (H1, H2, or P) based on font size.
@@ -27,8 +63,8 @@ def classify_block(line: list[dict[str, Any]], base_size: float, page_number: in
     # Determine the maximum font size in the line to represent the block's style
     max_size = round(max(float(span["size"]) for span in line), 1)
 
-    # Concatenate text from all spans. Use empty join to preserve PDF-native spacing.
-    content = "".join(span["text"] for span in line)
+    # Concatenate text from all spans, preserving formatting through markdown.
+    content = "".join(_format_span_text(span) for span in line)
 
     # Calculate the union bounding box
     x0 = min(span["bbox"][0] for span in line)
