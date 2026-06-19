@@ -12,35 +12,64 @@ class LoginScreen extends ConsumerStatefulWidget {
 class _LoginScreenState extends ConsumerState<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
+  final _fullNameController = TextEditingController();
+  final _orgNameController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
   bool _isLoading = false;
+  bool _isSignUpMode = false;
 
   @override
   void dispose() {
     _emailController.dispose();
+    _fullNameController.dispose();
+    _orgNameController.dispose();
     _passwordController.dispose();
+    _confirmPasswordController.dispose();
     super.dispose();
   }
 
-  Future<void> _login() async {
+  Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
 
     setState(() => _isLoading = true);
 
     try {
-      await ref.read(authRepositoryProvider).signIn(
-            _emailController.text.trim(),
-            _passwordController.text,
+      if (_isSignUpMode) {
+        await ref.read(authRepositoryProvider).signUp(
+              email: _emailController.text.trim(),
+              password: _passwordController.text,
+              fullName: _fullNameController.text.trim().isNotEmpty
+                  ? _fullNameController.text.trim()
+                  : null,
+              organizationName: _orgNameController.text.trim().isNotEmpty
+                  ? _orgNameController.text.trim()
+                  : null,
+            );
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Registration successful! Logging you in...'),
+            ),
           );
+        }
+      } else {
+        await ref.read(authRepositoryProvider).signIn(
+              _emailController.text.trim(),
+              _passwordController.text,
+            );
+      }
       if (mounted) {
         Navigator.of(context).pushReplacementNamed('/dashboard');
       }
     } catch (e) {
       if (mounted) {
+        final message = _isSignUpMode
+            ? 'Registration failed. Please try again.'
+            : 'Login failed. Please check your credentials and try again.';
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text(
-                'Login failed. Please check your credentials and try again.'),
+          SnackBar(
+            content: Text(message),
           ),
         );
       }
@@ -54,7 +83,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+      appBar: AppBar(title: Text(_isSignUpMode ? 'Sign Up' : 'Login')),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24.0),
@@ -66,9 +95,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const Text(
-                    'Welcome to Codex Admin',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  Text(
+                    _isSignUpMode ? 'Create Account' : 'Welcome to Codex Admin',
+                    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 32),
@@ -89,6 +118,26 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       return null;
                     },
                   ),
+                  if (_isSignUpMode) ...[
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: _fullNameController,
+                      decoration: const InputDecoration(
+                        labelText: 'Full Name',
+                        border: OutlineInputBorder(),
+                      ),
+                      textCapitalization: TextCapitalization.words,
+                    ),
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: _orgNameController,
+                      decoration: const InputDecoration(
+                        labelText: 'Organization Name',
+                        border: OutlineInputBorder(),
+                      ),
+                      textCapitalization: TextCapitalization.words,
+                    ),
+                  ],
                   const SizedBox(height: 16),
                   TextFormField(
                     controller: _passwordController,
@@ -101,15 +150,36 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your password';
                       }
+                      // TODO: [Security] Implement robust password strength estimation and validation based on PRD section 5.
                       if (value.length < 6) {
                         return 'Password must be at least 6 characters';
                       }
                       return null;
                     },
                   ),
+                  if (_isSignUpMode) ...[
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: _confirmPasswordController,
+                      decoration: const InputDecoration(
+                        labelText: 'Confirm Password',
+                        border: OutlineInputBorder(),
+                      ),
+                      obscureText: true,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please confirm your password';
+                        }
+                        if (value != _passwordController.text) {
+                          return 'Passwords do not match';
+                        }
+                        return null;
+                      },
+                    ),
+                  ],
                   const SizedBox(height: 24),
                   ElevatedButton(
-                    onPressed: _isLoading ? null : _login,
+                    onPressed: _isLoading ? null : _submit,
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 16),
                     ),
@@ -119,7 +189,26 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             width: 20,
                             child: CircularProgressIndicator(strokeWidth: 2),
                           )
-                        : const Text('Login'),
+                        : Text(_isSignUpMode ? 'Register' : 'Login'),
+                  ),
+                  const SizedBox(height: 16),
+                  TextButton(
+                    onPressed: _isLoading
+                        ? null
+                        : () {
+                            setState(() {
+                              _isSignUpMode = !_isSignUpMode;
+                              _formKey.currentState?.reset();
+                              _fullNameController.clear();
+                              _orgNameController.clear();
+                              _confirmPasswordController.clear();
+                            });
+                          },
+                    child: Text(
+                      _isSignUpMode
+                          ? 'Already have an account? Log In'
+                          : "Don't have an account? Sign Up",
+                    ),
                   ),
                 ],
               ),

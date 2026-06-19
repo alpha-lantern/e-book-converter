@@ -23,6 +23,24 @@ class AuthRepository {
 
   /// Stream of authentication state changes.
   Stream<AuthState> get authStateChanges => _supabase.auth.onAuthStateChange;
+
+  /// Registers a new user with email, password, and additional profile metadata.
+  Future<AuthResponse> signUp({
+    required String email,
+    required String password,
+    String? fullName,
+    String? organizationName,
+  }) async {
+    // TODO: [Security] Enable email confirmation requirement (OTP flow) in Supabase configuration for production based on PRD section 5.
+    return await _supabase.auth.signUp(
+      email: email,
+      password: password,
+      data: {
+        if (fullName != null) 'full_name': fullName,
+        if (organizationName != null) 'organization_name': organizationName,
+      },
+    );
+  }
 }
 
 @riverpod

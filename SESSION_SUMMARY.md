@@ -1,3 +1,33 @@
+# Session Summary - June 19, 2026
+
+## Work Completed
+
+### 1. Diagnostics of the Local Runner and Replicating White Screen Issue
+- **Debug Overhead Diagnosis**: Identified that the initial white screen reported by the user on startup is due to the Dart Development Compiler (DDC) in debug mode (`flutter run`) loading **1,187 script files** sequentially, causing long delays.
+- **Release Mode Verification**: Confirmed that running in release mode (`--release`) compiles the application into a single bundled JS file, loading the login interface instantly (within 2 seconds).
+- **Test suite validation**: Verified the health of the existing code by running `flutter test` (all tests passed).
+
+### 2. Database Migration for Automatic Profiles
+- **Profile Trigger Migration**: Created a new database migration [20260619131058_profile_signup_trigger.sql](file:///home/raywick/devprojects/public/e-book-converter/supabase/migrations/20260619131058_profile_signup_trigger.sql) which sets up a trigger function on `auth.users` to automatically populate corresponding profiles in the `public.profiles` table upon user registration. This ensures foreign key constraints are not violated on the `books` table.
+- **Migration Deployment**: Applied the SQL migration to the local active Supabase PostgreSQL database container.
+
+### 3. Flutter Admin Dashboard Sign-Up Feature
+- **AuthRepository Update**: Implemented a `signUp` method in [auth_repository.dart](file:///home/raywick/devprojects/public/e-book-converter/admin/lib/services/auth_repository.dart) to interface with Supabase Auth registration and pass optional profile metadata (`full_name` and `organization_name`).
+- **UI Screen Refactoring**: Updated [login_screen.dart](file:///home/raywick/devprojects/public/e-book-converter/admin/lib/screens/login_screen.dart) to support toggleable Login and Sign-Up modes. Added "Full Name", "Organization Name", and "Confirm Password" text inputs with matching validation when in Sign-Up mode, along with form cleanup on mode toggle.
+- **Widget Testing Coverage**: Added a new widget test in [widget_test.dart](file:///home/raywick/devprojects/public/e-book-converter/admin/test/widget_test.dart) covering toggle interactions, ensuring form fields update correctly and are scrolled into view using `tester.ensureVisible`. Verified that all widget and provider tests pass successfully.
+- **Browser Verification**: Spawned a browser subagent to interact with the dashboard, verifying that toggling to the sign-up view works correctly on the compiled release build.
+- **Security TODOs**: Placed TODO comments tracking the implementation of password strength validation and email OTP confirmation flows in [login_screen.dart](file:///home/raywick/devprojects/public/e-book-converter/admin/lib/screens/login_screen.dart) and [auth_repository.dart](file:///home/raywick/devprojects/public/e-book-converter/admin/lib/services/auth_repository.dart) to ensure security hardening before production release.
+
+## Current Status
+- **Registration Pipeline**: Fully functional locally, auto-creating database profiles and allowing new users to login and interact.
+- **Code Health**: The codebase compiles cleanly, and all tests are passing.
+
+## Next Steps
+1. **Sync Database Migrations**: Deploy the new trigger migration to the production Supabase cloud instance.
+2. **Dashboard UI Refinement**: Integrate authentication checks into other dashboard sub-screens as project scope expands.
+
+---
+
 # Session Summary - February 24, 2026
 
 ## Work Completed

@@ -1,7 +1,7 @@
-docs: document pdf extraction and indexing optimizations
+feat: implement toggleable sign-up flow & auto-profile DB trigger
 
-Update documentation and performance tracking to reflect the latest engineering improvements in PDF processing and database search.
+Add user registration capability to the admin dashboard UI and database layers using Supabase.
 
-- What: Updated database schema, technical specifications, setup guides, and performance roadmaps.
-- How: Added sections for the generator-based extraction pipeline, detailed the jsonb_path_ops GIN index usage, and updated the project file structure.
-- Why: To maintain synchronization between the codebase and its technical documentation, providing a clear reference for the newly implemented high-performance layers.
+- What: Refactored the login screen to support toggleable Login/Sign-Up modes, implemented a PostgreSQL trigger for automatic profile generation, added widget test coverage, and placed TODO comments for production security hardening.
+- How: Added a trigger function on auth.users in a new migration, added `signUp` method to `AuthRepository`, added new validated form fields to `LoginScreen`, updated `widget_test.dart` with toggle behavior validation, and injected security TODO comments in input validators and registration endpoints.
+- Why: To enable administrators to self-register locally with secure database consistency (satisfying foreign key constraints on owner_id), verify layout interactions, and track production security requirements.

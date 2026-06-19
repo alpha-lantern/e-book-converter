@@ -7,31 +7,31 @@
         "base_size": 11.0,
         "chapters": [
             {
-                "title": "EBOOK B\u00c1SICOS - VERSI\u00d3N EDITORIAL CON TONO ",
+                "title": "EBOOK B\u00c1SICOS - VERSI\u00d3N EDITORIAL CON TONO",
                 "page": 1
             },
             {
-                "title": "DE AUTORA ",
+                "title": "DE AUTORA",
                 "page": 1
             },
             {
-                "title": "\ud83c\udf3f Introducci\u00f3n general ",
+                "title": "\ud83c\udf3f Introducci\u00f3n general",
                 "page": 1
             },
             {
-                "title": "\ud83e\udd5b LECHES VEGETALES ",
+                "title": "\ud83e\udd5b LECHES VEGETALES",
                 "page": 1
             },
             {
-                "title": "\ud83e\uddc0 QUESOS, CREMAS Y MANTEQUILLAS ",
+                "title": "\ud83e\uddc0 QUESOS, CREMAS Y MANTEQUILLAS",
                 "page": 2
             },
             {
-                "title": "\ud83c\udf45 SALSAS VARIAS ",
+                "title": "\ud83c\udf45 SALSAS VARIAS",
                 "page": 4
             },
             {
-                "title": "\ud83e\udd5a REEMPLAZOS DE HUEVO ",
+                "title": "\ud83e\udd5a REEMPLAZOS DE HUEVO",
                 "page": 7
             }
         ],
@@ -45,9 +45,9 @@
     },
     "blocks": [
         {
-            "id": "c81127d9-8fe1-4db4-962c-db720ac92bea",
+            "id": "2d3679d6-a014-4d78-af30-84039c969761",
             "type": "h1",
-            "content": "EBOOK B\u00c1SICOS - VERSI\u00d3N EDITORIAL CON TONO ",
+            "content": "**EBOOK B\u00c1SICOS - VERSI\u00d3N EDITORIAL CON TONO** ",
             "page": 1,
             "style": {
                 "font_size": 17.0,
@@ -69,9 +69,9 @@
             }
         },
         {
-            "id": "1db2673f-08dd-4223-8424-66615014418a",
+            "id": "e07230fb-b331-4ae2-82e7-cc763c366e01",
             "type": "h1",
-            "content": "DE AUTORA ",
+            "content": "**DE AUTORA** ",
             "page": 1,
             "style": {
                 "font_size": 17.0,
@@ -93,9 +93,9 @@
             }
         },
         {
-            "id": "b59a2f45-b4fb-4e1d-b29c-e6969e3f8f62",
+            "id": "ce8a0728-b4c0-44b3-bba2-b183b4e3b3c4",
             "type": "h2",
-            "content": "\ud83c\udf3f Introducci\u00f3n general ",
+            "content": "\ud83c\udf3f **Introducci\u00f3n general** ",
             "page": 1,
             "style": {
                 "font_size": 13.0,
@@ -117,7 +117,7 @@
             }
         },
         {
-            "id": "6199a927-9fc3-4de2-9d69-65b9ef937dad",
+            "id": "29e53bd6-74ba-4468-a712-3da794e12ba4",
             "type": "p",
             "content": "Cuando decid\u00ed reunir estas recetas b\u00e1sicas en un solo lugar, mi intenci\u00f3n fue compartir lo ",
             "page": 1,
@@ -141,7 +141,7 @@
             }
         },
         {
-            "id": "df16fd8f-9060-4e16-af31-26a14b66701b",
+            "id": "8a80f5d6-4464-4bd6-a25d-d5f8877d9655",
             "type": "p",
             "content": "que he aprendido en mi cocina: que la comida vegetal puede ser deliciosa, sencilla y ",
             "page": 1,
@@ -165,7 +165,7 @@
             }
         },
         {
-            "id": "2e344e9b-9e70-4549-b031-053d95ddfae1",
+            "id": "54741494-16b9-4eac-8c84-7fa28aca186c",
             "type": "p",
             "content": "profundamente reconfortante. Estas preparaciones son la base de muchas de mis recetas: ",
             "page": 1,
@@ -189,7 +189,7 @@
             }
         },
         {
-            "id": "1d6fa295-9f41-406b-90e9-e97885097be7",
+            "id": "037e1b5a-b891-4e7c-b563-3076ef8f1947",
             "type": "p",
             "content": "desde las leches y cremas hasta los reemplazos de huevo. Cada una tiene su historia, su ",
             "page": 1,
@@ -213,7 +213,7 @@
             }
         },
         {
-            "id": "b6f34795-55c9-4ad2-a38b-97fb18210661",
+            "id": "03544681-a3a3-4581-8680-b5c309276dfa",
             "type": "p",
             "content": "truco y su toque casero. ",
             "page": 1,
@@ -237,7 +237,7 @@
             }
         },
         {
-            "id": "49b20d40-51e5-4a45-8de4-55e290a347a1",
+            "id": "27f1c1ef-8c32-4d84-b2da-33caa1dbc0b9",
             "type": "p",
             "content": "T\u00f3mate tu tiempo, experimenta con los ingredientes, y recuerda que en la cocina vegetal, ",
             "page": 1,
@@ -261,7 +261,7 @@
             }
         },
         {
-            "id": "48fb4745-8bbb-49fb-83cc-c70a977c71e6",
+            "id": "79066af2-938a-47df-b5a8-459c9a1cab55",
             "type": "p",
             "content": "cada paso es una invitaci\u00f3n a reconectarte con los sabores naturales y a crear con ",
             "page": 1,
@@ -285,7 +285,7 @@
             }
         },
         {
-            "id": "6d4a9090-e65b-4815-91cf-147b2ccbbc65",
+            "id": "04a70d06-962c-4451-be37-3718ec036776",
             "type": "p",
             "content": "consciencia. ",
             "page": 1,
@@ -309,9 +309,9 @@
             }
         },
         {
-            "id": "d95f4fff-f6a7-4306-8a52-ac7d3ff9c210",
+            "id": "423a9305-1744-4407-8e01-c79618764f2d",
             "type": "h2",
-            "content": "\ud83e\udd5b LECHES VEGETALES ",
+            "content": "\ud83e\udd5b **LECHES VEGETALES** ",
             "page": 1,
             "style": {
                 "font_size": 13.0,
@@ -333,9 +333,9 @@
             }
         },
         {
-            "id": "363d487c-8ea9-4c0b-9371-0929d55e1568",
+            "id": "4dfd501c-ea8a-444b-9066-5c997f4ebe49",
             "type": "p",
-            "content": "\ud83e\udd5c Leche de Almendras ",
+            "content": "\ud83e\udd5c **Leche de Almendras** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -357,7 +357,7 @@
             }
         },
         {
-            "id": "a194f123-0fac-477e-8d11-c723d66f8db3",
+            "id": "65ccbee5-c687-40f8-81c1-498c7a8f0dc7",
             "type": "p",
             "content": "Nada como preparar tu propia leche vegetal. Es ligera, vers\u00e1til y perfecta para caf\u00e9s, ",
             "page": 1,
@@ -381,7 +381,7 @@
             }
         },
         {
-            "id": "32ae459d-6c45-4ab0-9115-8336f8502b93",
+            "id": "3c0041d2-7199-4e1c-a7ed-260ef2345374",
             "type": "p",
             "content": "batidos o postres. Adem\u00e1s, aprovechar\u00e1s al m\u00e1ximo las almendras, sin aditivos ni ",
             "page": 1,
@@ -405,7 +405,7 @@
             }
         },
         {
-            "id": "08ae9259-62a7-4238-b8ef-bbf0b3fc1a12",
+            "id": "0ac5ff0f-96bb-427c-a653-7a2a676728c1",
             "type": "p",
             "content": "conservantes. ",
             "page": 1,
@@ -429,9 +429,9 @@
             }
         },
         {
-            "id": "799b08a3-4b61-4347-8cb2-5510fc2f97b3",
+            "id": "2f61c899-d2f1-4b7b-8484-f5a09aafebfd",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -453,7 +453,7 @@
             }
         },
         {
-            "id": "c0a43da0-8547-486f-9a5c-319a029a1eda",
+            "id": "a2d5928e-1269-467c-9bc3-47ba554bfa44",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de almendras crudas ",
             "page": 1,
@@ -477,7 +477,7 @@
             }
         },
         {
-            "id": "9d7f1094-0055-49b6-ac05-9eaf41688e89",
+            "id": "35266b35-2b32-406a-8b85-8afc3856746c",
             "type": "p",
             "content": "\u25cf\u200b 1 litro de agua ",
             "page": 1,
@@ -501,7 +501,7 @@
             }
         },
         {
-            "id": "80cc5951-27a9-41c8-b4da-6981f16a7412",
+            "id": "996e7c5a-7bb7-4bc7-b6cc-65914bc096dc",
             "type": "p",
             "content": "\u25cf\u200b Endulzante al gusto ",
             "page": 1,
@@ -525,9 +525,9 @@
             }
         },
         {
-            "id": "eecf41c2-a5b2-454d-8c2f-2a15ce9a5ac1",
+            "id": "53f829df-fb50-4ba3-81b8-d20cef286a2a",
             "type": "p",
-            "content": "Rinde: 1 litro\u200b",
+            "content": "**Rinde:** 1 litro\u200b",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -549,9 +549,9 @@
             }
         },
         {
-            "id": "8078e28a-ffa1-4a1f-a87d-8a3e85fe7994",
+            "id": "85e7b8a2-845b-4c45-8955-f389e4cfaa60",
             "type": "p",
-            "content": "Tiempo total: 6 h remojo + 10 min elaboraci\u00f3n ",
+            "content": "**Tiempo total:** 6 h remojo + 10 min elaboraci\u00f3n ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -573,9 +573,9 @@
             }
         },
         {
-            "id": "66bbe4fe-4345-481c-9aaa-eedd4c29d403",
+            "id": "dbcdd673-5dde-4fea-8b16-e6888d0cca5e",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -597,7 +597,7 @@
             }
         },
         {
-            "id": "e0ae09fe-a35b-463a-b675-49f1a4e48261",
+            "id": "d182a6ff-e66d-41fd-80d7-622f78db600a",
             "type": "p",
             "content": "1.\u200b Remoja las almendras durante la noche. ",
             "page": 1,
@@ -621,7 +621,7 @@
             }
         },
         {
-            "id": "0e598182-7c6c-47f5-91ad-61fd954d33c8",
+            "id": "c89294bf-b2f5-4193-940f-ff00715d8604",
             "type": "p",
             "content": "2.\u200b Escurre, pela (opcional) y lic\u00faa con el agua y endulzante. ",
             "page": 1,
@@ -645,7 +645,7 @@
             }
         },
         {
-            "id": "989a6c17-e289-4614-8e1b-1c6bffe017b0",
+            "id": "0d5d5e7b-66bd-4ff0-8dcb-2595ec0f676c",
             "type": "p",
             "content": "3.\u200b Cuela con una malla fina. ",
             "page": 1,
@@ -669,7 +669,7 @@
             }
         },
         {
-            "id": "4e84c14f-88e6-4c93-b7a7-64c61cd8f724",
+            "id": "df62ad17-f8a2-4c49-9c25-4b2755485bb9",
             "type": "p",
             "content": "4.\u200b Guarda en frasco de vidrio y refrigera (4\u20135 d\u00edas). ",
             "page": 1,
@@ -693,9 +693,9 @@
             }
         },
         {
-            "id": "738f0efa-3038-4e94-8836-1ecb31cc79d7",
+            "id": "35cbbaa7-448d-4fbd-830d-924a5ec19288",
             "type": "p",
-            "content": "\ud83d\udca1Tip: No tires la pulpa; puedes usarla para hacer galletas, granola o a\u00f1adirla a un batido. ",
+            "content": "\ud83d\udca1**Tip:** No tires la pulpa; puedes usarla para hacer galletas, granola o a\u00f1adirla a un batido. ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -717,9 +717,9 @@
             }
         },
         {
-            "id": "c31acc64-81e3-418d-ae88-0b8f512245ba",
+            "id": "2e6d7996-e33c-4502-84a0-b063b978abdd",
             "type": "p",
-            "content": "\ud83e\udd65 Leche de Coco ",
+            "content": "\ud83e\udd65 **Leche de Coco** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -741,7 +741,7 @@
             }
         },
         {
-            "id": "cef81bcb-2c7d-41b1-aab4-d025f6410b21",
+            "id": "a2d77add-cb1d-4c62-bace-8fd2b5b03d1c",
             "type": "p",
             "content": "Su sabor tropical y su cremosidad la hacen ideal para postres o currys. La clave est\u00e1 en ",
             "page": 2,
@@ -765,7 +765,7 @@
             }
         },
         {
-            "id": "58e1c59b-9162-4da4-ac67-7c895b787e0a",
+            "id": "f5a56c77-fdb3-468d-b348-34ab3d7c3fb3",
             "type": "p",
             "content": "usar coco maduro y agua caliente para extraer toda su esencia. ",
             "page": 2,
@@ -789,9 +789,9 @@
             }
         },
         {
-            "id": "af076428-719e-41f3-8c83-c7cbea085260",
+            "id": "8ab98d21-8d42-459c-8bc0-b7450e666fe7",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -813,7 +813,7 @@
             }
         },
         {
-            "id": "b616b8a6-5648-40f8-a746-aac707653f8e",
+            "id": "1926f4bc-2ec6-4e84-ad94-2ecd0b2642f8",
             "type": "p",
             "content": "\u25cf\u200b \u00bd coco maduro (solo la carne) ",
             "page": 2,
@@ -837,7 +837,7 @@
             }
         },
         {
-            "id": "c140f2dc-30ee-4c13-86ea-b772c0a50b45",
+            "id": "ee610d57-4c5c-4086-b8c2-6f70c55ca05e",
             "type": "p",
             "content": "\u25cf\u200b 1 litro de agua caliente ",
             "page": 2,
@@ -861,7 +861,7 @@
             }
         },
         {
-            "id": "a3b96589-dc1d-468d-8722-682dc71e99c4",
+            "id": "a2eda072-0fd9-48c4-b3a3-e88b2d54f96c",
             "type": "p",
             "content": "\u25cf\u200b Endulzante al gusto ",
             "page": 2,
@@ -885,9 +885,9 @@
             }
         },
         {
-            "id": "02f18fa5-38dc-4809-84d6-a833fc8c74f0",
+            "id": "27a97cd8-6271-4c2b-9a0a-0a69d539a6c9",
             "type": "p",
-            "content": "Rinde: 1 litro\u200b",
+            "content": "**Rinde:** 1 litro\u200b",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -909,9 +909,9 @@
             }
         },
         {
-            "id": "1d623afe-8605-43bb-a3b4-771a95923ee2",
+            "id": "64aaa476-aa2f-4c8b-afa6-ba0fb048eeea",
             "type": "p",
-            "content": "Tiempo total: 30 min ",
+            "content": "**Tiempo total:** 30 min ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -933,9 +933,9 @@
             }
         },
         {
-            "id": "3b2fb995-6e13-4845-9ba2-37045f5145d0",
+            "id": "28d4ad23-abc2-4276-b492-e9cbeb46f768",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -957,7 +957,7 @@
             }
         },
         {
-            "id": "89014fbd-91ed-4eb0-bd94-2ec07de4c161",
+            "id": "7fc42b4a-eef9-4412-bbf1-533f60a1bb6e",
             "type": "p",
             "content": "1.\u200b Mezcla el coco con el agua caliente y deja reposar 10\u201315 minutos. ",
             "page": 2,
@@ -981,7 +981,7 @@
             }
         },
         {
-            "id": "ba056c3a-b443-4d7c-9505-2fc3f83d38b3",
+            "id": "e6e319c6-8018-4f04-b929-6f390f2f145a",
             "type": "p",
             "content": "2.\u200b Lic\u00faa hasta obtener una mezcla fina y cuela. ",
             "page": 2,
@@ -1005,7 +1005,7 @@
             }
         },
         {
-            "id": "0db12933-9ead-48ab-9d77-077142b18358",
+            "id": "6f258925-40f0-4fad-9ac5-41bbb6d42630",
             "type": "p",
             "content": "3.\u200b Conserva en frasco de vidrio esterilizado. ",
             "page": 2,
@@ -1029,9 +1029,9 @@
             }
         },
         {
-            "id": "61fd524a-3f49-409c-9016-6ee4b7b22f13",
+            "id": "e7eb3b4b-1cc5-49b5-94e2-539d04946011",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Usa la crema que se forma al enfriar para preparar una \"nata\" vegetal perfecta para ",
+            "content": "\ud83d\udca1**Tip:** Usa la crema que se forma al enfriar para preparar una \"nata\" vegetal perfecta para ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -1053,7 +1053,7 @@
             }
         },
         {
-            "id": "c6bfaf63-c876-45af-8d1d-43d70b2ed759",
+            "id": "cc26ad7d-576c-47bc-b4c0-640d6495089d",
             "type": "p",
             "content": "postres. ",
             "page": 2,
@@ -1077,9 +1077,9 @@
             }
         },
         {
-            "id": "517b861d-73ef-44fd-8953-863e1500b5bb",
+            "id": "4a773cde-ea4d-4ff1-85dd-fbe6076ad469",
             "type": "p",
-            "content": "\ud83c\udf3e Leche de Soya ",
+            "content": "\ud83c\udf3e **Leche de Soya** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -1101,7 +1101,7 @@
             }
         },
         {
-            "id": "a4436741-97b6-44b2-bb6c-38f647e8fc94",
+            "id": "faf66027-edde-4d59-b30d-5c62b3698f6d",
             "type": "p",
             "content": "Una opci\u00f3n econ\u00f3mica y rica en prote\u00ednas. El secreto est\u00e1 en quitar bien las c\u00e1scaras para ",
             "page": 2,
@@ -1125,7 +1125,7 @@
             }
         },
         {
-            "id": "5ed7a1c1-110a-4356-a5fd-d5d6bef05e46",
+            "id": "07f89095-192f-4fff-9441-c0122e1419bb",
             "type": "p",
             "content": "lograr una textura m\u00e1s suave. ",
             "page": 2,
@@ -1149,9 +1149,9 @@
             }
         },
         {
-            "id": "09401de7-7715-4c49-a110-818470a83d1a",
+            "id": "56eb2154-7f36-4709-a9d2-726501fc703c",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -1173,7 +1173,7 @@
             }
         },
         {
-            "id": "7d1f9155-b1af-4aaf-8083-b6548fd0f30c",
+            "id": "2ccae6e3-1b62-4837-b97e-00931ad04367",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de soya ",
             "page": 2,
@@ -1197,7 +1197,7 @@
             }
         },
         {
-            "id": "f3b8512a-4cb5-42d7-80b9-e38f31e6380f",
+            "id": "61911655-536f-4eb9-a3b2-b26dffc17797",
             "type": "p",
             "content": "\u25cf\u200b 1 litro de agua ",
             "page": 2,
@@ -1221,7 +1221,7 @@
             }
         },
         {
-            "id": "95bf8b13-36ad-4e0a-b834-ab6dc8503bc7",
+            "id": "1b1bac48-546f-4a0f-81bf-6625befcb8bd",
             "type": "p",
             "content": "\u25cf\u200b Endulzante al gusto ",
             "page": 2,
@@ -1245,7 +1245,7 @@
             }
         },
         {
-            "id": "b19b0c2c-5702-4028-875f-04656db26470",
+            "id": "17946f03-9fd8-47ac-8964-e687177f27ce",
             "type": "p",
             "content": "\u25cf\u200b 1 raja de canela ",
             "page": 2,
@@ -1269,9 +1269,9 @@
             }
         },
         {
-            "id": "ca98b2ae-33a2-4fcc-a16e-12078a45daf7",
+            "id": "69335f05-1dd6-4f41-8185-f69b8b354d6f",
             "type": "p",
-            "content": "Rinde: 1 litro\u200b",
+            "content": "**Rinde:** 1 litro\u200b",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -1293,9 +1293,9 @@
             }
         },
         {
-            "id": "30a602b8-a7ac-446d-8ca6-d0fc8c275cdf",
+            "id": "7b8eeb11-57e1-4952-83ff-eab5bbe5c401",
             "type": "p",
-            "content": "Tiempo total: 6 h remojo + 1 h elaboraci\u00f3n ",
+            "content": "**Tiempo total:** 6 h remojo + 1 h elaboraci\u00f3n ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -1317,9 +1317,9 @@
             }
         },
         {
-            "id": "4d4e403d-a829-4dd8-b907-51e9776c6c13",
+            "id": "eca6f65d-86d6-4b9b-9dab-ed40325e51b9",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -1341,7 +1341,7 @@
             }
         },
         {
-            "id": "de623be9-798d-48ef-9f42-42a1511bae72",
+            "id": "066b7869-b70f-4d15-a23b-929a9b844c32",
             "type": "p",
             "content": "1.\u200b Remoja la soya toda la noche. ",
             "page": 2,
@@ -1365,7 +1365,7 @@
             }
         },
         {
-            "id": "2da8c354-fc02-42c3-9501-58845b2ff411",
+            "id": "8d4d00d6-17b1-4016-b2bd-31a07757bae0",
             "type": "p",
             "content": "2.\u200b Cocina hasta que suelten las c\u00e1scaras y ret\u00edralas. ",
             "page": 2,
@@ -1389,7 +1389,7 @@
             }
         },
         {
-            "id": "d411e44f-ddc4-4860-a738-8bacaa6f8586",
+            "id": "0d805bec-a58d-4f29-844d-38ede3be3679",
             "type": "p",
             "content": "3.\u200b Lic\u00faa, cuela y hierve con canela y endulzante. ",
             "page": 2,
@@ -1413,7 +1413,7 @@
             }
         },
         {
-            "id": "dae43224-a5f8-4e37-9ba9-96dda708cbc6",
+            "id": "04b9a16f-1ee0-405e-bb1f-9703f21d3cbe",
             "type": "p",
             "content": "4.\u200b Deja enfriar antes de refrigerar. ",
             "page": 2,
@@ -1437,9 +1437,9 @@
             }
         },
         {
-            "id": "4e3e2df5-c251-4ff4-95d6-1bb6cc013622",
+            "id": "009a3b8b-f05e-4baf-912d-f9d40b963efe",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Si la prefieres m\u00e1s ligera, agrega un poco m\u00e1s de agua tras colarla. ",
+            "content": "\ud83d\udca1**Tip:** Si la prefieres m\u00e1s ligera, agrega un poco m\u00e1s de agua tras colarla. ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -1461,9 +1461,9 @@
             }
         },
         {
-            "id": "5b0061f8-a596-4997-94bc-78b1f6e3c5e6",
+            "id": "62af9cc3-1ea0-4fed-a290-f4d431d87746",
             "type": "h2",
-            "content": "\ud83e\uddc0 QUESOS, CREMAS Y MANTEQUILLAS ",
+            "content": "\ud83e\uddc0 **QUESOS, CREMAS Y MANTEQUILLAS** ",
             "page": 2,
             "style": {
                 "font_size": 13.0,
@@ -1485,9 +1485,9 @@
             }
         },
         {
-            "id": "60c50cba-d1b2-4d6e-a334-b4802af8f865",
+            "id": "4f0cbad2-a64e-426e-9bb3-a19708c5136d",
             "type": "p",
-            "content": "Queso de Chocho (para untar o rallar) ",
+            "content": "**Queso de Chocho (para untar o rallar)** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -1509,7 +1509,7 @@
             }
         },
         {
-            "id": "d91c3cd9-f984-4baa-a6c8-1f709f4da15c",
+            "id": "1a2d0de0-319f-475d-862b-9e651e35e740",
             "type": "p",
             "content": "Este queso vegetal tiene una textura firme y un sabor ligeramente salado. Ideal para rallar ",
             "page": 3,
@@ -1533,7 +1533,7 @@
             }
         },
         {
-            "id": "0051032e-e661-4060-95d8-4e2f972daa18",
+            "id": "2ec9ea0a-3de4-47da-bf44-32c67b01a15c",
             "type": "p",
             "content": "sobre pastas o untar en pan artesanal. ",
             "page": 3,
@@ -1557,9 +1557,9 @@
             }
         },
         {
-            "id": "add6ec68-9c0f-4d5d-8dad-808112ca7a4f",
+            "id": "52bf8cbf-991d-49dd-b7f5-73ad5787799f",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -1581,7 +1581,7 @@
             }
         },
         {
-            "id": "cdf8c209-e404-4709-b2b4-bb0248a70312",
+            "id": "d3304210-4e7c-4594-9497-26d82d7e84db",
             "type": "p",
             "content": "\u25cf\u200b 260 g de chochos pelados ",
             "page": 3,
@@ -1605,7 +1605,7 @@
             }
         },
         {
-            "id": "242978c4-fd48-4297-8290-ca5ba712bcd7",
+            "id": "155968c7-1a1a-45cc-8b2e-eddfcf9eb1cf",
             "type": "p",
             "content": "\u25cf\u200b 2 cda de levadura nutricional ",
             "page": 3,
@@ -1629,7 +1629,7 @@
             }
         },
         {
-            "id": "50a407b1-a744-4ebe-9a05-1ba5bb5fcf99",
+            "id": "0ee4dd40-43d5-4cf8-8f9d-e816a28d0e75",
             "type": "p",
             "content": "\u25cf\u200b 2 cda de aceite de coco ",
             "page": 3,
@@ -1653,7 +1653,7 @@
             }
         },
         {
-            "id": "23b46d2f-42a0-45da-8a01-97794128d625",
+            "id": "2499c9ff-dcc9-4a67-a576-4d2c9b88e979",
             "type": "p",
             "content": "\u25cf\u200b 1 cda de agua ",
             "page": 3,
@@ -1677,7 +1677,7 @@
             }
         },
         {
-            "id": "308df395-5313-42ff-a110-52dbe41160ad",
+            "id": "311afe17-d75d-45b2-8823-15f1f2b86d21",
             "type": "p",
             "content": "\u25cf\u200b Sal al gusto ",
             "page": 3,
@@ -1701,9 +1701,9 @@
             }
         },
         {
-            "id": "6a87c84c-dd33-4314-8b0c-47d7548c3585",
+            "id": "461959c0-fb98-4979-89f6-88198cbe48e0",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -1725,7 +1725,7 @@
             }
         },
         {
-            "id": "a34c8961-ddc1-4a6a-baca-761f3e743d57",
+            "id": "ff3557c4-1940-40bf-b250-d3ffd919ff9b",
             "type": "p",
             "content": "1.\u200b Tritura todos los ingredientes hasta obtener una mezcla homog\u00e9nea. ",
             "page": 3,
@@ -1749,7 +1749,7 @@
             }
         },
         {
-            "id": "898a82c5-699f-4593-ae19-475e884bbcac",
+            "id": "e28de2c5-0787-49a8-b125-b0c93c9cdb4e",
             "type": "p",
             "content": "2.\u200b Coloca en molde con papel film y prensa. ",
             "page": 3,
@@ -1773,7 +1773,7 @@
             }
         },
         {
-            "id": "630c7c67-22d7-4eda-8e8f-57d0b5a2b8b7",
+            "id": "6dd06677-ca4a-4b80-b0a0-74c637e737d7",
             "type": "p",
             "content": "3.\u200b Congela 45 minutos y estar\u00e1 listo para usar. ",
             "page": 3,
@@ -1797,9 +1797,9 @@
             }
         },
         {
-            "id": "9f0efc5f-2c79-48c4-8149-aabf956c8634",
+            "id": "1c321651-ab39-4345-bdd5-95d038b5d95a",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Para un toque ahumado, a\u00f1ade unas gotas de salsa de soya. ",
+            "content": "\ud83d\udca1**Tip:** Para un toque ahumado, a\u00f1ade unas gotas de salsa de soya. ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -1821,9 +1821,9 @@
             }
         },
         {
-            "id": "85d4f767-5e63-45eb-964a-f44f697d431b",
+            "id": "deae5ed4-98b3-440a-a374-a9637affab84",
             "type": "p",
-            "content": "Queso Crema de Chocho ",
+            "content": "**Queso Crema de Chocho** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -1845,7 +1845,7 @@
             }
         },
         {
-            "id": "39a903e7-5b54-4909-83fc-bc254c6dd804",
+            "id": "7d691c73-dc39-4de6-879c-dac926338928",
             "type": "p",
             "content": "Suave, untuoso y con un ligero toque \u00e1cido. Perfecto para tostadas o como base de dips. ",
             "page": 3,
@@ -1869,9 +1869,9 @@
             }
         },
         {
-            "id": "e87491bc-0d38-4d24-91b8-64e2dea75ceb",
+            "id": "ae802691-2450-4b89-a355-b0191a465586",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -1893,7 +1893,7 @@
             }
         },
         {
-            "id": "4a6b1d61-e2fb-4276-8fe4-a0b635873989",
+            "id": "16fa3a56-c8a0-48a9-8d3a-eb7a03f1bda5",
             "type": "p",
             "content": "\u25cf\u200b 300 g de chochos pelados ",
             "page": 3,
@@ -1917,7 +1917,7 @@
             }
         },
         {
-            "id": "a28a6009-aabd-4ec2-a1ed-fa8d5b4e87b4",
+            "id": "d8269e1d-93c4-4afb-b7b6-54def2f7510d",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de agua ",
             "page": 3,
@@ -1941,7 +1941,7 @@
             }
         },
         {
-            "id": "306b85e3-125c-4d08-8923-dbb6c7e8d3cf",
+            "id": "78072ca7-6d13-4773-9c54-c752020fdf8c",
             "type": "p",
             "content": "\u25cf\u200b 1 chorrito de vinagre ",
             "page": 3,
@@ -1965,7 +1965,7 @@
             }
         },
         {
-            "id": "59d51aac-8c73-4d24-96f5-65bdf7a4c747",
+            "id": "137ab9d7-fa14-44a8-8116-68e276e2fe8b",
             "type": "p",
             "content": "\u25cf\u200b Sal al gusto ",
             "page": 3,
@@ -1989,9 +1989,9 @@
             }
         },
         {
-            "id": "97187ab6-89cc-4846-9a7c-ed08d15dfe0d",
+            "id": "263cb9b0-3b5b-44d2-a4f1-5b5af2f939ad",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -2013,7 +2013,7 @@
             }
         },
         {
-            "id": "fcde59a8-a39a-4288-934c-b3c94678759a",
+            "id": "2db84bc8-165d-4af7-8f04-dc3f50bc8977",
             "type": "p",
             "content": "1.\u200b Lic\u00faa todo a velocidad alta hasta lograr una textura cremosa. ",
             "page": 3,
@@ -2037,9 +2037,9 @@
             }
         },
         {
-            "id": "fc2b5583-097a-4345-93ed-f557cb737ce3",
+            "id": "92ab8992-a899-4282-a600-c7d47a20b063",
             "type": "p",
-            "content": "\ud83d\udca1Tip: A\u00f1ade hierbas frescas o ajo rostizado para un sabor gourmet. ",
+            "content": "\ud83d\udca1**Tip:** A\u00f1ade hierbas frescas o ajo rostizado para un sabor gourmet. ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -2061,9 +2061,9 @@
             }
         },
         {
-            "id": "72cead1f-dc28-4fb7-a0aa-854f75f72205",
+            "id": "e2f98bb1-4bcc-4b6e-b303-2497144bdf37",
             "type": "p",
-            "content": "Crema Vegana ",
+            "content": "**Crema Vegana** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -2085,7 +2085,7 @@
             }
         },
         {
-            "id": "0bf20e30-a905-4bd3-a949-8c04a3e329af",
+            "id": "38f489bb-ee71-40fe-ac31-9fc18ec74e53",
             "type": "p",
             "content": "Ideal para dar textura a salsas o postres. Su base de tofu y aceite de coco crea una mezcla ",
             "page": 3,
@@ -2109,7 +2109,7 @@
             }
         },
         {
-            "id": "bf192d04-5ecf-4098-ba50-f0c985ce8eda",
+            "id": "5cb6a6b5-be59-4f08-a8e1-60fbdc3476a6",
             "type": "p",
             "content": "sedosa y neutra. ",
             "page": 3,
@@ -2133,9 +2133,9 @@
             }
         },
         {
-            "id": "3eba8ac6-380f-428f-9a3c-ccacf9f21613",
+            "id": "83b95171-a7f9-4531-bd79-87bb609596ea",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -2157,7 +2157,7 @@
             }
         },
         {
-            "id": "c458899e-bfbd-4db4-88de-a6353de6c442",
+            "id": "87a21188-deb1-40ce-8c97-80de77ea6c7f",
             "type": "p",
             "content": "\u25cf\u200b 150 g de tofu blando ",
             "page": 3,
@@ -2181,7 +2181,7 @@
             }
         },
         {
-            "id": "8cb0eb62-03e3-4a88-be8b-fd0254bba046",
+            "id": "044b62fc-e39c-4e32-8706-bbca74b302c5",
             "type": "p",
             "content": "\u25cf\u200b 3 cda de aceite de coco derretido ",
             "page": 3,
@@ -2205,7 +2205,7 @@
             }
         },
         {
-            "id": "e63833cf-7a69-428b-b585-7c06fc010080",
+            "id": "54fe7c0b-bf0d-49d8-9e69-169426a32c2c",
             "type": "p",
             "content": "\u25cf\u200b \u2153 taza de agua ",
             "page": 4,
@@ -2229,7 +2229,7 @@
             }
         },
         {
-            "id": "8906f63f-76db-413f-b1ac-956fda9f7a7d",
+            "id": "910dce54-4819-4344-9905-f151be3b1612",
             "type": "p",
             "content": "\u25cf\u200b 1 chorrito de vinagre ",
             "page": 4,
@@ -2253,9 +2253,9 @@
             }
         },
         {
-            "id": "4d154e91-9a48-4ac4-b69b-b1b3fab53945",
+            "id": "2423f001-51b8-4774-8ad1-a1c56821f308",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2277,7 +2277,7 @@
             }
         },
         {
-            "id": "fddc80ea-0e8a-4fc5-80ab-92f8989a5c9b",
+            "id": "e7bf4752-c589-4395-83c7-549f238bd54a",
             "type": "p",
             "content": "1.\u200b Lic\u00faa todo hasta que quede una crema uniforme. ",
             "page": 4,
@@ -2301,7 +2301,7 @@
             }
         },
         {
-            "id": "5b88a597-5c29-4fc8-b07d-2215a4af849a",
+            "id": "bf75455e-6d4d-4de3-94f0-caacce066f4a",
             "type": "p",
             "content": "2.\u200b Refrigera 3 horas antes de usar. ",
             "page": 4,
@@ -2325,9 +2325,9 @@
             }
         },
         {
-            "id": "e0bf88a9-90b6-4d3a-b3b1-74b1c8a5c22e",
+            "id": "92e5960d-90b1-4738-bf4a-0e37b3563a22",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Usa esta crema para sustituir la nata en recetas dulces o saladas. ",
+            "content": "\ud83d\udca1**Tip:** Usa esta crema para sustituir la nata en recetas dulces o saladas. ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2349,9 +2349,9 @@
             }
         },
         {
-            "id": "69d6911f-1704-47b6-acd7-9914fa35dee4",
+            "id": "ab50ef06-2c97-4937-bf8b-00b19ac732a0",
             "type": "p",
-            "content": "Mantequilla Vegana de Aceite de Coco ",
+            "content": "**Mantequilla Vegana de Aceite de Coco** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2373,7 +2373,7 @@
             }
         },
         {
-            "id": "ff7b0d2b-1ebc-46d0-8851-c416fe934837",
+            "id": "5816ccb6-28c4-4de8-9065-51396e2abe19",
             "type": "p",
             "content": "Ligera y con una textura perfecta para untar. Es una de esas recetas que sorprenden por su ",
             "page": 4,
@@ -2397,7 +2397,7 @@
             }
         },
         {
-            "id": "6939498c-378a-46f5-8528-cca0783ea879",
+            "id": "8271b761-3bcc-444c-b96a-3db33fb0c598",
             "type": "p",
             "content": "sencillez. ",
             "page": 4,
@@ -2421,9 +2421,9 @@
             }
         },
         {
-            "id": "81863c7c-54cf-442a-a992-352a00f34042",
+            "id": "12d6f1c7-a50b-4371-b91b-7db5863ba6b5",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2445,7 +2445,7 @@
             }
         },
         {
-            "id": "ba480bb9-1fce-4fdd-af4c-69cb0f94c9f6",
+            "id": "0122d648-2d22-4ccc-8ac2-3b7f1c39c445",
             "type": "p",
             "content": "\u25cf\u200b 120 g de aceite de coco derretido ",
             "page": 4,
@@ -2469,7 +2469,7 @@
             }
         },
         {
-            "id": "de3ce738-5bfc-4e56-b1f6-f7ae7012b7dd",
+            "id": "46678ab9-76e3-49f3-8c39-a516b55a7d63",
             "type": "p",
             "content": "\u25cf\u200b 1 cda de lecitina de soya ",
             "page": 4,
@@ -2493,7 +2493,7 @@
             }
         },
         {
-            "id": "9a75afe6-6071-40c3-a5a3-f4bd548856c7",
+            "id": "06f61388-d709-4ddf-a2c3-6f8bb8d41c03",
             "type": "p",
             "content": "\u25cf\u200b 3 cda de aceite de oliva ",
             "page": 4,
@@ -2517,7 +2517,7 @@
             }
         },
         {
-            "id": "6da34b37-1dba-4e02-a9f3-f39b42c52d9f",
+            "id": "199cffb6-36d5-4a51-893e-8563ea7b52d6",
             "type": "p",
             "content": "\u25cf\u200b 4 cda de leche de avena ",
             "page": 4,
@@ -2541,7 +2541,7 @@
             }
         },
         {
-            "id": "d1cd863e-f97c-4641-a2e6-ef0802216a7c",
+            "id": "9f2f5b18-d1ca-49b0-9554-ea57c1fd7a0c",
             "type": "p",
             "content": "\u25cf\u200b Sal al gusto ",
             "page": 4,
@@ -2565,9 +2565,9 @@
             }
         },
         {
-            "id": "833363cf-7388-4d5b-a428-bec71bca266c",
+            "id": "96e79fc7-ce97-4830-94cc-bc43788e01be",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2589,7 +2589,7 @@
             }
         },
         {
-            "id": "c2da3bcc-7df9-4992-bf46-4a2d006c09f3",
+            "id": "ae33c605-bc81-4ea6-8305-c2c42df068c4",
             "type": "p",
             "content": "1.\u200b Emulsiona todos los ingredientes con batidora de inmersi\u00f3n. ",
             "page": 4,
@@ -2613,7 +2613,7 @@
             }
         },
         {
-            "id": "36545317-0290-41eb-83cf-d26691374c49",
+            "id": "5738924e-f49a-45ef-be3d-afba202ef3a6",
             "type": "p",
             "content": "2.\u200b Guarda en recipiente con tapa y refrigera hasta que solidifique. ",
             "page": 4,
@@ -2637,9 +2637,9 @@
             }
         },
         {
-            "id": "93957f63-dcc8-4154-b556-9a819420de2a",
+            "id": "ca2ac190-b173-4f4f-8edb-ddaeb33a08e7",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Para una versi\u00f3n dulce, a\u00f1ade una pizca de canela y miel de agave. ",
+            "content": "\ud83d\udca1**Tip:** Para una versi\u00f3n dulce, a\u00f1ade una pizca de canela y miel de agave. ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2661,9 +2661,9 @@
             }
         },
         {
-            "id": "05cf3c03-eca2-44f7-818a-14aa6faac3d1",
+            "id": "556ecfbe-2f6c-4fe3-abdb-42614eda7e38",
             "type": "h2",
-            "content": "\ud83c\udf45 SALSAS VARIAS ",
+            "content": "\ud83c\udf45 **SALSAS VARIAS** ",
             "page": 4,
             "style": {
                 "font_size": 13.0,
@@ -2685,9 +2685,9 @@
             }
         },
         {
-            "id": "95f2117b-1a9c-4b52-8f92-43d2b92ec54e",
+            "id": "de22dee0-1ddd-4a25-9db5-02ac7a540c39",
             "type": "p",
-            "content": "Salsa de Tomate (Pomodoro) ",
+            "content": "**Salsa de Tomate (Pomodoro)** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2709,7 +2709,7 @@
             }
         },
         {
-            "id": "dd2863cf-56b0-4ef6-9e29-6ee17c0d496a",
+            "id": "9b0ec512-28a7-4a48-b0f5-fd6d141e0fce",
             "type": "p",
             "content": "Una base infaltable. Su aroma, cuando se cocina lentamente, es el alma de muchas recetas ",
             "page": 4,
@@ -2733,7 +2733,7 @@
             }
         },
         {
-            "id": "ca7076ca-d7d0-4f12-b37f-2bcb5ed1714e",
+            "id": "f9d374a9-1546-455d-9b6e-39771b284e29",
             "type": "p",
             "content": "italianas. ",
             "page": 4,
@@ -2757,9 +2757,9 @@
             }
         },
         {
-            "id": "aab2a5ca-dbb9-4304-9b4d-852658596fa1",
+            "id": "37c5a1ba-5f87-4be3-a49e-41c5ec2899c6",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -2781,7 +2781,7 @@
             }
         },
         {
-            "id": "31222461-8889-467d-b8d4-c27921e117dd",
+            "id": "1c032eca-cb88-4fc5-82e0-896f25bef67e",
             "type": "p",
             "content": "\u25cf\u200b Aceite de oliva ",
             "page": 4,
@@ -2805,7 +2805,7 @@
             }
         },
         {
-            "id": "dcbc058d-c2aa-498a-88c6-16f7565e112d",
+            "id": "d8102117-3389-4576-9994-74ad1b414d75",
             "type": "p",
             "content": "\u25cf\u200b 1 cebolla mediana picada ",
             "page": 4,
@@ -2829,7 +2829,7 @@
             }
         },
         {
-            "id": "6d6f2ba4-e5e6-4615-b664-16dea2eb9e8a",
+            "id": "c3479c05-4ad2-4729-8f0a-a5005d541a48",
             "type": "p",
             "content": "\u25cf\u200b 2 dientes de ajo ",
             "page": 4,
@@ -2853,7 +2853,7 @@
             }
         },
         {
-            "id": "885021b4-3a3c-4aa9-b078-701720e064c1",
+            "id": "229de308-0d96-4348-8d68-d810354306a7",
             "type": "p",
             "content": "\u25cf\u200b 2 rajas de canela ",
             "page": 4,
@@ -2877,7 +2877,7 @@
             }
         },
         {
-            "id": "c268ba29-5e42-4f7a-be96-bca358eeaa3a",
+            "id": "aacbecd8-6939-475b-84a3-8e27b85d8240",
             "type": "p",
             "content": "\u25cf\u200b 4 tomates medianos picados ",
             "page": 4,
@@ -2901,7 +2901,7 @@
             }
         },
         {
-            "id": "dbb29f2f-81bc-4d7b-af6f-f2e6bf96dfc0",
+            "id": "3a7dbc4b-b19a-4c99-bca9-64f01dbb9f15",
             "type": "p",
             "content": "\u25cf\u200b 2 cda de aceto bals\u00e1mico ",
             "page": 4,
@@ -2925,7 +2925,7 @@
             }
         },
         {
-            "id": "156e733f-2106-4d80-8bab-ec93cd2f32b6",
+            "id": "622c4db7-3e32-4127-a58f-3c439f8ea045",
             "type": "p",
             "content": "\u25cf\u200b Sal y pimienta al gusto ",
             "page": 4,
@@ -2949,9 +2949,9 @@
             }
         },
         {
-            "id": "97d7e10b-395d-4efb-a8ee-1c002db21cc2",
+            "id": "5495c3fe-239d-4f49-9ce7-7d2fc9279b59",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -2973,7 +2973,7 @@
             }
         },
         {
-            "id": "9641baf7-5cb7-4be7-a60b-0a5adc918124",
+            "id": "10a4a7d2-0c25-4741-b64b-bea55df4be5c",
             "type": "p",
             "content": "1.\u200b Sofr\u00ede cebolla, ajo y canela hasta dorar. ",
             "page": 5,
@@ -2997,7 +2997,7 @@
             }
         },
         {
-            "id": "cf3fc2b7-bc93-467b-bd68-2cc9da00a692",
+            "id": "214d4642-de49-4413-92e8-34e0f5134b2f",
             "type": "p",
             "content": "2.\u200b Agrega el resto y cocina 10 minutos a fuego bajo. ",
             "page": 5,
@@ -3021,9 +3021,9 @@
             }
         },
         {
-            "id": "5575e27c-7078-4b08-9fda-c4bb2efc6954",
+            "id": "bfe988c3-d82e-4ba2-b543-e88505c47116",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Guarda en frascos y congela; as\u00ed tendr\u00e1s siempre una salsa casera lista. ",
+            "content": "\ud83d\udca1**Tip:** Guarda en frascos y congela; as\u00ed tendr\u00e1s siempre una salsa casera lista. ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3045,9 +3045,9 @@
             }
         },
         {
-            "id": "d0f5409c-caa6-473b-8763-75c24701f918",
+            "id": "fee36261-9f76-4e05-8818-e502bd3d8402",
             "type": "p",
-            "content": "Salsa de Man\u00ed ",
+            "content": "**Salsa de Man\u00ed** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3069,7 +3069,7 @@
             }
         },
         {
-            "id": "7b7e4d77-6281-42ee-ad98-5ab985252166",
+            "id": "5aba5401-cd2e-4f47-bdfc-825e6f8ac2b2",
             "type": "p",
             "content": "Una joya ecuatoriana, cremosa y arom\u00e1tica. Perfecta para servir con yucas o vegetales al ",
             "page": 5,
@@ -3093,7 +3093,7 @@
             }
         },
         {
-            "id": "ac5c359b-aa02-4d6e-a4be-74ac0f652b90",
+            "id": "d0329878-4171-4b5f-a26f-2031996fb0f6",
             "type": "p",
             "content": "vapor. ",
             "page": 5,
@@ -3117,9 +3117,9 @@
             }
         },
         {
-            "id": "f7f51786-6633-414a-b867-c7c6d91bb6ea",
+            "id": "a2ae2ba9-1828-4671-a249-74b1f2036dc9",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3141,7 +3141,7 @@
             }
         },
         {
-            "id": "4879dbcf-420a-4566-9893-996d20d19ed0",
+            "id": "5eec7cb3-a94f-4f94-a8ca-c8ff4882e749",
             "type": "p",
             "content": "\u25cf\u200b 150 g de mantequilla de man\u00ed ",
             "page": 5,
@@ -3165,7 +3165,7 @@
             }
         },
         {
-            "id": "f0124b32-c06b-4a08-9012-27848d41937b",
+            "id": "f8da5402-b19a-49bd-90dc-4a9e474a6233",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de leche vegetal ",
             "page": 5,
@@ -3189,7 +3189,7 @@
             }
         },
         {
-            "id": "b2bba186-e459-4d6d-a125-b99c14670137",
+            "id": "ed3ed380-200e-40ae-ae69-95169919ce8d",
             "type": "p",
             "content": "\u25cf\u200b 1 cebolla larga picada ",
             "page": 5,
@@ -3213,7 +3213,7 @@
             }
         },
         {
-            "id": "0d8c63df-6e51-457b-9875-ff15d6b13131",
+            "id": "be6818ec-be0e-4268-b5ab-7d705d616839",
             "type": "p",
             "content": "\u25cf\u200b Sal, aceite y achiote ",
             "page": 5,
@@ -3237,9 +3237,9 @@
             }
         },
         {
-            "id": "dd32c782-b77b-44f8-9d54-16df750945b0",
+            "id": "dcf85bdd-327a-4283-9d14-5e2f106cb1cd",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3261,7 +3261,7 @@
             }
         },
         {
-            "id": "29eeef7a-b7e2-4f52-945a-bd4452839c2e",
+            "id": "0059b299-edf6-42ea-9469-37f212b158c3",
             "type": "p",
             "content": "1.\u200b Prepara un refrito con la cebolla, aceite y achiote. ",
             "page": 5,
@@ -3285,7 +3285,7 @@
             }
         },
         {
-            "id": "15034fc4-fa98-4ac1-b483-e329928b6c3a",
+            "id": "3c28cbb0-9b3c-40fd-9936-c4c74adfc0ae",
             "type": "p",
             "content": "2.\u200b Lic\u00faa el man\u00ed con la leche y a\u00f1ade al refrito. ",
             "page": 5,
@@ -3309,7 +3309,7 @@
             }
         },
         {
-            "id": "c4b49f9d-9ee5-4ef5-838a-be611a23b1e8",
+            "id": "7bdd3ca8-a31f-4c20-ae86-5762d8433e70",
             "type": "p",
             "content": "3.\u200b Cocina a fuego bajo hasta que espese. ",
             "page": 5,
@@ -3333,9 +3333,9 @@
             }
         },
         {
-            "id": "3c55689d-a7f5-47e8-9374-43ad167e0950",
+            "id": "3ba08420-708d-4e59-925c-b6c5694c6e2f",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Un toque de or\u00e9gano seco realza su sabor. ",
+            "content": "\ud83d\udca1**Tip:** Un toque de or\u00e9gano seco realza su sabor. ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3357,9 +3357,9 @@
             }
         },
         {
-            "id": "1378bc6e-8d52-42a6-9c1c-306a4d333e72",
+            "id": "23b45dab-2e87-4d04-956d-5256ac2d050b",
             "type": "p",
-            "content": "Agrio ",
+            "content": "**Agrio** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3381,7 +3381,7 @@
             }
         },
         {
-            "id": "4b155db5-e0f5-4e54-9f64-ba014fd98bbf",
+            "id": "b66dc301-ca47-4534-9f68-7013c6649a39",
             "type": "p",
             "content": "Refrescante y lleno de vida, este aderezo es el alma de muchos platos tradicionales. ",
             "page": 5,
@@ -3405,9 +3405,9 @@
             }
         },
         {
-            "id": "679d29be-a06f-46b9-8411-f2edb87b715c",
+            "id": "5fc35e8d-fa6c-4590-89e8-b5bf124ffdea",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3429,7 +3429,7 @@
             }
         },
         {
-            "id": "c673b59b-00a0-4f5b-a247-35e48b038fdf",
+            "id": "f03a98a1-27ed-41ba-8cd5-4f70abecec1c",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de agua ",
             "page": 5,
@@ -3453,7 +3453,7 @@
             }
         },
         {
-            "id": "94af0856-120c-4f08-b898-5cef18aa0ffb",
+            "id": "7176f05a-fb86-42dd-9a58-4543bdb95802",
             "type": "p",
             "content": "\u25cf\u200b 1 cda de az\u00facar de coco ",
             "page": 5,
@@ -3477,7 +3477,7 @@
             }
         },
         {
-            "id": "f82d0a69-67f9-4e9c-8009-7d8129d1d64a",
+            "id": "b5072347-1f7a-4287-a646-29b5b843bdd5",
             "type": "p",
             "content": "\u25cf\u200b Jugo de 1 lim\u00f3n ",
             "page": 5,
@@ -3501,7 +3501,7 @@
             }
         },
         {
-            "id": "86ef1101-8024-4d33-8664-625238d91128",
+            "id": "5696c6bc-16b9-465e-81c8-fb885598f37a",
             "type": "p",
             "content": "\u25cf\u200b 2 ramitas de culantro picado ",
             "page": 5,
@@ -3525,7 +3525,7 @@
             }
         },
         {
-            "id": "723fdf8b-68af-449c-b291-a673f041392a",
+            "id": "439633bb-fdda-4d81-ac89-5c4e56631de7",
             "type": "p",
             "content": "\u25cf\u200b 1 cebolla larga picada ",
             "page": 5,
@@ -3549,9 +3549,9 @@
             }
         },
         {
-            "id": "3eb70af7-0e21-492e-bf88-169cbaef826d",
+            "id": "7a13e0ca-78bc-4a9c-86d8-b47e6401b224",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3573,7 +3573,7 @@
             }
         },
         {
-            "id": "e75018f2-d469-48a3-bf48-fdf39afb736d",
+            "id": "2f3e568e-9df7-4a27-8531-08a853c5caac",
             "type": "p",
             "content": "1.\u200b Mezcla l\u00edquidos y az\u00facar. ",
             "page": 5,
@@ -3597,7 +3597,7 @@
             }
         },
         {
-            "id": "20a65055-c6a9-485a-8875-d6af2c713f25",
+            "id": "3fc9227d-583b-4dd3-ab1d-9770c455b6eb",
             "type": "p",
             "content": "2.\u200b Agrega la cebolla y culantro. ",
             "page": 5,
@@ -3621,9 +3621,9 @@
             }
         },
         {
-            "id": "4e497f8e-51cc-49db-b30a-c108ae569a5c",
+            "id": "70f8678f-96cb-4a8d-ad38-28c88d2c936c",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Ideal para acompa\u00f1ar llapingachos o mote con tostado. ",
+            "content": "\ud83d\udca1**Tip:** Ideal para acompa\u00f1ar llapingachos o mote con tostado. ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -3645,9 +3645,9 @@
             }
         },
         {
-            "id": "7dfba9ff-0fda-4bfc-a989-1e2377a50742",
+            "id": "0ca10bb7-c701-4b01-92f4-2feed128357c",
             "type": "p",
-            "content": "Aj\u00ed de Pepas de Zambo ",
+            "content": "**Aj\u00ed de Pepas de Zambo** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -3669,7 +3669,7 @@
             }
         },
         {
-            "id": "299b8738-2648-4bbd-a25a-7a451a222743",
+            "id": "5040c410-041d-401f-9d07-1d50b8e03e39",
             "type": "p",
             "content": "Una receta ancestral con car\u00e1cter. Las pepas tostadas aportan un sabor \u00fanico. ",
             "page": 6,
@@ -3693,9 +3693,9 @@
             }
         },
         {
-            "id": "a487b6ea-4b03-42f9-b53d-74ae3a173e24",
+            "id": "7e31a297-06a6-49aa-a866-4cfc60918460",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -3717,7 +3717,7 @@
             }
         },
         {
-            "id": "411802a6-6862-4e07-94da-c3dfcea93f65",
+            "id": "fbb0a120-0ccf-4d2b-9530-5c61e90dd925",
             "type": "p",
             "content": "\u25cf\u200b 150 g de pepas de zambo ",
             "page": 6,
@@ -3741,7 +3741,7 @@
             }
         },
         {
-            "id": "00e8f7a2-bba3-4858-8637-95d2a0d25c9c",
+            "id": "17d4984c-dc6b-4e3e-8310-1654c66b1933",
             "type": "p",
             "content": "\u25cf\u200b 2 aj\u00edes ",
             "page": 6,
@@ -3765,7 +3765,7 @@
             }
         },
         {
-            "id": "9c6b9836-5832-46bd-ad59-f563c390d22b",
+            "id": "db0dd04e-1b11-4af8-8bb3-b6a07362b64a",
             "type": "p",
             "content": "\u25cf\u200b Culantro y cebolla picada ",
             "page": 6,
@@ -3789,9 +3789,9 @@
             }
         },
         {
-            "id": "e7e594f6-031c-4299-a18f-0e8950c446e5",
+            "id": "08bb5889-a88b-46e4-8c05-cb8db511dae3",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -3813,7 +3813,7 @@
             }
         },
         {
-            "id": "ca32ddc5-c094-46dd-b60c-6cc51171998b",
+            "id": "025b8dd2-2c03-46d3-8f3b-6d536ae04049",
             "type": "p",
             "content": "1.\u200b Tuesta las pepas y lic\u00faa con aj\u00ed, agua, sal y culantro. ",
             "page": 6,
@@ -3837,7 +3837,7 @@
             }
         },
         {
-            "id": "76d9514f-1bb2-4e3a-8094-5b591e876e41",
+            "id": "9faf454f-00e2-4042-b9f8-aeddcf36ee6a",
             "type": "p",
             "content": "2.\u200b A\u00f1ade la cebolla y mezcla. ",
             "page": 6,
@@ -3861,9 +3861,9 @@
             }
         },
         {
-            "id": "ce867f63-8b49-4dc2-901b-8f8a5df14880",
+            "id": "423e8b69-eeda-4d40-9c0d-0ce94247f0c6",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Si prefieres un toque m\u00e1s suave, quita las semillas del aj\u00ed antes de licuar. ",
+            "content": "\ud83d\udca1**Tip:** Si prefieres un toque m\u00e1s suave, quita las semillas del aj\u00ed antes de licuar. ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -3885,9 +3885,9 @@
             }
         },
         {
-            "id": "0fc26cb5-c58f-4a42-ac63-b5568716a30c",
+            "id": "856728cc-fa8b-447a-a441-7408a7aae629",
             "type": "p",
-            "content": "Mayonesa de Aquafaba ",
+            "content": "**Mayonesa de Aquafaba** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -3909,7 +3909,7 @@
             }
         },
         {
-            "id": "97b749de-28d0-4ba8-b845-d22b75d772b0",
+            "id": "9a60dc21-b102-4d5d-9ab1-a1a6a6110739",
             "type": "p",
             "content": "Una versi\u00f3n vegetal de la cl\u00e1sica mayonesa, suave y sedosa. La magia est\u00e1 en la aquafaba. ",
             "page": 6,
@@ -3933,9 +3933,9 @@
             }
         },
         {
-            "id": "67db4f52-ac71-427e-8df1-024aaa221774",
+            "id": "2095d5a0-098a-4d63-91d1-aff6d2df914e",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -3957,7 +3957,7 @@
             }
         },
         {
-            "id": "ebfe316a-b1e5-4c57-8324-4bc422e2262b",
+            "id": "88217c3c-9b29-4dfb-ab8c-39ec3dda3bb2",
             "type": "p",
             "content": "\u25cf\u200b 6 cda de aquafaba ",
             "page": 6,
@@ -3981,7 +3981,7 @@
             }
         },
         {
-            "id": "fc7f980f-24b3-47bf-a197-d7f9dc5b8a15",
+            "id": "76339c9c-f499-40fe-9224-b64a69283322",
             "type": "p",
             "content": "\u25cf\u200b Jugo de lim\u00f3n ",
             "page": 6,
@@ -4005,7 +4005,7 @@
             }
         },
         {
-            "id": "0fba00cd-4308-4f3c-93e9-dd6861b56556",
+            "id": "803e6e4b-8f25-46ca-8d81-d0ad9a5d151c",
             "type": "p",
             "content": "\u25cf\u200b Vinagre ",
             "page": 6,
@@ -4029,7 +4029,7 @@
             }
         },
         {
-            "id": "09970088-4127-4733-a2ce-21e43b1736b0",
+            "id": "483cc85b-a33b-4599-ae3a-5c9f6b73ec77",
             "type": "p",
             "content": "\u25cf\u200b Sal, pimienta y aceite ",
             "page": 6,
@@ -4053,9 +4053,9 @@
             }
         },
         {
-            "id": "29e18d94-dceb-446d-b800-f750c7f3f102",
+            "id": "8b9d39af-71dc-4206-ae90-6bc23667a493",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -4077,7 +4077,7 @@
             }
         },
         {
-            "id": "ad2ae342-19d0-49f9-aa88-4c3bf87aec84",
+            "id": "81f035f8-0fdd-44cf-accb-e2d2a440a110",
             "type": "p",
             "content": "1.\u200b Coloca todo en la licuadora. ",
             "page": 6,
@@ -4101,7 +4101,7 @@
             }
         },
         {
-            "id": "15ebda8b-9355-46db-8819-9ff84b61abd3",
+            "id": "dd7c7f9f-4ab2-4127-8c8d-229f12e88293",
             "type": "p",
             "content": "2.\u200b Agrega el aceite poco a poco hasta emulsionar. ",
             "page": 6,
@@ -4125,9 +4125,9 @@
             }
         },
         {
-            "id": "4e03b7b9-fa74-49fb-9b1c-9e232e4948ad",
+            "id": "e1bbb63a-dbd4-4242-8daf-38df024356e4",
             "type": "p",
-            "content": "\ud83d\udca1Tip: A\u00f1ade mostaza Dijon o ajo asado para un toque gourmet. ",
+            "content": "\ud83d\udca1**Tip:** A\u00f1ade mostaza Dijon o ajo asado para un toque gourmet. ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -4149,9 +4149,9 @@
             }
         },
         {
-            "id": "660aee99-474c-469c-a39f-b9084a482a74",
+            "id": "9124430c-4554-4c53-a4a5-59a50c5536bf",
             "type": "p",
-            "content": "Aquafaba de Garbanzo ",
+            "content": "**Aquafaba de Garbanzo** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -4173,7 +4173,7 @@
             }
         },
         {
-            "id": "bb7f33b7-febb-4de4-ade4-0916e118b5bb",
+            "id": "4d4d8e15-f460-458e-9abd-742361202a91",
             "type": "p",
             "content": "El secreto mejor guardado de la reposter\u00eda vegana. Sustituye claras de huevo y da una ",
             "page": 6,
@@ -4197,7 +4197,7 @@
             }
         },
         {
-            "id": "283ae259-4f04-4d97-a597-941ff117f25c",
+            "id": "1546a4d4-b1dc-4b37-86aa-7b120dead088",
             "type": "p",
             "content": "textura ligera. ",
             "page": 6,
@@ -4221,9 +4221,9 @@
             }
         },
         {
-            "id": "b31487b5-4a28-43c6-8d56-7b3bd6149a2b",
+            "id": "62f9e632-623a-4e9d-99d9-561f7383775f",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -4245,7 +4245,7 @@
             }
         },
         {
-            "id": "77b4024f-9bf4-499a-ae3a-9d13d1552030",
+            "id": "fea8ef27-e5a0-4500-b99a-e3a9a19effff",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de garbanzos secos ",
             "page": 6,
@@ -4269,7 +4269,7 @@
             }
         },
         {
-            "id": "7d9e6d47-af07-4a9a-85e0-2d11c3be4fb2",
+            "id": "d5c51381-026e-4691-8f0a-1c89c397da07",
             "type": "p",
             "content": "\u25cf\u200b 3 tazas de agua ",
             "page": 6,
@@ -4293,9 +4293,9 @@
             }
         },
         {
-            "id": "218aec74-67b7-4dd6-881b-83ed9d499573",
+            "id": "3f7f0e3a-db2e-4b58-b280-69b30b677855",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -4317,7 +4317,7 @@
             }
         },
         {
-            "id": "88d49ef5-f3f2-48b9-bae7-8827e68686ad",
+            "id": "0491548a-dad1-407f-90f9-c593dc261f66",
             "type": "p",
             "content": "1.\u200b Remoja los garbanzos toda la noche. ",
             "page": 7,
@@ -4341,7 +4341,7 @@
             }
         },
         {
-            "id": "d79a2b01-a896-4d2f-ae0f-a826bc643ff7",
+            "id": "b1b4bcd2-c4d8-4a61-9b7d-7977bdd48d7c",
             "type": "p",
             "content": "2.\u200b Cocina 25 minutos en olla de presi\u00f3n. ",
             "page": 7,
@@ -4365,7 +4365,7 @@
             }
         },
         {
-            "id": "ea1cd26e-2934-4055-90d4-d8efbe7eb12b",
+            "id": "2ced302a-7502-4c7b-b7d5-c6512e6da394",
             "type": "p",
             "content": "3.\u200b Cuela y reduce el l\u00edquido hasta que espese. ",
             "page": 7,
@@ -4389,9 +4389,9 @@
             }
         },
         {
-            "id": "c14d91c0-c813-48b4-98f2-b6bb026cf16b",
+            "id": "ce62a04a-0bb5-4e20-9002-b67d26fe8fce",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Cong\u00e9lala en cubetas para tener siempre a mano. ",
+            "content": "\ud83d\udca1**Tip:** Cong\u00e9lala en cubetas para tener siempre a mano. ",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4413,9 +4413,9 @@
             }
         },
         {
-            "id": "009daab1-1bb1-4ac5-9142-7681d323f2ab",
+            "id": "7b7edd90-5896-422d-bfa8-7d940279bdd9",
             "type": "h2",
-            "content": "\ud83e\udd5a REEMPLAZOS DE HUEVO ",
+            "content": "\ud83e\udd5a **REEMPLAZOS DE HUEVO** ",
             "page": 7,
             "style": {
                 "font_size": 13.0,
@@ -4437,7 +4437,7 @@
             }
         },
         {
-            "id": "4c6abb1a-1e60-4e5f-bd35-f6cbe9fe9bdd",
+            "id": "5eef353c-620a-4465-a2b3-566caa20c633",
             "type": "p",
             "content": "Saber reemplazar el huevo abre un mundo de posibilidades en la cocina vegetal. Aqu\u00ed te ",
             "page": 7,
@@ -4461,7 +4461,7 @@
             }
         },
         {
-            "id": "9b157473-0378-40b9-82b8-485d01cc418a",
+            "id": "c274f62d-0122-4ecc-be8c-5f23870600ed",
             "type": "p",
             "content": "dejo mis combinaciones favoritas, todas equivalentes a 1 huevo. ",
             "page": 7,
@@ -4485,9 +4485,9 @@
             }
         },
         {
-            "id": "75207896-aa2d-40ef-80cf-286884223bd5",
+            "id": "f5669a3f-dc0e-423d-b436-fb7109a1ee63",
             "type": "p",
-            "content": "1. Mezcla Casera:\u200b",
+            "content": "**1. Mezcla Casera:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4509,7 +4509,7 @@
             }
         },
         {
-            "id": "00b375a6-3737-4605-86fd-8d2172652835",
+            "id": "da40f994-f980-44f8-ba20-e40c72ae5a78",
             "type": "p",
             "content": "1 cda maicena + 2 cdta aceite + \u00bd cdta polvo de hornear + 1 cda agua fr\u00eda.\u200b",
             "page": 7,
@@ -4533,7 +4533,7 @@
             }
         },
         {
-            "id": "4f8d4fe3-5a01-4bdd-804a-3685a6cc8fb4",
+            "id": "575bbcf4-c7b6-4880-89b4-87ecf675549e",
             "type": "p",
             "content": "\ud83d\udc49 Perfecta para masas y panes. ",
             "page": 7,
@@ -4557,9 +4557,9 @@
             }
         },
         {
-            "id": "d3c97596-3652-4774-8bea-e844ae669551",
+            "id": "51ad7b73-9d49-41e8-bcd5-9ef3c6f9cae8",
             "type": "p",
-            "content": "2. Linaza:\u200b",
+            "content": "**2. Linaza:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4581,7 +4581,7 @@
             }
         },
         {
-            "id": "f5a5db92-6b15-45d9-bafd-cbb6ad716c78",
+            "id": "1ae550b7-7452-4175-a96b-32bb99bb76d4",
             "type": "p",
             "content": "1 cda linaza molida + 3 cda agua caliente (reposar 5 min).\u200b",
             "page": 7,
@@ -4605,7 +4605,7 @@
             }
         },
         {
-            "id": "4a82200e-4311-45d6-a1a6-4df00b819f00",
+            "id": "7ab78416-d2c6-451c-8ce4-621c91395f9d",
             "type": "p",
             "content": "\ud83d\udc49 Ideal para waffles o muffins. ",
             "page": 7,
@@ -4629,9 +4629,9 @@
             }
         },
         {
-            "id": "1115200c-c7c9-492e-b407-94177a775316",
+            "id": "666bfd80-b841-4557-a697-2a3435569eac",
             "type": "p",
-            "content": "3. Ch\u00eda:\u200b",
+            "content": "**3. Ch\u00eda:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4653,7 +4653,7 @@
             }
         },
         {
-            "id": "bbb87759-9d08-435a-a80b-9fe4e901373f",
+            "id": "9dc34209-012c-4d50-9a18-c0bd7de2f31e",
             "type": "p",
             "content": "1 cda ch\u00eda molida + 3 cda agua caliente (reposar 5 min).\u200b",
             "page": 7,
@@ -4677,7 +4677,7 @@
             }
         },
         {
-            "id": "4b0664bb-e7f6-4a9b-af7a-5e7181d6b355",
+            "id": "e5645976-7461-4bf7-9e27-98c46bd9b228",
             "type": "p",
             "content": "\ud83d\udc49 Da una textura h\u00fameda a los bizcochos. ",
             "page": 7,
@@ -4701,9 +4701,9 @@
             }
         },
         {
-            "id": "4b15ee6d-f314-492d-80df-bf9026254e2e",
+            "id": "9dcb1e7f-3dd0-45dd-ad72-2ef02e4a4319",
             "type": "p",
-            "content": "4. Pur\u00e9 de Pl\u00e1tano:\u200b",
+            "content": "**4. Pur\u00e9 de Pl\u00e1tano:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4725,7 +4725,7 @@
             }
         },
         {
-            "id": "8071c571-c196-448b-ae4b-1cd2618937c4",
+            "id": "a55a4c37-8c0d-4be9-bfdf-1d482339a7b3",
             "type": "p",
             "content": "\u00bc taza pl\u00e1tano maduro triturado.\u200b",
             "page": 7,
@@ -4749,7 +4749,7 @@
             }
         },
         {
-            "id": "09691529-f0e7-492d-9db9-a416ad4e3f86",
+            "id": "e6f21d1e-d9b1-481f-8313-86cbbe1af887",
             "type": "p",
             "content": "\ud83d\udc49 Aporta dulzura natural y humedad. ",
             "page": 7,
@@ -4773,9 +4773,9 @@
             }
         },
         {
-            "id": "a9b0e6bb-7978-473d-921d-bbc5884e4e33",
+            "id": "a22d015d-0f80-4d14-aea8-43b6f78f7551",
             "type": "p",
-            "content": "5. Pur\u00e9 de Manzana:\u200b",
+            "content": "**5. Pur\u00e9 de Manzana:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4797,7 +4797,7 @@
             }
         },
         {
-            "id": "2e21b140-13e4-4b37-a851-3d6ff962f97e",
+            "id": "88da9fd0-a96c-4ba8-91cd-36e9cf49c1c0",
             "type": "p",
             "content": "\u00bc taza pur\u00e9 de manzana cocida y licuada.\u200b",
             "page": 7,
@@ -4821,7 +4821,7 @@
             }
         },
         {
-            "id": "d83abed6-86c7-414f-aeed-a457ae332c4e",
+            "id": "751e7a2b-35a5-4d0f-b25a-ba81817f6e68",
             "type": "p",
             "content": "\ud83d\udc49 Perfecto para postres suaves. ",
             "page": 7,
@@ -4845,9 +4845,9 @@
             }
         },
         {
-            "id": "d9090867-8fe5-4495-80c0-e9155ddd396d",
+            "id": "968b791a-7d24-4199-8366-f4b2316e5989",
             "type": "p",
-            "content": "6. Aquafaba:\u200b",
+            "content": "**6. Aquafaba:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4869,7 +4869,7 @@
             }
         },
         {
-            "id": "a23929a7-403a-41d6-b0a5-beba80a7913f",
+            "id": "655ea2bb-9633-45c6-a096-f69ad3dee1d6",
             "type": "p",
             "content": "3 cda de agua de garbanzos o legumbres.\u200b",
             "page": 7,
@@ -4893,7 +4893,7 @@
             }
         },
         {
-            "id": "76325d3a-4ac0-484e-ae7f-512bc87f7835",
+            "id": "5f02107e-cfc1-4b30-ad35-e181afcc36b9",
             "type": "p",
             "content": "\ud83d\udc49 La mejor opci\u00f3n para merengues y panes esponjosos. ",
             "page": 7,
@@ -4917,9 +4917,9 @@
             }
         },
         {
-            "id": "c25d7d46-3405-455c-a36a-8f35ecdc7451",
+            "id": "18e4c8aa-f1ca-41ab-9a58-99afb7483a01",
             "type": "p",
-            "content": "\u2728Recuerda: cada receta es una oportunidad para cuidar el cuerpo, el planeta y el alma. ",
+            "content": "\u2728*Recuerda: cada receta es una oportunidad para cuidar el cuerpo, el planeta y el alma.* ",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -4943,10 +4943,10 @@
     ],
     "assets": {},
     "block_map": {
-        "c81127d9-8fe1-4db4-962c-db720ac92bea": {
-            "id": "c81127d9-8fe1-4db4-962c-db720ac92bea",
+        "2d3679d6-a014-4d78-af30-84039c969761": {
+            "id": "2d3679d6-a014-4d78-af30-84039c969761",
             "type": "h1",
-            "content": "EBOOK B\u00c1SICOS - VERSI\u00d3N EDITORIAL CON TONO ",
+            "content": "**EBOOK B\u00c1SICOS - VERSI\u00d3N EDITORIAL CON TONO** ",
             "page": 1,
             "style": {
                 "font_size": 17.0,
@@ -4967,10 +4967,10 @@
                 "y1": 109.54833984375
             }
         },
-        "1db2673f-08dd-4223-8424-66615014418a": {
-            "id": "1db2673f-08dd-4223-8424-66615014418a",
+        "e07230fb-b331-4ae2-82e7-cc763c366e01": {
+            "id": "e07230fb-b331-4ae2-82e7-cc763c366e01",
             "type": "h1",
-            "content": "DE AUTORA ",
+            "content": "**DE AUTORA** ",
             "page": 1,
             "style": {
                 "font_size": 17.0,
@@ -4991,10 +4991,10 @@
                 "y1": 132.0289306640625
             }
         },
-        "b59a2f45-b4fb-4e1d-b29c-e6969e3f8f62": {
-            "id": "b59a2f45-b4fb-4e1d-b29c-e6969e3f8f62",
+        "ce8a0728-b4c0-44b3-bba2-b183b4e3b3c4": {
+            "id": "ce8a0728-b4c0-44b3-bba2-b183b4e3b3c4",
             "type": "h2",
-            "content": "\ud83c\udf3f Introducci\u00f3n general ",
+            "content": "\ud83c\udf3f **Introducci\u00f3n general** ",
             "page": 1,
             "style": {
                 "font_size": 13.0,
@@ -5015,8 +5015,8 @@
                 "y1": 182.9259033203125
             }
         },
-        "6199a927-9fc3-4de2-9d69-65b9ef937dad": {
-            "id": "6199a927-9fc3-4de2-9d69-65b9ef937dad",
+        "29e53bd6-74ba-4468-a712-3da794e12ba4": {
+            "id": "29e53bd6-74ba-4468-a712-3da794e12ba4",
             "type": "p",
             "content": "Cuando decid\u00ed reunir estas recetas b\u00e1sicas en un solo lugar, mi intenci\u00f3n fue compartir lo ",
             "page": 1,
@@ -5039,8 +5039,8 @@
                 "y1": 209.347412109375
             }
         },
-        "df16fd8f-9060-4e16-af31-26a14b66701b": {
-            "id": "df16fd8f-9060-4e16-af31-26a14b66701b",
+        "8a80f5d6-4464-4bd6-a25d-d5f8877d9655": {
+            "id": "8a80f5d6-4464-4bd6-a25d-d5f8877d9655",
             "type": "p",
             "content": "que he aprendido en mi cocina: que la comida vegetal puede ser deliciosa, sencilla y ",
             "page": 1,
@@ -5063,8 +5063,8 @@
                 "y1": 223.8936767578125
             }
         },
-        "2e344e9b-9e70-4549-b031-053d95ddfae1": {
-            "id": "2e344e9b-9e70-4549-b031-053d95ddfae1",
+        "54741494-16b9-4eac-8c84-7fa28aca186c": {
+            "id": "54741494-16b9-4eac-8c84-7fa28aca186c",
             "type": "p",
             "content": "profundamente reconfortante. Estas preparaciones son la base de muchas de mis recetas: ",
             "page": 1,
@@ -5087,8 +5087,8 @@
                 "y1": 238.43994140625
             }
         },
-        "1d6fa295-9f41-406b-90e9-e97885097be7": {
-            "id": "1d6fa295-9f41-406b-90e9-e97885097be7",
+        "037e1b5a-b891-4e7c-b563-3076ef8f1947": {
+            "id": "037e1b5a-b891-4e7c-b563-3076ef8f1947",
             "type": "p",
             "content": "desde las leches y cremas hasta los reemplazos de huevo. Cada una tiene su historia, su ",
             "page": 1,
@@ -5111,8 +5111,8 @@
                 "y1": 252.9862060546875
             }
         },
-        "b6f34795-55c9-4ad2-a38b-97fb18210661": {
-            "id": "b6f34795-55c9-4ad2-a38b-97fb18210661",
+        "03544681-a3a3-4581-8680-b5c309276dfa": {
+            "id": "03544681-a3a3-4581-8680-b5c309276dfa",
             "type": "p",
             "content": "truco y su toque casero. ",
             "page": 1,
@@ -5135,8 +5135,8 @@
                 "y1": 267.532470703125
             }
         },
-        "49b20d40-51e5-4a45-8de4-55e290a347a1": {
-            "id": "49b20d40-51e5-4a45-8de4-55e290a347a1",
+        "27f1c1ef-8c32-4d84-b2da-33caa1dbc0b9": {
+            "id": "27f1c1ef-8c32-4d84-b2da-33caa1dbc0b9",
             "type": "p",
             "content": "T\u00f3mate tu tiempo, experimenta con los ingredientes, y recuerda que en la cocina vegetal, ",
             "page": 1,
@@ -5159,8 +5159,8 @@
                 "y1": 294.0787353515625
             }
         },
-        "48fb4745-8bbb-49fb-83cc-c70a977c71e6": {
-            "id": "48fb4745-8bbb-49fb-83cc-c70a977c71e6",
+        "79066af2-938a-47df-b5a8-459c9a1cab55": {
+            "id": "79066af2-938a-47df-b5a8-459c9a1cab55",
             "type": "p",
             "content": "cada paso es una invitaci\u00f3n a reconectarte con los sabores naturales y a crear con ",
             "page": 1,
@@ -5183,8 +5183,8 @@
                 "y1": 308.625
             }
         },
-        "6d4a9090-e65b-4815-91cf-147b2ccbbc65": {
-            "id": "6d4a9090-e65b-4815-91cf-147b2ccbbc65",
+        "04a70d06-962c-4451-be37-3718ec036776": {
+            "id": "04a70d06-962c-4451-be37-3718ec036776",
             "type": "p",
             "content": "consciencia. ",
             "page": 1,
@@ -5207,10 +5207,10 @@
                 "y1": 323.1712646484375
             }
         },
-        "d95f4fff-f6a7-4306-8a52-ac7d3ff9c210": {
-            "id": "d95f4fff-f6a7-4306-8a52-ac7d3ff9c210",
+        "423a9305-1744-4407-8e01-c79618764f2d": {
+            "id": "423a9305-1744-4407-8e01-c79618764f2d",
             "type": "h2",
-            "content": "\ud83e\udd5b LECHES VEGETALES ",
+            "content": "\ud83e\udd5b **LECHES VEGETALES** ",
             "page": 1,
             "style": {
                 "font_size": 13.0,
@@ -5231,10 +5231,10 @@
                 "y1": 381.0333251953125
             }
         },
-        "363d487c-8ea9-4c0b-9371-0929d55e1568": {
-            "id": "363d487c-8ea9-4c0b-9371-0929d55e1568",
+        "4dfd501c-ea8a-444b-9066-5c997f4ebe49": {
+            "id": "4dfd501c-ea8a-444b-9066-5c997f4ebe49",
             "type": "p",
-            "content": "\ud83e\udd5c Leche de Almendras ",
+            "content": "\ud83e\udd5c **Leche de Almendras** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -5255,8 +5255,8 @@
                 "y1": 407.852294921875
             }
         },
-        "a194f123-0fac-477e-8d11-c723d66f8db3": {
-            "id": "a194f123-0fac-477e-8d11-c723d66f8db3",
+        "65ccbee5-c687-40f8-81c1-498c7a8f0dc7": {
+            "id": "65ccbee5-c687-40f8-81c1-498c7a8f0dc7",
             "type": "p",
             "content": "Nada como preparar tu propia leche vegetal. Es ligera, vers\u00e1til y perfecta para caf\u00e9s, ",
             "page": 1,
@@ -5279,8 +5279,8 @@
                 "y1": 434.0010986328125
             }
         },
-        "32ae459d-6c45-4ab0-9115-8336f8502b93": {
-            "id": "32ae459d-6c45-4ab0-9115-8336f8502b93",
+        "3c0041d2-7199-4e1c-a7ed-260ef2345374": {
+            "id": "3c0041d2-7199-4e1c-a7ed-260ef2345374",
             "type": "p",
             "content": "batidos o postres. Adem\u00e1s, aprovechar\u00e1s al m\u00e1ximo las almendras, sin aditivos ni ",
             "page": 1,
@@ -5303,8 +5303,8 @@
                 "y1": 448.54736328125
             }
         },
-        "08ae9259-62a7-4238-b8ef-bbf0b3fc1a12": {
-            "id": "08ae9259-62a7-4238-b8ef-bbf0b3fc1a12",
+        "0ac5ff0f-96bb-427c-a653-7a2a676728c1": {
+            "id": "0ac5ff0f-96bb-427c-a653-7a2a676728c1",
             "type": "p",
             "content": "conservantes. ",
             "page": 1,
@@ -5327,10 +5327,10 @@
                 "y1": 463.0936279296875
             }
         },
-        "799b08a3-4b61-4347-8cb2-5510fc2f97b3": {
-            "id": "799b08a3-4b61-4347-8cb2-5510fc2f97b3",
+        "2f61c899-d2f1-4b7b-8484-f5a09aafebfd": {
+            "id": "2f61c899-d2f1-4b7b-8484-f5a09aafebfd",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -5351,8 +5351,8 @@
                 "y1": 489.639892578125
             }
         },
-        "c0a43da0-8547-486f-9a5c-319a029a1eda": {
-            "id": "c0a43da0-8547-486f-9a5c-319a029a1eda",
+        "a2d5928e-1269-467c-9bc3-47ba554bfa44": {
+            "id": "a2d5928e-1269-467c-9bc3-47ba554bfa44",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de almendras crudas ",
             "page": 1,
@@ -5375,8 +5375,8 @@
                 "y1": 516.1861572265625
             }
         },
-        "9d7f1094-0055-49b6-ac05-9eaf41688e89": {
-            "id": "9d7f1094-0055-49b6-ac05-9eaf41688e89",
+        "35266b35-2b32-406a-8b85-8afc3856746c": {
+            "id": "35266b35-2b32-406a-8b85-8afc3856746c",
             "type": "p",
             "content": "\u25cf\u200b 1 litro de agua ",
             "page": 1,
@@ -5399,8 +5399,8 @@
                 "y1": 530.732421875
             }
         },
-        "80cc5951-27a9-41c8-b4da-6981f16a7412": {
-            "id": "80cc5951-27a9-41c8-b4da-6981f16a7412",
+        "996e7c5a-7bb7-4bc7-b6cc-65914bc096dc": {
+            "id": "996e7c5a-7bb7-4bc7-b6cc-65914bc096dc",
             "type": "p",
             "content": "\u25cf\u200b Endulzante al gusto ",
             "page": 1,
@@ -5423,10 +5423,10 @@
                 "y1": 545.2786865234375
             }
         },
-        "eecf41c2-a5b2-454d-8c2f-2a15ce9a5ac1": {
-            "id": "eecf41c2-a5b2-454d-8c2f-2a15ce9a5ac1",
+        "53f829df-fb50-4ba3-81b8-d20cef286a2a": {
+            "id": "53f829df-fb50-4ba3-81b8-d20cef286a2a",
             "type": "p",
-            "content": "Rinde: 1 litro\u200b",
+            "content": "**Rinde:** 1 litro\u200b",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -5447,10 +5447,10 @@
                 "y1": 571.824951171875
             }
         },
-        "8078e28a-ffa1-4a1f-a87d-8a3e85fe7994": {
-            "id": "8078e28a-ffa1-4a1f-a87d-8a3e85fe7994",
+        "85e7b8a2-845b-4c45-8955-f389e4cfaa60": {
+            "id": "85e7b8a2-845b-4c45-8955-f389e4cfaa60",
             "type": "p",
-            "content": "Tiempo total: 6 h remojo + 10 min elaboraci\u00f3n ",
+            "content": "**Tiempo total:** 6 h remojo + 10 min elaboraci\u00f3n ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -5471,10 +5471,10 @@
                 "y1": 586.3712158203125
             }
         },
-        "66bbe4fe-4345-481c-9aaa-eedd4c29d403": {
-            "id": "66bbe4fe-4345-481c-9aaa-eedd4c29d403",
+        "dbcdd673-5dde-4fea-8b16-e6888d0cca5e": {
+            "id": "dbcdd673-5dde-4fea-8b16-e6888d0cca5e",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -5495,8 +5495,8 @@
                 "y1": 612.91748046875
             }
         },
-        "e0ae09fe-a35b-463a-b675-49f1a4e48261": {
-            "id": "e0ae09fe-a35b-463a-b675-49f1a4e48261",
+        "d182a6ff-e66d-41fd-80d7-622f78db600a": {
+            "id": "d182a6ff-e66d-41fd-80d7-622f78db600a",
             "type": "p",
             "content": "1.\u200b Remoja las almendras durante la noche. ",
             "page": 1,
@@ -5519,8 +5519,8 @@
                 "y1": 639.4637451171875
             }
         },
-        "0e598182-7c6c-47f5-91ad-61fd954d33c8": {
-            "id": "0e598182-7c6c-47f5-91ad-61fd954d33c8",
+        "c89294bf-b2f5-4193-940f-ff00715d8604": {
+            "id": "c89294bf-b2f5-4193-940f-ff00715d8604",
             "type": "p",
             "content": "2.\u200b Escurre, pela (opcional) y lic\u00faa con el agua y endulzante. ",
             "page": 1,
@@ -5543,8 +5543,8 @@
                 "y1": 654.010009765625
             }
         },
-        "989a6c17-e289-4614-8e1b-1c6bffe017b0": {
-            "id": "989a6c17-e289-4614-8e1b-1c6bffe017b0",
+        "0d5d5e7b-66bd-4ff0-8dcb-2595ec0f676c": {
+            "id": "0d5d5e7b-66bd-4ff0-8dcb-2595ec0f676c",
             "type": "p",
             "content": "3.\u200b Cuela con una malla fina. ",
             "page": 1,
@@ -5567,8 +5567,8 @@
                 "y1": 668.5562744140625
             }
         },
-        "4e84c14f-88e6-4c93-b7a7-64c61cd8f724": {
-            "id": "4e84c14f-88e6-4c93-b7a7-64c61cd8f724",
+        "df62ad17-f8a2-4c49-9c25-4b2755485bb9": {
+            "id": "df62ad17-f8a2-4c49-9c25-4b2755485bb9",
             "type": "p",
             "content": "4.\u200b Guarda en frasco de vidrio y refrigera (4\u20135 d\u00edas). ",
             "page": 1,
@@ -5591,10 +5591,10 @@
                 "y1": 683.1025390625
             }
         },
-        "738f0efa-3038-4e94-8836-1ecb31cc79d7": {
-            "id": "738f0efa-3038-4e94-8836-1ecb31cc79d7",
+        "35cbbaa7-448d-4fbd-830d-924a5ec19288": {
+            "id": "35cbbaa7-448d-4fbd-830d-924a5ec19288",
             "type": "p",
-            "content": "\ud83d\udca1Tip: No tires la pulpa; puedes usarla para hacer galletas, granola o a\u00f1adirla a un batido. ",
+            "content": "\ud83d\udca1**Tip:** No tires la pulpa; puedes usarla para hacer galletas, granola o a\u00f1adirla a un batido. ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -5615,10 +5615,10 @@
                 "y1": 710.0462646484375
             }
         },
-        "c31acc64-81e3-418d-ae88-0b8f512245ba": {
-            "id": "c31acc64-81e3-418d-ae88-0b8f512245ba",
+        "2e6d7996-e33c-4502-84a0-b063b978abdd": {
+            "id": "2e6d7996-e33c-4502-84a0-b063b978abdd",
             "type": "p",
-            "content": "\ud83e\udd65 Leche de Coco ",
+            "content": "\ud83e\udd65 **Leche de Coco** ",
             "page": 1,
             "style": {
                 "font_size": 11.0,
@@ -5639,8 +5639,8 @@
                 "y1": 763.1387939453125
             }
         },
-        "cef81bcb-2c7d-41b1-aab4-d025f6410b21": {
-            "id": "cef81bcb-2c7d-41b1-aab4-d025f6410b21",
+        "a2d77add-cb1d-4c62-bace-8fd2b5b03d1c": {
+            "id": "a2d77add-cb1d-4c62-bace-8fd2b5b03d1c",
             "type": "p",
             "content": "Su sabor tropical y su cremosidad la hacen ideal para postres o currys. La clave est\u00e1 en ",
             "page": 2,
@@ -5663,8 +5663,8 @@
                 "y1": 84.64892578125
             }
         },
-        "58e1c59b-9162-4da4-ac67-7c895b787e0a": {
-            "id": "58e1c59b-9162-4da4-ac67-7c895b787e0a",
+        "f5a56c77-fdb3-468d-b348-34ab3d7c3fb3": {
+            "id": "f5a56c77-fdb3-468d-b348-34ab3d7c3fb3",
             "type": "p",
             "content": "usar coco maduro y agua caliente para extraer toda su esencia. ",
             "page": 2,
@@ -5687,10 +5687,10 @@
                 "y1": 99.1951904296875
             }
         },
-        "af076428-719e-41f3-8c83-c7cbea085260": {
-            "id": "af076428-719e-41f3-8c83-c7cbea085260",
+        "8ab98d21-8d42-459c-8bc0-b7450e666fe7": {
+            "id": "8ab98d21-8d42-459c-8bc0-b7450e666fe7",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -5711,8 +5711,8 @@
                 "y1": 125.741455078125
             }
         },
-        "b616b8a6-5648-40f8-a746-aac707653f8e": {
-            "id": "b616b8a6-5648-40f8-a746-aac707653f8e",
+        "1926f4bc-2ec6-4e84-ad94-2ecd0b2642f8": {
+            "id": "1926f4bc-2ec6-4e84-ad94-2ecd0b2642f8",
             "type": "p",
             "content": "\u25cf\u200b \u00bd coco maduro (solo la carne) ",
             "page": 2,
@@ -5735,8 +5735,8 @@
                 "y1": 152.2877197265625
             }
         },
-        "c140f2dc-30ee-4c13-86ea-b772c0a50b45": {
-            "id": "c140f2dc-30ee-4c13-86ea-b772c0a50b45",
+        "ee610d57-4c5c-4086-b8c2-6f70c55ca05e": {
+            "id": "ee610d57-4c5c-4086-b8c2-6f70c55ca05e",
             "type": "p",
             "content": "\u25cf\u200b 1 litro de agua caliente ",
             "page": 2,
@@ -5759,8 +5759,8 @@
                 "y1": 166.833984375
             }
         },
-        "a3b96589-dc1d-468d-8722-682dc71e99c4": {
-            "id": "a3b96589-dc1d-468d-8722-682dc71e99c4",
+        "a2eda072-0fd9-48c4-b3a3-e88b2d54f96c": {
+            "id": "a2eda072-0fd9-48c4-b3a3-e88b2d54f96c",
             "type": "p",
             "content": "\u25cf\u200b Endulzante al gusto ",
             "page": 2,
@@ -5783,10 +5783,10 @@
                 "y1": 181.3802490234375
             }
         },
-        "02f18fa5-38dc-4809-84d6-a833fc8c74f0": {
-            "id": "02f18fa5-38dc-4809-84d6-a833fc8c74f0",
+        "27a97cd8-6271-4c2b-9a0a-0a69d539a6c9": {
+            "id": "27a97cd8-6271-4c2b-9a0a-0a69d539a6c9",
             "type": "p",
-            "content": "Rinde: 1 litro\u200b",
+            "content": "**Rinde:** 1 litro\u200b",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -5807,10 +5807,10 @@
                 "y1": 207.926513671875
             }
         },
-        "1d623afe-8605-43bb-a3b4-771a95923ee2": {
-            "id": "1d623afe-8605-43bb-a3b4-771a95923ee2",
+        "64aaa476-aa2f-4c8b-afa6-ba0fb048eeea": {
+            "id": "64aaa476-aa2f-4c8b-afa6-ba0fb048eeea",
             "type": "p",
-            "content": "Tiempo total: 30 min ",
+            "content": "**Tiempo total:** 30 min ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -5831,10 +5831,10 @@
                 "y1": 222.4727783203125
             }
         },
-        "3b2fb995-6e13-4845-9ba2-37045f5145d0": {
-            "id": "3b2fb995-6e13-4845-9ba2-37045f5145d0",
+        "28d4ad23-abc2-4276-b492-e9cbeb46f768": {
+            "id": "28d4ad23-abc2-4276-b492-e9cbeb46f768",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -5855,8 +5855,8 @@
                 "y1": 249.01904296875
             }
         },
-        "89014fbd-91ed-4eb0-bd94-2ec07de4c161": {
-            "id": "89014fbd-91ed-4eb0-bd94-2ec07de4c161",
+        "7fc42b4a-eef9-4412-bbf1-533f60a1bb6e": {
+            "id": "7fc42b4a-eef9-4412-bbf1-533f60a1bb6e",
             "type": "p",
             "content": "1.\u200b Mezcla el coco con el agua caliente y deja reposar 10\u201315 minutos. ",
             "page": 2,
@@ -5879,8 +5879,8 @@
                 "y1": 275.5653076171875
             }
         },
-        "ba056c3a-b443-4d7c-9505-2fc3f83d38b3": {
-            "id": "ba056c3a-b443-4d7c-9505-2fc3f83d38b3",
+        "e6e319c6-8018-4f04-b929-6f390f2f145a": {
+            "id": "e6e319c6-8018-4f04-b929-6f390f2f145a",
             "type": "p",
             "content": "2.\u200b Lic\u00faa hasta obtener una mezcla fina y cuela. ",
             "page": 2,
@@ -5903,8 +5903,8 @@
                 "y1": 290.111572265625
             }
         },
-        "0db12933-9ead-48ab-9d77-077142b18358": {
-            "id": "0db12933-9ead-48ab-9d77-077142b18358",
+        "6f258925-40f0-4fad-9ac5-41bbb6d42630": {
+            "id": "6f258925-40f0-4fad-9ac5-41bbb6d42630",
             "type": "p",
             "content": "3.\u200b Conserva en frasco de vidrio esterilizado. ",
             "page": 2,
@@ -5927,10 +5927,10 @@
                 "y1": 304.6578369140625
             }
         },
-        "61fd524a-3f49-409c-9016-6ee4b7b22f13": {
-            "id": "61fd524a-3f49-409c-9016-6ee4b7b22f13",
+        "e7eb3b4b-1cc5-49b5-94e2-539d04946011": {
+            "id": "e7eb3b4b-1cc5-49b5-94e2-539d04946011",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Usa la crema que se forma al enfriar para preparar una \"nata\" vegetal perfecta para ",
+            "content": "\ud83d\udca1**Tip:** Usa la crema que se forma al enfriar para preparar una \"nata\" vegetal perfecta para ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -5951,8 +5951,8 @@
                 "y1": 331.6015625
             }
         },
-        "c6bfaf63-c876-45af-8d1d-43d70b2ed759": {
-            "id": "c6bfaf63-c876-45af-8d1d-43d70b2ed759",
+        "cc26ad7d-576c-47bc-b4c0-640d6495089d": {
+            "id": "cc26ad7d-576c-47bc-b4c0-640d6495089d",
             "type": "p",
             "content": "postres. ",
             "page": 2,
@@ -5975,10 +5975,10 @@
                 "y1": 345.7503662109375
             }
         },
-        "517b861d-73ef-44fd-8953-863e1500b5bb": {
-            "id": "517b861d-73ef-44fd-8953-863e1500b5bb",
+        "4a773cde-ea4d-4ff1-85dd-fbe6076ad469": {
+            "id": "4a773cde-ea4d-4ff1-85dd-fbe6076ad469",
             "type": "p",
-            "content": "\ud83c\udf3e Leche de Soya ",
+            "content": "\ud83c\udf3e **Leche de Soya** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -5999,8 +5999,8 @@
                 "y1": 399.2403564453125
             }
         },
-        "a4436741-97b6-44b2-bb6c-38f647e8fc94": {
-            "id": "a4436741-97b6-44b2-bb6c-38f647e8fc94",
+        "faf66027-edde-4d59-b30d-5c62b3698f6d": {
+            "id": "faf66027-edde-4d59-b30d-5c62b3698f6d",
             "type": "p",
             "content": "Una opci\u00f3n econ\u00f3mica y rica en prote\u00ednas. El secreto est\u00e1 en quitar bien las c\u00e1scaras para ",
             "page": 2,
@@ -6023,8 +6023,8 @@
                 "y1": 425.38916015625
             }
         },
-        "5ed7a1c1-110a-4356-a5fd-d5d6bef05e46": {
-            "id": "5ed7a1c1-110a-4356-a5fd-d5d6bef05e46",
+        "07f89095-192f-4fff-9441-c0122e1419bb": {
+            "id": "07f89095-192f-4fff-9441-c0122e1419bb",
             "type": "p",
             "content": "lograr una textura m\u00e1s suave. ",
             "page": 2,
@@ -6047,10 +6047,10 @@
                 "y1": 439.9354248046875
             }
         },
-        "09401de7-7715-4c49-a110-818470a83d1a": {
-            "id": "09401de7-7715-4c49-a110-818470a83d1a",
+        "56eb2154-7f36-4709-a9d2-726501fc703c": {
+            "id": "56eb2154-7f36-4709-a9d2-726501fc703c",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -6071,8 +6071,8 @@
                 "y1": 466.481689453125
             }
         },
-        "7d1f9155-b1af-4aaf-8083-b6548fd0f30c": {
-            "id": "7d1f9155-b1af-4aaf-8083-b6548fd0f30c",
+        "2ccae6e3-1b62-4837-b97e-00931ad04367": {
+            "id": "2ccae6e3-1b62-4837-b97e-00931ad04367",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de soya ",
             "page": 2,
@@ -6095,8 +6095,8 @@
                 "y1": 493.0279541015625
             }
         },
-        "f3b8512a-4cb5-42d7-80b9-e38f31e6380f": {
-            "id": "f3b8512a-4cb5-42d7-80b9-e38f31e6380f",
+        "61911655-536f-4eb9-a3b2-b26dffc17797": {
+            "id": "61911655-536f-4eb9-a3b2-b26dffc17797",
             "type": "p",
             "content": "\u25cf\u200b 1 litro de agua ",
             "page": 2,
@@ -6119,8 +6119,8 @@
                 "y1": 507.57421875
             }
         },
-        "95bf8b13-36ad-4e0a-b834-ab6dc8503bc7": {
-            "id": "95bf8b13-36ad-4e0a-b834-ab6dc8503bc7",
+        "1b1bac48-546f-4a0f-81bf-6625befcb8bd": {
+            "id": "1b1bac48-546f-4a0f-81bf-6625befcb8bd",
             "type": "p",
             "content": "\u25cf\u200b Endulzante al gusto ",
             "page": 2,
@@ -6143,8 +6143,8 @@
                 "y1": 522.1204833984375
             }
         },
-        "b19b0c2c-5702-4028-875f-04656db26470": {
-            "id": "b19b0c2c-5702-4028-875f-04656db26470",
+        "17946f03-9fd8-47ac-8964-e687177f27ce": {
+            "id": "17946f03-9fd8-47ac-8964-e687177f27ce",
             "type": "p",
             "content": "\u25cf\u200b 1 raja de canela ",
             "page": 2,
@@ -6167,10 +6167,10 @@
                 "y1": 536.666748046875
             }
         },
-        "ca98b2ae-33a2-4fcc-a16e-12078a45daf7": {
-            "id": "ca98b2ae-33a2-4fcc-a16e-12078a45daf7",
+        "69335f05-1dd6-4f41-8185-f69b8b354d6f": {
+            "id": "69335f05-1dd6-4f41-8185-f69b8b354d6f",
             "type": "p",
-            "content": "Rinde: 1 litro\u200b",
+            "content": "**Rinde:** 1 litro\u200b",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -6191,10 +6191,10 @@
                 "y1": 563.2130126953125
             }
         },
-        "30a602b8-a7ac-446d-8ca6-d0fc8c275cdf": {
-            "id": "30a602b8-a7ac-446d-8ca6-d0fc8c275cdf",
+        "7b8eeb11-57e1-4952-83ff-eab5bbe5c401": {
+            "id": "7b8eeb11-57e1-4952-83ff-eab5bbe5c401",
             "type": "p",
-            "content": "Tiempo total: 6 h remojo + 1 h elaboraci\u00f3n ",
+            "content": "**Tiempo total:** 6 h remojo + 1 h elaboraci\u00f3n ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -6215,10 +6215,10 @@
                 "y1": 577.75927734375
             }
         },
-        "4d4e403d-a829-4dd8-b907-51e9776c6c13": {
-            "id": "4d4e403d-a829-4dd8-b907-51e9776c6c13",
+        "eca6f65d-86d6-4b9b-9dab-ed40325e51b9": {
+            "id": "eca6f65d-86d6-4b9b-9dab-ed40325e51b9",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -6239,8 +6239,8 @@
                 "y1": 604.3055419921875
             }
         },
-        "de623be9-798d-48ef-9f42-42a1511bae72": {
-            "id": "de623be9-798d-48ef-9f42-42a1511bae72",
+        "066b7869-b70f-4d15-a23b-929a9b844c32": {
+            "id": "066b7869-b70f-4d15-a23b-929a9b844c32",
             "type": "p",
             "content": "1.\u200b Remoja la soya toda la noche. ",
             "page": 2,
@@ -6263,8 +6263,8 @@
                 "y1": 630.851806640625
             }
         },
-        "2da8c354-fc02-42c3-9501-58845b2ff411": {
-            "id": "2da8c354-fc02-42c3-9501-58845b2ff411",
+        "8d4d00d6-17b1-4016-b2bd-31a07757bae0": {
+            "id": "8d4d00d6-17b1-4016-b2bd-31a07757bae0",
             "type": "p",
             "content": "2.\u200b Cocina hasta que suelten las c\u00e1scaras y ret\u00edralas. ",
             "page": 2,
@@ -6287,8 +6287,8 @@
                 "y1": 645.3980712890625
             }
         },
-        "d411e44f-ddc4-4860-a738-8bacaa6f8586": {
-            "id": "d411e44f-ddc4-4860-a738-8bacaa6f8586",
+        "0d805bec-a58d-4f29-844d-38ede3be3679": {
+            "id": "0d805bec-a58d-4f29-844d-38ede3be3679",
             "type": "p",
             "content": "3.\u200b Lic\u00faa, cuela y hierve con canela y endulzante. ",
             "page": 2,
@@ -6311,8 +6311,8 @@
                 "y1": 659.9443359375
             }
         },
-        "dae43224-a5f8-4e37-9ba9-96dda708cbc6": {
-            "id": "dae43224-a5f8-4e37-9ba9-96dda708cbc6",
+        "04b9a16f-1ee0-405e-bb1f-9703f21d3cbe": {
+            "id": "04b9a16f-1ee0-405e-bb1f-9703f21d3cbe",
             "type": "p",
             "content": "4.\u200b Deja enfriar antes de refrigerar. ",
             "page": 2,
@@ -6335,10 +6335,10 @@
                 "y1": 674.4906005859375
             }
         },
-        "4e3e2df5-c251-4ff4-95d6-1bb6cc013622": {
-            "id": "4e3e2df5-c251-4ff4-95d6-1bb6cc013622",
+        "009a3b8b-f05e-4baf-912d-f9d40b963efe": {
+            "id": "009a3b8b-f05e-4baf-912d-f9d40b963efe",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Si la prefieres m\u00e1s ligera, agrega un poco m\u00e1s de agua tras colarla. ",
+            "content": "\ud83d\udca1**Tip:** Si la prefieres m\u00e1s ligera, agrega un poco m\u00e1s de agua tras colarla. ",
             "page": 2,
             "style": {
                 "font_size": 11.0,
@@ -6359,10 +6359,10 @@
                 "y1": 701.434326171875
             }
         },
-        "5b0061f8-a596-4997-94bc-78b1f6e3c5e6": {
-            "id": "5b0061f8-a596-4997-94bc-78b1f6e3c5e6",
+        "62af9cc3-1ea0-4fed-a290-f4d431d87746": {
+            "id": "62af9cc3-1ea0-4fed-a290-f4d431d87746",
             "type": "h2",
-            "content": "\ud83e\uddc0 QUESOS, CREMAS Y MANTEQUILLAS ",
+            "content": "\ud83e\uddc0 **QUESOS, CREMAS Y MANTEQUILLAS** ",
             "page": 2,
             "style": {
                 "font_size": 13.0,
@@ -6383,10 +6383,10 @@
                 "y1": 758.89892578125
             }
         },
-        "60c50cba-d1b2-4d6e-a334-b4802af8f865": {
-            "id": "60c50cba-d1b2-4d6e-a334-b4802af8f865",
+        "4f0cbad2-a64e-426e-9bb3-a19708c5136d": {
+            "id": "4f0cbad2-a64e-426e-9bb3-a19708c5136d",
             "type": "p",
-            "content": "Queso de Chocho (para untar o rallar) ",
+            "content": "**Queso de Chocho (para untar o rallar)** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6407,8 +6407,8 @@
                 "y1": 84.64892578125
             }
         },
-        "d91c3cd9-f984-4baa-a6c8-1f709f4da15c": {
-            "id": "d91c3cd9-f984-4baa-a6c8-1f709f4da15c",
+        "1a2d0de0-319f-475d-862b-9e651e35e740": {
+            "id": "1a2d0de0-319f-475d-862b-9e651e35e740",
             "type": "p",
             "content": "Este queso vegetal tiene una textura firme y un sabor ligeramente salado. Ideal para rallar ",
             "page": 3,
@@ -6431,8 +6431,8 @@
                 "y1": 111.1953125
             }
         },
-        "0051032e-e661-4060-95d8-4e2f972daa18": {
-            "id": "0051032e-e661-4060-95d8-4e2f972daa18",
+        "2ec9ea0a-3de4-47da-bf44-32c67b01a15c": {
+            "id": "2ec9ea0a-3de4-47da-bf44-32c67b01a15c",
             "type": "p",
             "content": "sobre pastas o untar en pan artesanal. ",
             "page": 3,
@@ -6455,10 +6455,10 @@
                 "y1": 125.741455078125
             }
         },
-        "add6ec68-9c0f-4d5d-8dad-808112ca7a4f": {
-            "id": "add6ec68-9c0f-4d5d-8dad-808112ca7a4f",
+        "52bf8cbf-991d-49dd-b7f5-73ad5787799f": {
+            "id": "52bf8cbf-991d-49dd-b7f5-73ad5787799f",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6479,8 +6479,8 @@
                 "y1": 152.2877197265625
             }
         },
-        "cdf8c209-e404-4709-b2b4-bb0248a70312": {
-            "id": "cdf8c209-e404-4709-b2b4-bb0248a70312",
+        "d3304210-4e7c-4594-9497-26d82d7e84db": {
+            "id": "d3304210-4e7c-4594-9497-26d82d7e84db",
             "type": "p",
             "content": "\u25cf\u200b 260 g de chochos pelados ",
             "page": 3,
@@ -6503,8 +6503,8 @@
                 "y1": 178.833984375
             }
         },
-        "242978c4-fd48-4297-8290-ca5ba712bcd7": {
-            "id": "242978c4-fd48-4297-8290-ca5ba712bcd7",
+        "155968c7-1a1a-45cc-8b2e-eddfcf9eb1cf": {
+            "id": "155968c7-1a1a-45cc-8b2e-eddfcf9eb1cf",
             "type": "p",
             "content": "\u25cf\u200b 2 cda de levadura nutricional ",
             "page": 3,
@@ -6527,8 +6527,8 @@
                 "y1": 193.3802490234375
             }
         },
-        "50a407b1-a744-4ebe-9a05-1ba5bb5fcf99": {
-            "id": "50a407b1-a744-4ebe-9a05-1ba5bb5fcf99",
+        "0ee4dd40-43d5-4cf8-8f9d-e816a28d0e75": {
+            "id": "0ee4dd40-43d5-4cf8-8f9d-e816a28d0e75",
             "type": "p",
             "content": "\u25cf\u200b 2 cda de aceite de coco ",
             "page": 3,
@@ -6551,8 +6551,8 @@
                 "y1": 207.926513671875
             }
         },
-        "23b46d2f-42a0-45da-8a01-97794128d625": {
-            "id": "23b46d2f-42a0-45da-8a01-97794128d625",
+        "2499c9ff-dcc9-4a67-a576-4d2c9b88e979": {
+            "id": "2499c9ff-dcc9-4a67-a576-4d2c9b88e979",
             "type": "p",
             "content": "\u25cf\u200b 1 cda de agua ",
             "page": 3,
@@ -6575,8 +6575,8 @@
                 "y1": 222.4727783203125
             }
         },
-        "308df395-5313-42ff-a110-52dbe41160ad": {
-            "id": "308df395-5313-42ff-a110-52dbe41160ad",
+        "311afe17-d75d-45b2-8823-15f1f2b86d21": {
+            "id": "311afe17-d75d-45b2-8823-15f1f2b86d21",
             "type": "p",
             "content": "\u25cf\u200b Sal al gusto ",
             "page": 3,
@@ -6599,10 +6599,10 @@
                 "y1": 237.01904296875
             }
         },
-        "6a87c84c-dd33-4314-8b0c-47d7548c3585": {
-            "id": "6a87c84c-dd33-4314-8b0c-47d7548c3585",
+        "461959c0-fb98-4979-89f6-88198cbe48e0": {
+            "id": "461959c0-fb98-4979-89f6-88198cbe48e0",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6623,8 +6623,8 @@
                 "y1": 263.5653076171875
             }
         },
-        "a34c8961-ddc1-4a6a-baca-761f3e743d57": {
-            "id": "a34c8961-ddc1-4a6a-baca-761f3e743d57",
+        "ff3557c4-1940-40bf-b250-d3ffd919ff9b": {
+            "id": "ff3557c4-1940-40bf-b250-d3ffd919ff9b",
             "type": "p",
             "content": "1.\u200b Tritura todos los ingredientes hasta obtener una mezcla homog\u00e9nea. ",
             "page": 3,
@@ -6647,8 +6647,8 @@
                 "y1": 290.111572265625
             }
         },
-        "898a82c5-699f-4593-ae19-475e884bbcac": {
-            "id": "898a82c5-699f-4593-ae19-475e884bbcac",
+        "e28de2c5-0787-49a8-b125-b0c93c9cdb4e": {
+            "id": "e28de2c5-0787-49a8-b125-b0c93c9cdb4e",
             "type": "p",
             "content": "2.\u200b Coloca en molde con papel film y prensa. ",
             "page": 3,
@@ -6671,8 +6671,8 @@
                 "y1": 304.6578369140625
             }
         },
-        "630c7c67-22d7-4eda-8e8f-57d0b5a2b8b7": {
-            "id": "630c7c67-22d7-4eda-8e8f-57d0b5a2b8b7",
+        "6dd06677-ca4a-4b80-b0a0-74c637e737d7": {
+            "id": "6dd06677-ca4a-4b80-b0a0-74c637e737d7",
             "type": "p",
             "content": "3.\u200b Congela 45 minutos y estar\u00e1 listo para usar. ",
             "page": 3,
@@ -6695,10 +6695,10 @@
                 "y1": 319.2041015625
             }
         },
-        "9f0efc5f-2c79-48c4-8149-aabf956c8634": {
-            "id": "9f0efc5f-2c79-48c4-8149-aabf956c8634",
+        "1c321651-ab39-4345-bdd5-95d038b5d95a": {
+            "id": "1c321651-ab39-4345-bdd5-95d038b5d95a",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Para un toque ahumado, a\u00f1ade unas gotas de salsa de soya. ",
+            "content": "\ud83d\udca1**Tip:** Para un toque ahumado, a\u00f1ade unas gotas de salsa de soya. ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6719,10 +6719,10 @@
                 "y1": 346.1478271484375
             }
         },
-        "85d4f767-5e63-45eb-964a-f44f697d431b": {
-            "id": "85d4f767-5e63-45eb-964a-f44f697d431b",
+        "deae5ed4-98b3-440a-a374-a9637affab84": {
+            "id": "deae5ed4-98b3-440a-a374-a9637affab84",
             "type": "p",
-            "content": "Queso Crema de Chocho ",
+            "content": "**Queso Crema de Chocho** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6743,8 +6743,8 @@
                 "y1": 398.8427734375
             }
         },
-        "39a903e7-5b54-4909-83fc-bc254c6dd804": {
-            "id": "39a903e7-5b54-4909-83fc-bc254c6dd804",
+        "7d691c73-dc39-4de6-879c-dac926338928": {
+            "id": "7d691c73-dc39-4de6-879c-dac926338928",
             "type": "p",
             "content": "Suave, untuoso y con un ligero toque \u00e1cido. Perfecto para tostadas o como base de dips. ",
             "page": 3,
@@ -6767,10 +6767,10 @@
                 "y1": 425.38916015625
             }
         },
-        "e87491bc-0d38-4d24-91b8-64e2dea75ceb": {
-            "id": "e87491bc-0d38-4d24-91b8-64e2dea75ceb",
+        "ae802691-2450-4b89-a355-b0191a465586": {
+            "id": "ae802691-2450-4b89-a355-b0191a465586",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6791,8 +6791,8 @@
                 "y1": 451.935546875
             }
         },
-        "4a6b1d61-e2fb-4276-8fe4-a0b635873989": {
-            "id": "4a6b1d61-e2fb-4276-8fe4-a0b635873989",
+        "16fa3a56-c8a0-48a9-8d3a-eb7a03f1bda5": {
+            "id": "16fa3a56-c8a0-48a9-8d3a-eb7a03f1bda5",
             "type": "p",
             "content": "\u25cf\u200b 300 g de chochos pelados ",
             "page": 3,
@@ -6815,8 +6815,8 @@
                 "y1": 478.481689453125
             }
         },
-        "a28a6009-aabd-4ec2-a1ed-fa8d5b4e87b4": {
-            "id": "a28a6009-aabd-4ec2-a1ed-fa8d5b4e87b4",
+        "d8269e1d-93c4-4afb-b7b6-54def2f7510d": {
+            "id": "d8269e1d-93c4-4afb-b7b6-54def2f7510d",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de agua ",
             "page": 3,
@@ -6839,8 +6839,8 @@
                 "y1": 493.02783203125
             }
         },
-        "306b85e3-125c-4d08-8923-dbb6c7e8d3cf": {
-            "id": "306b85e3-125c-4d08-8923-dbb6c7e8d3cf",
+        "78072ca7-6d13-4773-9c54-c752020fdf8c": {
+            "id": "78072ca7-6d13-4773-9c54-c752020fdf8c",
             "type": "p",
             "content": "\u25cf\u200b 1 chorrito de vinagre ",
             "page": 3,
@@ -6863,8 +6863,8 @@
                 "y1": 507.57421875
             }
         },
-        "59d51aac-8c73-4d24-96f5-65bdf7a4c747": {
-            "id": "59d51aac-8c73-4d24-96f5-65bdf7a4c747",
+        "137ab9d7-fa14-44a8-8116-68e276e2fe8b": {
+            "id": "137ab9d7-fa14-44a8-8116-68e276e2fe8b",
             "type": "p",
             "content": "\u25cf\u200b Sal al gusto ",
             "page": 3,
@@ -6887,10 +6887,10 @@
                 "y1": 522.12060546875
             }
         },
-        "97187ab6-89cc-4846-9a7c-ed08d15dfe0d": {
-            "id": "97187ab6-89cc-4846-9a7c-ed08d15dfe0d",
+        "263cb9b0-3b5b-44d2-a4f1-5b5af2f939ad": {
+            "id": "263cb9b0-3b5b-44d2-a4f1-5b5af2f939ad",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6911,8 +6911,8 @@
                 "y1": 548.666748046875
             }
         },
-        "fcde59a8-a39a-4288-934c-b3c94678759a": {
-            "id": "fcde59a8-a39a-4288-934c-b3c94678759a",
+        "2db84bc8-165d-4af7-8f04-dc3f50bc8977": {
+            "id": "2db84bc8-165d-4af7-8f04-dc3f50bc8977",
             "type": "p",
             "content": "1.\u200b Lic\u00faa todo a velocidad alta hasta lograr una textura cremosa. ",
             "page": 3,
@@ -6935,10 +6935,10 @@
                 "y1": 575.212890625
             }
         },
-        "fc2b5583-097a-4345-93ed-f557cb737ce3": {
-            "id": "fc2b5583-097a-4345-93ed-f557cb737ce3",
+        "92ab8992-a899-4282-a600-c7d47a20b063": {
+            "id": "92ab8992-a899-4282-a600-c7d47a20b063",
             "type": "p",
-            "content": "\ud83d\udca1Tip: A\u00f1ade hierbas frescas o ajo rostizado para un sabor gourmet. ",
+            "content": "\ud83d\udca1**Tip:** A\u00f1ade hierbas frescas o ajo rostizado para un sabor gourmet. ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6959,10 +6959,10 @@
                 "y1": 602.15673828125
             }
         },
-        "72cead1f-dc28-4fb7-a0aa-854f75f72205": {
-            "id": "72cead1f-dc28-4fb7-a0aa-854f75f72205",
+        "e2f98bb1-4bcc-4b6e-b303-2497144bdf37": {
+            "id": "e2f98bb1-4bcc-4b6e-b303-2497144bdf37",
             "type": "p",
-            "content": "Crema Vegana ",
+            "content": "**Crema Vegana** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -6983,8 +6983,8 @@
                 "y1": 654.851806640625
             }
         },
-        "0bf20e30-a905-4bd3-a949-8c04a3e329af": {
-            "id": "0bf20e30-a905-4bd3-a949-8c04a3e329af",
+        "38f489bb-ee71-40fe-ac31-9fc18ec74e53": {
+            "id": "38f489bb-ee71-40fe-ac31-9fc18ec74e53",
             "type": "p",
             "content": "Ideal para dar textura a salsas o postres. Su base de tofu y aceite de coco crea una mezcla ",
             "page": 3,
@@ -7007,8 +7007,8 @@
                 "y1": 681.398193359375
             }
         },
-        "bf192d04-5ecf-4098-ba50-f0c985ce8eda": {
-            "id": "bf192d04-5ecf-4098-ba50-f0c985ce8eda",
+        "5cb6a6b5-be59-4f08-a8e1-60fbdc3476a6": {
+            "id": "5cb6a6b5-be59-4f08-a8e1-60fbdc3476a6",
             "type": "p",
             "content": "sedosa y neutra. ",
             "page": 3,
@@ -7031,10 +7031,10 @@
                 "y1": 695.9443359375
             }
         },
-        "3eba8ac6-380f-428f-9a3c-ccacf9f21613": {
-            "id": "3eba8ac6-380f-428f-9a3c-ccacf9f21613",
+        "83b95171-a7f9-4531-bd79-87bb609596ea": {
+            "id": "83b95171-a7f9-4531-bd79-87bb609596ea",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 3,
             "style": {
                 "font_size": 11.0,
@@ -7055,8 +7055,8 @@
                 "y1": 722.49072265625
             }
         },
-        "c458899e-bfbd-4db4-88de-a6353de6c442": {
-            "id": "c458899e-bfbd-4db4-88de-a6353de6c442",
+        "87a21188-deb1-40ce-8c97-80de77ea6c7f": {
+            "id": "87a21188-deb1-40ce-8c97-80de77ea6c7f",
             "type": "p",
             "content": "\u25cf\u200b 150 g de tofu blando ",
             "page": 3,
@@ -7079,8 +7079,8 @@
                 "y1": 749.036865234375
             }
         },
-        "8cb0eb62-03e3-4a88-be8b-fd0254bba046": {
-            "id": "8cb0eb62-03e3-4a88-be8b-fd0254bba046",
+        "044b62fc-e39c-4e32-8706-bbca74b302c5": {
+            "id": "044b62fc-e39c-4e32-8706-bbca74b302c5",
             "type": "p",
             "content": "\u25cf\u200b 3 cda de aceite de coco derretido ",
             "page": 3,
@@ -7103,8 +7103,8 @@
                 "y1": 763.5830078125
             }
         },
-        "e63833cf-7a69-428b-b585-7c06fc010080": {
-            "id": "e63833cf-7a69-428b-b585-7c06fc010080",
+        "54fe7c0b-bf0d-49d8-9e69-169426a32c2c": {
+            "id": "54fe7c0b-bf0d-49d8-9e69-169426a32c2c",
             "type": "p",
             "content": "\u25cf\u200b \u2153 taza de agua ",
             "page": 4,
@@ -7127,8 +7127,8 @@
                 "y1": 84.64892578125
             }
         },
-        "8906f63f-76db-413f-b1ac-956fda9f7a7d": {
-            "id": "8906f63f-76db-413f-b1ac-956fda9f7a7d",
+        "910dce54-4819-4344-9905-f151be3b1612": {
+            "id": "910dce54-4819-4344-9905-f151be3b1612",
             "type": "p",
             "content": "\u25cf\u200b 1 chorrito de vinagre ",
             "page": 4,
@@ -7151,10 +7151,10 @@
                 "y1": 99.1953125
             }
         },
-        "4d154e91-9a48-4ac4-b69b-b1b3fab53945": {
-            "id": "4d154e91-9a48-4ac4-b69b-b1b3fab53945",
+        "2423f001-51b8-4774-8ad1-a1c56821f308": {
+            "id": "2423f001-51b8-4774-8ad1-a1c56821f308",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7175,8 +7175,8 @@
                 "y1": 125.741455078125
             }
         },
-        "fddc80ea-0e8a-4fc5-80ab-92f8989a5c9b": {
-            "id": "fddc80ea-0e8a-4fc5-80ab-92f8989a5c9b",
+        "e7bf4752-c589-4395-83c7-549f238bd54a": {
+            "id": "e7bf4752-c589-4395-83c7-549f238bd54a",
             "type": "p",
             "content": "1.\u200b Lic\u00faa todo hasta que quede una crema uniforme. ",
             "page": 4,
@@ -7199,8 +7199,8 @@
                 "y1": 152.28759765625
             }
         },
-        "5b88a597-5c29-4fc8-b07d-2215a4af849a": {
-            "id": "5b88a597-5c29-4fc8-b07d-2215a4af849a",
+        "bf75455e-6d4d-4de3-94f0-caacce066f4a": {
+            "id": "bf75455e-6d4d-4de3-94f0-caacce066f4a",
             "type": "p",
             "content": "2.\u200b Refrigera 3 horas antes de usar. ",
             "page": 4,
@@ -7223,10 +7223,10 @@
                 "y1": 166.833984375
             }
         },
-        "e0bf88a9-90b6-4d3a-b3b1-74b1c8a5c22e": {
-            "id": "e0bf88a9-90b6-4d3a-b3b1-74b1c8a5c22e",
+        "92e5960d-90b1-4738-bf4a-0e37b3563a22": {
+            "id": "92e5960d-90b1-4738-bf4a-0e37b3563a22",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Usa esta crema para sustituir la nata en recetas dulces o saladas. ",
+            "content": "\ud83d\udca1**Tip:** Usa esta crema para sustituir la nata en recetas dulces o saladas. ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7247,10 +7247,10 @@
                 "y1": 193.77783203125
             }
         },
-        "69d6911f-1704-47b6-acd7-9914fa35dee4": {
-            "id": "69d6911f-1704-47b6-acd7-9914fa35dee4",
+        "ab50ef06-2c97-4937-bf8b-00b19ac732a0": {
+            "id": "ab50ef06-2c97-4937-bf8b-00b19ac732a0",
             "type": "p",
-            "content": "Mantequilla Vegana de Aceite de Coco ",
+            "content": "**Mantequilla Vegana de Aceite de Coco** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7271,8 +7271,8 @@
                 "y1": 246.47265625
             }
         },
-        "ff7b0d2b-1ebc-46d0-8851-c416fe934837": {
-            "id": "ff7b0d2b-1ebc-46d0-8851-c416fe934837",
+        "5816ccb6-28c4-4de8-9065-51396e2abe19": {
+            "id": "5816ccb6-28c4-4de8-9065-51396e2abe19",
             "type": "p",
             "content": "Ligera y con una textura perfecta para untar. Es una de esas recetas que sorprenden por su ",
             "page": 4,
@@ -7295,8 +7295,8 @@
                 "y1": 273.01904296875
             }
         },
-        "6939498c-378a-46f5-8528-cca0783ea879": {
-            "id": "6939498c-378a-46f5-8528-cca0783ea879",
+        "8271b761-3bcc-444c-b96a-3db33fb0c598": {
+            "id": "8271b761-3bcc-444c-b96a-3db33fb0c598",
             "type": "p",
             "content": "sencillez. ",
             "page": 4,
@@ -7319,10 +7319,10 @@
                 "y1": 287.5654296875
             }
         },
-        "81863c7c-54cf-442a-a992-352a00f34042": {
-            "id": "81863c7c-54cf-442a-a992-352a00f34042",
+        "12d6f1c7-a50b-4371-b91b-7db5863ba6b5": {
+            "id": "12d6f1c7-a50b-4371-b91b-7db5863ba6b5",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7343,8 +7343,8 @@
                 "y1": 314.111572265625
             }
         },
-        "ba480bb9-1fce-4fdd-af4c-69cb0f94c9f6": {
-            "id": "ba480bb9-1fce-4fdd-af4c-69cb0f94c9f6",
+        "0122d648-2d22-4ccc-8ac2-3b7f1c39c445": {
+            "id": "0122d648-2d22-4ccc-8ac2-3b7f1c39c445",
             "type": "p",
             "content": "\u25cf\u200b 120 g de aceite de coco derretido ",
             "page": 4,
@@ -7367,8 +7367,8 @@
                 "y1": 340.65771484375
             }
         },
-        "de3ce738-5bfc-4e56-b1f6-f7ae7012b7dd": {
-            "id": "de3ce738-5bfc-4e56-b1f6-f7ae7012b7dd",
+        "46678ab9-76e3-49f3-8c39-a516b55a7d63": {
+            "id": "46678ab9-76e3-49f3-8c39-a516b55a7d63",
             "type": "p",
             "content": "\u25cf\u200b 1 cda de lecitina de soya ",
             "page": 4,
@@ -7391,8 +7391,8 @@
                 "y1": 355.2041015625
             }
         },
-        "9a75afe6-6071-40c3-a5a3-f4bd548856c7": {
-            "id": "9a75afe6-6071-40c3-a5a3-f4bd548856c7",
+        "06f61388-d709-4ddf-a2c3-6f8bb8d41c03": {
+            "id": "06f61388-d709-4ddf-a2c3-6f8bb8d41c03",
             "type": "p",
             "content": "\u25cf\u200b 3 cda de aceite de oliva ",
             "page": 4,
@@ -7415,8 +7415,8 @@
                 "y1": 369.75048828125
             }
         },
-        "6da34b37-1dba-4e02-a9f3-f39b42c52d9f": {
-            "id": "6da34b37-1dba-4e02-a9f3-f39b42c52d9f",
+        "199cffb6-36d5-4a51-893e-8563ea7b52d6": {
+            "id": "199cffb6-36d5-4a51-893e-8563ea7b52d6",
             "type": "p",
             "content": "\u25cf\u200b 4 cda de leche de avena ",
             "page": 4,
@@ -7439,8 +7439,8 @@
                 "y1": 384.296630859375
             }
         },
-        "d1cd863e-f97c-4641-a2e6-ef0802216a7c": {
-            "id": "d1cd863e-f97c-4641-a2e6-ef0802216a7c",
+        "9f2f5b18-d1ca-49b0-9554-ea57c1fd7a0c": {
+            "id": "9f2f5b18-d1ca-49b0-9554-ea57c1fd7a0c",
             "type": "p",
             "content": "\u25cf\u200b Sal al gusto ",
             "page": 4,
@@ -7463,10 +7463,10 @@
                 "y1": 398.8427734375
             }
         },
-        "833363cf-7388-4d5b-a428-bec71bca266c": {
-            "id": "833363cf-7388-4d5b-a428-bec71bca266c",
+        "96e79fc7-ce97-4830-94cc-bc43788e01be": {
+            "id": "96e79fc7-ce97-4830-94cc-bc43788e01be",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7487,8 +7487,8 @@
                 "y1": 425.38916015625
             }
         },
-        "c2da3bcc-7df9-4992-bf46-4a2d006c09f3": {
-            "id": "c2da3bcc-7df9-4992-bf46-4a2d006c09f3",
+        "ae33c605-bc81-4ea6-8305-c2c42df068c4": {
+            "id": "ae33c605-bc81-4ea6-8305-c2c42df068c4",
             "type": "p",
             "content": "1.\u200b Emulsiona todos los ingredientes con batidora de inmersi\u00f3n. ",
             "page": 4,
@@ -7511,8 +7511,8 @@
                 "y1": 451.935546875
             }
         },
-        "36545317-0290-41eb-83cf-d26691374c49": {
-            "id": "36545317-0290-41eb-83cf-d26691374c49",
+        "5738924e-f49a-45ef-be3d-afba202ef3a6": {
+            "id": "5738924e-f49a-45ef-be3d-afba202ef3a6",
             "type": "p",
             "content": "2.\u200b Guarda en recipiente con tapa y refrigera hasta que solidifique. ",
             "page": 4,
@@ -7535,10 +7535,10 @@
                 "y1": 466.481689453125
             }
         },
-        "93957f63-dcc8-4154-b556-9a819420de2a": {
-            "id": "93957f63-dcc8-4154-b556-9a819420de2a",
+        "ca2ac190-b173-4f4f-8edb-ddaeb33a08e7": {
+            "id": "ca2ac190-b173-4f4f-8edb-ddaeb33a08e7",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Para una versi\u00f3n dulce, a\u00f1ade una pizca de canela y miel de agave. ",
+            "content": "\ud83d\udca1**Tip:** Para una versi\u00f3n dulce, a\u00f1ade una pizca de canela y miel de agave. ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7559,10 +7559,10 @@
                 "y1": 493.42529296875
             }
         },
-        "05cf3c03-eca2-44f7-818a-14aa6faac3d1": {
-            "id": "05cf3c03-eca2-44f7-818a-14aa6faac3d1",
+        "556ecfbe-2f6c-4fe3-abdb-42614eda7e38": {
+            "id": "556ecfbe-2f6c-4fe3-abdb-42614eda7e38",
             "type": "h2",
-            "content": "\ud83c\udf45 SALSAS VARIAS ",
+            "content": "\ud83c\udf45 **SALSAS VARIAS** ",
             "page": 4,
             "style": {
                 "font_size": 13.0,
@@ -7583,10 +7583,10 @@
                 "y1": 550.89013671875
             }
         },
-        "95f2117b-1a9c-4b52-8f92-43d2b92ec54e": {
-            "id": "95f2117b-1a9c-4b52-8f92-43d2b92ec54e",
+        "de22dee0-1ddd-4a25-9db5-02ac7a540c39": {
+            "id": "de22dee0-1ddd-4a25-9db5-02ac7a540c39",
             "type": "p",
-            "content": "Salsa de Tomate (Pomodoro) ",
+            "content": "**Salsa de Tomate (Pomodoro)** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7607,8 +7607,8 @@
                 "y1": 577.3115234375
             }
         },
-        "dd2863cf-56b0-4ef6-9e29-6ee17c0d496a": {
-            "id": "dd2863cf-56b0-4ef6-9e29-6ee17c0d496a",
+        "9b0ec512-28a7-4a48-b0f5-fd6d141e0fce": {
+            "id": "9b0ec512-28a7-4a48-b0f5-fd6d141e0fce",
             "type": "p",
             "content": "Una base infaltable. Su aroma, cuando se cocina lentamente, es el alma de muchas recetas ",
             "page": 4,
@@ -7631,8 +7631,8 @@
                 "y1": 603.85791015625
             }
         },
-        "ca7076ca-d7d0-4f12-b37f-2bcb5ed1714e": {
-            "id": "ca7076ca-d7d0-4f12-b37f-2bcb5ed1714e",
+        "f9d374a9-1546-455d-9b6e-39771b284e29": {
+            "id": "f9d374a9-1546-455d-9b6e-39771b284e29",
             "type": "p",
             "content": "italianas. ",
             "page": 4,
@@ -7655,10 +7655,10 @@
                 "y1": 618.40380859375
             }
         },
-        "aab2a5ca-dbb9-4304-9b4d-852658596fa1": {
-            "id": "aab2a5ca-dbb9-4304-9b4d-852658596fa1",
+        "37c5a1ba-5f87-4be3-a49e-41c5ec2899c6": {
+            "id": "37c5a1ba-5f87-4be3-a49e-41c5ec2899c6",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 4,
             "style": {
                 "font_size": 11.0,
@@ -7679,8 +7679,8 @@
                 "y1": 644.9501953125
             }
         },
-        "31222461-8889-467d-b8d4-c27921e117dd": {
-            "id": "31222461-8889-467d-b8d4-c27921e117dd",
+        "1c032eca-cb88-4fc5-82e0-896f25bef67e": {
+            "id": "1c032eca-cb88-4fc5-82e0-896f25bef67e",
             "type": "p",
             "content": "\u25cf\u200b Aceite de oliva ",
             "page": 4,
@@ -7703,8 +7703,8 @@
                 "y1": 671.49658203125
             }
         },
-        "dcbc058d-c2aa-498a-88c6-16f7565e112d": {
-            "id": "dcbc058d-c2aa-498a-88c6-16f7565e112d",
+        "d8102117-3389-4576-9994-74ad1b414d75": {
+            "id": "d8102117-3389-4576-9994-74ad1b414d75",
             "type": "p",
             "content": "\u25cf\u200b 1 cebolla mediana picada ",
             "page": 4,
@@ -7727,8 +7727,8 @@
                 "y1": 686.042724609375
             }
         },
-        "6d6f2ba4-e5e6-4615-b664-16dea2eb9e8a": {
-            "id": "6d6f2ba4-e5e6-4615-b664-16dea2eb9e8a",
+        "c3479c05-4ad2-4729-8f0a-a5005d541a48": {
+            "id": "c3479c05-4ad2-4729-8f0a-a5005d541a48",
             "type": "p",
             "content": "\u25cf\u200b 2 dientes de ajo ",
             "page": 4,
@@ -7751,8 +7751,8 @@
                 "y1": 700.5888671875
             }
         },
-        "885021b4-3a3c-4aa9-b078-701720e064c1": {
-            "id": "885021b4-3a3c-4aa9-b078-701720e064c1",
+        "229de308-0d96-4348-8d68-d810354306a7": {
+            "id": "229de308-0d96-4348-8d68-d810354306a7",
             "type": "p",
             "content": "\u25cf\u200b 2 rajas de canela ",
             "page": 4,
@@ -7775,8 +7775,8 @@
                 "y1": 715.13525390625
             }
         },
-        "c268ba29-5e42-4f7a-be96-bca358eeaa3a": {
-            "id": "c268ba29-5e42-4f7a-be96-bca358eeaa3a",
+        "aacbecd8-6939-475b-84a3-8e27b85d8240": {
+            "id": "aacbecd8-6939-475b-84a3-8e27b85d8240",
             "type": "p",
             "content": "\u25cf\u200b 4 tomates medianos picados ",
             "page": 4,
@@ -7799,8 +7799,8 @@
                 "y1": 729.681640625
             }
         },
-        "dbb29f2f-81bc-4d7b-af6f-f2e6bf96dfc0": {
-            "id": "dbb29f2f-81bc-4d7b-af6f-f2e6bf96dfc0",
+        "3a7dbc4b-b19a-4c99-bca9-64f01dbb9f15": {
+            "id": "3a7dbc4b-b19a-4c99-bca9-64f01dbb9f15",
             "type": "p",
             "content": "\u25cf\u200b 2 cda de aceto bals\u00e1mico ",
             "page": 4,
@@ -7823,8 +7823,8 @@
                 "y1": 744.227783203125
             }
         },
-        "156e733f-2106-4d80-8bab-ec93cd2f32b6": {
-            "id": "156e733f-2106-4d80-8bab-ec93cd2f32b6",
+        "622c4db7-3e32-4127-a58f-3c439f8ea045": {
+            "id": "622c4db7-3e32-4127-a58f-3c439f8ea045",
             "type": "p",
             "content": "\u25cf\u200b Sal y pimienta al gusto ",
             "page": 4,
@@ -7847,10 +7847,10 @@
                 "y1": 758.77392578125
             }
         },
-        "97d7e10b-395d-4efb-a8ee-1c002db21cc2": {
-            "id": "97d7e10b-395d-4efb-a8ee-1c002db21cc2",
+        "5495c3fe-239d-4f49-9ce7-7d2fc9279b59": {
+            "id": "5495c3fe-239d-4f49-9ce7-7d2fc9279b59",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -7871,8 +7871,8 @@
                 "y1": 84.64892578125
             }
         },
-        "9641baf7-5cb7-4be7-a60b-0a5adc918124": {
-            "id": "9641baf7-5cb7-4be7-a60b-0a5adc918124",
+        "10a4a7d2-0c25-4741-b64b-bea55df4be5c": {
+            "id": "10a4a7d2-0c25-4741-b64b-bea55df4be5c",
             "type": "p",
             "content": "1.\u200b Sofr\u00ede cebolla, ajo y canela hasta dorar. ",
             "page": 5,
@@ -7895,8 +7895,8 @@
                 "y1": 111.1953125
             }
         },
-        "cf3fc2b7-bc93-467b-bd68-2cc9da00a692": {
-            "id": "cf3fc2b7-bc93-467b-bd68-2cc9da00a692",
+        "214d4642-de49-4413-92e8-34e0f5134b2f": {
+            "id": "214d4642-de49-4413-92e8-34e0f5134b2f",
             "type": "p",
             "content": "2.\u200b Agrega el resto y cocina 10 minutos a fuego bajo. ",
             "page": 5,
@@ -7919,10 +7919,10 @@
                 "y1": 125.741455078125
             }
         },
-        "5575e27c-7078-4b08-9fda-c4bb2efc6954": {
-            "id": "5575e27c-7078-4b08-9fda-c4bb2efc6954",
+        "bfe988c3-d82e-4ba2-b543-e88505c47116": {
+            "id": "bfe988c3-d82e-4ba2-b543-e88505c47116",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Guarda en frascos y congela; as\u00ed tendr\u00e1s siempre una salsa casera lista. ",
+            "content": "\ud83d\udca1**Tip:** Guarda en frascos y congela; as\u00ed tendr\u00e1s siempre una salsa casera lista. ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -7943,10 +7943,10 @@
                 "y1": 152.68505859375
             }
         },
-        "d0f5409c-caa6-473b-8763-75c24701f918": {
-            "id": "d0f5409c-caa6-473b-8763-75c24701f918",
+        "fee36261-9f76-4e05-8818-e502bd3d8402": {
+            "id": "fee36261-9f76-4e05-8818-e502bd3d8402",
             "type": "p",
-            "content": "Salsa de Man\u00ed ",
+            "content": "**Salsa de Man\u00ed** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -7967,8 +7967,8 @@
                 "y1": 205.38037109375
             }
         },
-        "7b7e4d77-6281-42ee-ad98-5ab985252166": {
-            "id": "7b7e4d77-6281-42ee-ad98-5ab985252166",
+        "5aba5401-cd2e-4f47-bdfc-825e6f8ac2b2": {
+            "id": "5aba5401-cd2e-4f47-bdfc-825e6f8ac2b2",
             "type": "p",
             "content": "Una joya ecuatoriana, cremosa y arom\u00e1tica. Perfecta para servir con yucas o vegetales al ",
             "page": 5,
@@ -7991,8 +7991,8 @@
                 "y1": 231.92626953125
             }
         },
-        "ac5c359b-aa02-4d6e-a4be-74ac0f652b90": {
-            "id": "ac5c359b-aa02-4d6e-a4be-74ac0f652b90",
+        "d0329878-4171-4b5f-a26f-2031996fb0f6": {
+            "id": "d0329878-4171-4b5f-a26f-2031996fb0f6",
             "type": "p",
             "content": "vapor. ",
             "page": 5,
@@ -8015,10 +8015,10 @@
                 "y1": 246.47265625
             }
         },
-        "f7f51786-6633-414a-b867-c7c6d91bb6ea": {
-            "id": "f7f51786-6633-414a-b867-c7c6d91bb6ea",
+        "a2ae2ba9-1828-4671-a249-74b1f2036dc9": {
+            "id": "a2ae2ba9-1828-4671-a249-74b1f2036dc9",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -8039,8 +8039,8 @@
                 "y1": 273.01904296875
             }
         },
-        "4879dbcf-420a-4566-9893-996d20d19ed0": {
-            "id": "4879dbcf-420a-4566-9893-996d20d19ed0",
+        "5eec7cb3-a94f-4f94-a8ca-c8ff4882e749": {
+            "id": "5eec7cb3-a94f-4f94-a8ca-c8ff4882e749",
             "type": "p",
             "content": "\u25cf\u200b 150 g de mantequilla de man\u00ed ",
             "page": 5,
@@ -8063,8 +8063,8 @@
                 "y1": 299.5654296875
             }
         },
-        "f0124b32-c06b-4a08-9012-27848d41937b": {
-            "id": "f0124b32-c06b-4a08-9012-27848d41937b",
+        "f8da5402-b19a-49bd-90dc-4a9e474a6233": {
+            "id": "f8da5402-b19a-49bd-90dc-4a9e474a6233",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de leche vegetal ",
             "page": 5,
@@ -8087,8 +8087,8 @@
                 "y1": 314.111572265625
             }
         },
-        "b2bba186-e459-4d6d-a125-b99c14670137": {
-            "id": "b2bba186-e459-4d6d-a125-b99c14670137",
+        "ed3ed380-200e-40ae-ae69-95169919ce8d": {
+            "id": "ed3ed380-200e-40ae-ae69-95169919ce8d",
             "type": "p",
             "content": "\u25cf\u200b 1 cebolla larga picada ",
             "page": 5,
@@ -8111,8 +8111,8 @@
                 "y1": 328.65771484375
             }
         },
-        "0d8c63df-6e51-457b-9875-ff15d6b13131": {
-            "id": "0d8c63df-6e51-457b-9875-ff15d6b13131",
+        "be6818ec-be0e-4268-b5ab-7d705d616839": {
+            "id": "be6818ec-be0e-4268-b5ab-7d705d616839",
             "type": "p",
             "content": "\u25cf\u200b Sal, aceite y achiote ",
             "page": 5,
@@ -8135,10 +8135,10 @@
                 "y1": 343.2041015625
             }
         },
-        "dd32c782-b77b-44f8-9d54-16df750945b0": {
-            "id": "dd32c782-b77b-44f8-9d54-16df750945b0",
+        "dcf85bdd-327a-4283-9d14-5e2f106cb1cd": {
+            "id": "dcf85bdd-327a-4283-9d14-5e2f106cb1cd",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -8159,8 +8159,8 @@
                 "y1": 369.75048828125
             }
         },
-        "29eeef7a-b7e2-4f52-945a-bd4452839c2e": {
-            "id": "29eeef7a-b7e2-4f52-945a-bd4452839c2e",
+        "0059b299-edf6-42ea-9469-37f212b158c3": {
+            "id": "0059b299-edf6-42ea-9469-37f212b158c3",
             "type": "p",
             "content": "1.\u200b Prepara un refrito con la cebolla, aceite y achiote. ",
             "page": 5,
@@ -8183,8 +8183,8 @@
                 "y1": 396.296630859375
             }
         },
-        "15034fc4-fa98-4ac1-b483-e329928b6c3a": {
-            "id": "15034fc4-fa98-4ac1-b483-e329928b6c3a",
+        "3c28cbb0-9b3c-40fd-9936-c4c74adfc0ae": {
+            "id": "3c28cbb0-9b3c-40fd-9936-c4c74adfc0ae",
             "type": "p",
             "content": "2.\u200b Lic\u00faa el man\u00ed con la leche y a\u00f1ade al refrito. ",
             "page": 5,
@@ -8207,8 +8207,8 @@
                 "y1": 410.8427734375
             }
         },
-        "c4b49f9d-9ee5-4ef5-838a-be611a23b1e8": {
-            "id": "c4b49f9d-9ee5-4ef5-838a-be611a23b1e8",
+        "7bdd3ca8-a31f-4c20-ae86-5762d8433e70": {
+            "id": "7bdd3ca8-a31f-4c20-ae86-5762d8433e70",
             "type": "p",
             "content": "3.\u200b Cocina a fuego bajo hasta que espese. ",
             "page": 5,
@@ -8231,10 +8231,10 @@
                 "y1": 425.38916015625
             }
         },
-        "3c55689d-a7f5-47e8-9374-43ad167e0950": {
-            "id": "3c55689d-a7f5-47e8-9374-43ad167e0950",
+        "3ba08420-708d-4e59-925c-b6c5694c6e2f": {
+            "id": "3ba08420-708d-4e59-925c-b6c5694c6e2f",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Un toque de or\u00e9gano seco realza su sabor. ",
+            "content": "\ud83d\udca1**Tip:** Un toque de or\u00e9gano seco realza su sabor. ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -8255,10 +8255,10 @@
                 "y1": 452.3330078125
             }
         },
-        "1378bc6e-8d52-42a6-9c1c-306a4d333e72": {
-            "id": "1378bc6e-8d52-42a6-9c1c-306a4d333e72",
+        "23b45dab-2e87-4d04-956d-5256ac2d050b": {
+            "id": "23b45dab-2e87-4d04-956d-5256ac2d050b",
             "type": "p",
-            "content": "Agrio ",
+            "content": "**Agrio** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -8279,8 +8279,8 @@
                 "y1": 505.02783203125
             }
         },
-        "4b155db5-e0f5-4e54-9f64-ba014fd98bbf": {
-            "id": "4b155db5-e0f5-4e54-9f64-ba014fd98bbf",
+        "b66dc301-ca47-4534-9f68-7013c6649a39": {
+            "id": "b66dc301-ca47-4534-9f68-7013c6649a39",
             "type": "p",
             "content": "Refrescante y lleno de vida, este aderezo es el alma de muchos platos tradicionales. ",
             "page": 5,
@@ -8303,10 +8303,10 @@
                 "y1": 531.57421875
             }
         },
-        "679d29be-a06f-46b9-8411-f2edb87b715c": {
-            "id": "679d29be-a06f-46b9-8411-f2edb87b715c",
+        "5fc35e8d-fa6c-4590-89e8-b5bf124ffdea": {
+            "id": "5fc35e8d-fa6c-4590-89e8-b5bf124ffdea",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -8327,8 +8327,8 @@
                 "y1": 558.12060546875
             }
         },
-        "c673b59b-00a0-4f5b-a247-35e48b038fdf": {
-            "id": "c673b59b-00a0-4f5b-a247-35e48b038fdf",
+        "f03a98a1-27ed-41ba-8cd5-4f70abecec1c": {
+            "id": "f03a98a1-27ed-41ba-8cd5-4f70abecec1c",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de agua ",
             "page": 5,
@@ -8351,8 +8351,8 @@
                 "y1": 584.666748046875
             }
         },
-        "94af0856-120c-4f08-b898-5cef18aa0ffb": {
-            "id": "94af0856-120c-4f08-b898-5cef18aa0ffb",
+        "7176f05a-fb86-42dd-9a58-4543bdb95802": {
+            "id": "7176f05a-fb86-42dd-9a58-4543bdb95802",
             "type": "p",
             "content": "\u25cf\u200b 1 cda de az\u00facar de coco ",
             "page": 5,
@@ -8375,8 +8375,8 @@
                 "y1": 599.212890625
             }
         },
-        "f82d0a69-67f9-4e9c-8009-7d8129d1d64a": {
-            "id": "f82d0a69-67f9-4e9c-8009-7d8129d1d64a",
+        "b5072347-1f7a-4287-a646-29b5b843bdd5": {
+            "id": "b5072347-1f7a-4287-a646-29b5b843bdd5",
             "type": "p",
             "content": "\u25cf\u200b Jugo de 1 lim\u00f3n ",
             "page": 5,
@@ -8399,8 +8399,8 @@
                 "y1": 613.75927734375
             }
         },
-        "86ef1101-8024-4d33-8664-625238d91128": {
-            "id": "86ef1101-8024-4d33-8664-625238d91128",
+        "5696c6bc-16b9-465e-81c8-fb885598f37a": {
+            "id": "5696c6bc-16b9-465e-81c8-fb885598f37a",
             "type": "p",
             "content": "\u25cf\u200b 2 ramitas de culantro picado ",
             "page": 5,
@@ -8423,8 +8423,8 @@
                 "y1": 628.3056640625
             }
         },
-        "723fdf8b-68af-449c-b291-a673f041392a": {
-            "id": "723fdf8b-68af-449c-b291-a673f041392a",
+        "439633bb-fdda-4d81-ac89-5c4e56631de7": {
+            "id": "439633bb-fdda-4d81-ac89-5c4e56631de7",
             "type": "p",
             "content": "\u25cf\u200b 1 cebolla larga picada ",
             "page": 5,
@@ -8447,10 +8447,10 @@
                 "y1": 642.851806640625
             }
         },
-        "3eb70af7-0e21-492e-bf88-169cbaef826d": {
-            "id": "3eb70af7-0e21-492e-bf88-169cbaef826d",
+        "7a13e0ca-78bc-4a9c-86d8-b47e6401b224": {
+            "id": "7a13e0ca-78bc-4a9c-86d8-b47e6401b224",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -8471,8 +8471,8 @@
                 "y1": 669.39794921875
             }
         },
-        "e75018f2-d469-48a3-bf48-fdf39afb736d": {
-            "id": "e75018f2-d469-48a3-bf48-fdf39afb736d",
+        "2f3e568e-9df7-4a27-8531-08a853c5caac": {
+            "id": "2f3e568e-9df7-4a27-8531-08a853c5caac",
             "type": "p",
             "content": "1.\u200b Mezcla l\u00edquidos y az\u00facar. ",
             "page": 5,
@@ -8495,8 +8495,8 @@
                 "y1": 695.9443359375
             }
         },
-        "20a65055-c6a9-485a-8875-d6af2c713f25": {
-            "id": "20a65055-c6a9-485a-8875-d6af2c713f25",
+        "3fc9227d-583b-4dd3-ab1d-9770c455b6eb": {
+            "id": "3fc9227d-583b-4dd3-ab1d-9770c455b6eb",
             "type": "p",
             "content": "2.\u200b Agrega la cebolla y culantro. ",
             "page": 5,
@@ -8519,10 +8519,10 @@
                 "y1": 710.49072265625
             }
         },
-        "4e497f8e-51cc-49db-b30a-c108ae569a5c": {
-            "id": "4e497f8e-51cc-49db-b30a-c108ae569a5c",
+        "70f8678f-96cb-4a8d-ad38-28c88d2c936c": {
+            "id": "70f8678f-96cb-4a8d-ad38-28c88d2c936c",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Ideal para acompa\u00f1ar llapingachos o mote con tostado. ",
+            "content": "\ud83d\udca1**Tip:** Ideal para acompa\u00f1ar llapingachos o mote con tostado. ",
             "page": 5,
             "style": {
                 "font_size": 11.0,
@@ -8543,10 +8543,10 @@
                 "y1": 737.43408203125
             }
         },
-        "7dfba9ff-0fda-4bfc-a989-1e2377a50742": {
-            "id": "7dfba9ff-0fda-4bfc-a989-1e2377a50742",
+        "0ca10bb7-c701-4b01-92f4-2feed128357c": {
+            "id": "0ca10bb7-c701-4b01-92f4-2feed128357c",
             "type": "p",
-            "content": "Aj\u00ed de Pepas de Zambo ",
+            "content": "**Aj\u00ed de Pepas de Zambo** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -8567,8 +8567,8 @@
                 "y1": 84.64892578125
             }
         },
-        "299b8738-2648-4bbd-a25a-7a451a222743": {
-            "id": "299b8738-2648-4bbd-a25a-7a451a222743",
+        "5040c410-041d-401f-9d07-1d50b8e03e39": {
+            "id": "5040c410-041d-401f-9d07-1d50b8e03e39",
             "type": "p",
             "content": "Una receta ancestral con car\u00e1cter. Las pepas tostadas aportan un sabor \u00fanico. ",
             "page": 6,
@@ -8591,10 +8591,10 @@
                 "y1": 111.19482421875
             }
         },
-        "a487b6ea-4b03-42f9-b53d-74ae3a173e24": {
-            "id": "a487b6ea-4b03-42f9-b53d-74ae3a173e24",
+        "7e31a297-06a6-49aa-a866-4cfc60918460": {
+            "id": "7e31a297-06a6-49aa-a866-4cfc60918460",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -8615,8 +8615,8 @@
                 "y1": 137.74169921875
             }
         },
-        "411802a6-6862-4e07-94da-c3dfcea93f65": {
-            "id": "411802a6-6862-4e07-94da-c3dfcea93f65",
+        "fbb0a120-0ccf-4d2b-9530-5c61e90dd925": {
+            "id": "fbb0a120-0ccf-4d2b-9530-5c61e90dd925",
             "type": "p",
             "content": "\u25cf\u200b 150 g de pepas de zambo ",
             "page": 6,
@@ -8639,8 +8639,8 @@
                 "y1": 164.28759765625
             }
         },
-        "00e8f7a2-bba3-4858-8637-95d2a0d25c9c": {
-            "id": "00e8f7a2-bba3-4858-8637-95d2a0d25c9c",
+        "17d4984c-dc6b-4e3e-8310-1654c66b1933": {
+            "id": "17d4984c-dc6b-4e3e-8310-1654c66b1933",
             "type": "p",
             "content": "\u25cf\u200b 2 aj\u00edes ",
             "page": 6,
@@ -8663,8 +8663,8 @@
                 "y1": 178.833984375
             }
         },
-        "9c6b9836-5832-46bd-ad59-f563c390d22b": {
-            "id": "9c6b9836-5832-46bd-ad59-f563c390d22b",
+        "db0dd04e-1b11-4af8-8bb3-b6a07362b64a": {
+            "id": "db0dd04e-1b11-4af8-8bb3-b6a07362b64a",
             "type": "p",
             "content": "\u25cf\u200b Culantro y cebolla picada ",
             "page": 6,
@@ -8687,10 +8687,10 @@
                 "y1": 193.38037109375
             }
         },
-        "e7e594f6-031c-4299-a18f-0e8950c446e5": {
-            "id": "e7e594f6-031c-4299-a18f-0e8950c446e5",
+        "08bb5889-a88b-46e4-8c05-cb8db511dae3": {
+            "id": "08bb5889-a88b-46e4-8c05-cb8db511dae3",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -8711,8 +8711,8 @@
                 "y1": 219.92626953125
             }
         },
-        "ca32ddc5-c094-46dd-b60c-6cc51171998b": {
-            "id": "ca32ddc5-c094-46dd-b60c-6cc51171998b",
+        "025b8dd2-2c03-46d3-8f3b-6d536ae04049": {
+            "id": "025b8dd2-2c03-46d3-8f3b-6d536ae04049",
             "type": "p",
             "content": "1.\u200b Tuesta las pepas y lic\u00faa con aj\u00ed, agua, sal y culantro. ",
             "page": 6,
@@ -8735,8 +8735,8 @@
                 "y1": 246.47265625
             }
         },
-        "76d9514f-1bb2-4e3a-8094-5b591e876e41": {
-            "id": "76d9514f-1bb2-4e3a-8094-5b591e876e41",
+        "9faf454f-00e2-4042-b9f8-aeddcf36ee6a": {
+            "id": "9faf454f-00e2-4042-b9f8-aeddcf36ee6a",
             "type": "p",
             "content": "2.\u200b A\u00f1ade la cebolla y mezcla. ",
             "page": 6,
@@ -8759,10 +8759,10 @@
                 "y1": 261.01904296875
             }
         },
-        "ce867f63-8b49-4dc2-901b-8f8a5df14880": {
-            "id": "ce867f63-8b49-4dc2-901b-8f8a5df14880",
+        "423e8b69-eeda-4d40-9c0d-0ce94247f0c6": {
+            "id": "423e8b69-eeda-4d40-9c0d-0ce94247f0c6",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Si prefieres un toque m\u00e1s suave, quita las semillas del aj\u00ed antes de licuar. ",
+            "content": "\ud83d\udca1**Tip:** Si prefieres un toque m\u00e1s suave, quita las semillas del aj\u00ed antes de licuar. ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -8783,10 +8783,10 @@
                 "y1": 287.962890625
             }
         },
-        "0fc26cb5-c58f-4a42-ac63-b5568716a30c": {
-            "id": "0fc26cb5-c58f-4a42-ac63-b5568716a30c",
+        "856728cc-fa8b-447a-a441-7408a7aae629": {
+            "id": "856728cc-fa8b-447a-a441-7408a7aae629",
             "type": "p",
-            "content": "Mayonesa de Aquafaba ",
+            "content": "**Mayonesa de Aquafaba** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -8807,8 +8807,8 @@
                 "y1": 340.65771484375
             }
         },
-        "97b749de-28d0-4ba8-b845-d22b75d772b0": {
-            "id": "97b749de-28d0-4ba8-b845-d22b75d772b0",
+        "9a60dc21-b102-4d5d-9ab1-a1a6a6110739": {
+            "id": "9a60dc21-b102-4d5d-9ab1-a1a6a6110739",
             "type": "p",
             "content": "Una versi\u00f3n vegetal de la cl\u00e1sica mayonesa, suave y sedosa. La magia est\u00e1 en la aquafaba. ",
             "page": 6,
@@ -8831,10 +8831,10 @@
                 "y1": 367.2041015625
             }
         },
-        "67db4f52-ac71-427e-8df1-024aaa221774": {
-            "id": "67db4f52-ac71-427e-8df1-024aaa221774",
+        "2095d5a0-098a-4d63-91d1-aff6d2df914e": {
+            "id": "2095d5a0-098a-4d63-91d1-aff6d2df914e",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -8855,8 +8855,8 @@
                 "y1": 393.75048828125
             }
         },
-        "ebfe316a-b1e5-4c57-8324-4bc422e2262b": {
-            "id": "ebfe316a-b1e5-4c57-8324-4bc422e2262b",
+        "88217c3c-9b29-4dfb-ab8c-39ec3dda3bb2": {
+            "id": "88217c3c-9b29-4dfb-ab8c-39ec3dda3bb2",
             "type": "p",
             "content": "\u25cf\u200b 6 cda de aquafaba ",
             "page": 6,
@@ -8879,8 +8879,8 @@
                 "y1": 420.29638671875
             }
         },
-        "fc7f980f-24b3-47bf-a197-d7f9dc5b8a15": {
-            "id": "fc7f980f-24b3-47bf-a197-d7f9dc5b8a15",
+        "76339c9c-f499-40fe-9224-b64a69283322": {
+            "id": "76339c9c-f499-40fe-9224-b64a69283322",
             "type": "p",
             "content": "\u25cf\u200b Jugo de lim\u00f3n ",
             "page": 6,
@@ -8903,8 +8903,8 @@
                 "y1": 434.8427734375
             }
         },
-        "0fba00cd-4308-4f3c-93e9-dd6861b56556": {
-            "id": "0fba00cd-4308-4f3c-93e9-dd6861b56556",
+        "803e6e4b-8f25-46ca-8d81-d0ad9a5d151c": {
+            "id": "803e6e4b-8f25-46ca-8d81-d0ad9a5d151c",
             "type": "p",
             "content": "\u25cf\u200b Vinagre ",
             "page": 6,
@@ -8927,8 +8927,8 @@
                 "y1": 449.38916015625
             }
         },
-        "09970088-4127-4733-a2ce-21e43b1736b0": {
-            "id": "09970088-4127-4733-a2ce-21e43b1736b0",
+        "483cc85b-a33b-4599-ae3a-5c9f6b73ec77": {
+            "id": "483cc85b-a33b-4599-ae3a-5c9f6b73ec77",
             "type": "p",
             "content": "\u25cf\u200b Sal, pimienta y aceite ",
             "page": 6,
@@ -8951,10 +8951,10 @@
                 "y1": 463.935546875
             }
         },
-        "29e18d94-dceb-446d-b800-f750c7f3f102": {
-            "id": "29e18d94-dceb-446d-b800-f750c7f3f102",
+        "8b9d39af-71dc-4206-ae90-6bc23667a493": {
+            "id": "8b9d39af-71dc-4206-ae90-6bc23667a493",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -8975,8 +8975,8 @@
                 "y1": 490.48193359375
             }
         },
-        "ad2ae342-19d0-49f9-aa88-4c3bf87aec84": {
-            "id": "ad2ae342-19d0-49f9-aa88-4c3bf87aec84",
+        "81f035f8-0fdd-44cf-accb-e2d2a440a110": {
+            "id": "81f035f8-0fdd-44cf-accb-e2d2a440a110",
             "type": "p",
             "content": "1.\u200b Coloca todo en la licuadora. ",
             "page": 6,
@@ -8999,8 +8999,8 @@
                 "y1": 517.02783203125
             }
         },
-        "15ebda8b-9355-46db-8819-9ff84b61abd3": {
-            "id": "15ebda8b-9355-46db-8819-9ff84b61abd3",
+        "dd7c7f9f-4ab2-4127-8c8d-229f12e88293": {
+            "id": "dd7c7f9f-4ab2-4127-8c8d-229f12e88293",
             "type": "p",
             "content": "2.\u200b Agrega el aceite poco a poco hasta emulsionar. ",
             "page": 6,
@@ -9023,10 +9023,10 @@
                 "y1": 531.57421875
             }
         },
-        "4e03b7b9-fa74-49fb-9b1c-9e232e4948ad": {
-            "id": "4e03b7b9-fa74-49fb-9b1c-9e232e4948ad",
+        "e1bbb63a-dbd4-4242-8daf-38df024356e4": {
+            "id": "e1bbb63a-dbd4-4242-8daf-38df024356e4",
             "type": "p",
-            "content": "\ud83d\udca1Tip: A\u00f1ade mostaza Dijon o ajo asado para un toque gourmet. ",
+            "content": "\ud83d\udca1**Tip:** A\u00f1ade mostaza Dijon o ajo asado para un toque gourmet. ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -9047,10 +9047,10 @@
                 "y1": 558.51806640625
             }
         },
-        "660aee99-474c-469c-a39f-b9084a482a74": {
-            "id": "660aee99-474c-469c-a39f-b9084a482a74",
+        "9124430c-4554-4c53-a4a5-59a50c5536bf": {
+            "id": "9124430c-4554-4c53-a4a5-59a50c5536bf",
             "type": "p",
-            "content": "Aquafaba de Garbanzo ",
+            "content": "**Aquafaba de Garbanzo** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -9071,8 +9071,8 @@
                 "y1": 611.212890625
             }
         },
-        "bb7f33b7-febb-4de4-ade4-0916e118b5bb": {
-            "id": "bb7f33b7-febb-4de4-ade4-0916e118b5bb",
+        "4d4d8e15-f460-458e-9abd-742361202a91": {
+            "id": "4d4d8e15-f460-458e-9abd-742361202a91",
             "type": "p",
             "content": "El secreto mejor guardado de la reposter\u00eda vegana. Sustituye claras de huevo y da una ",
             "page": 6,
@@ -9095,8 +9095,8 @@
                 "y1": 637.75927734375
             }
         },
-        "283ae259-4f04-4d97-a597-941ff117f25c": {
-            "id": "283ae259-4f04-4d97-a597-941ff117f25c",
+        "1546a4d4-b1dc-4b37-86aa-7b120dead088": {
+            "id": "1546a4d4-b1dc-4b37-86aa-7b120dead088",
             "type": "p",
             "content": "textura ligera. ",
             "page": 6,
@@ -9119,10 +9119,10 @@
                 "y1": 652.3056640625
             }
         },
-        "b31487b5-4a28-43c6-8d56-7b3bd6149a2b": {
-            "id": "b31487b5-4a28-43c6-8d56-7b3bd6149a2b",
+        "62f9e632-623a-4e9d-99d9-561f7383775f": {
+            "id": "62f9e632-623a-4e9d-99d9-561f7383775f",
             "type": "p",
-            "content": "Ingredientes: ",
+            "content": "**Ingredientes:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -9143,8 +9143,8 @@
                 "y1": 678.85205078125
             }
         },
-        "77b4024f-9bf4-499a-ae3a-9d13d1552030": {
-            "id": "77b4024f-9bf4-499a-ae3a-9d13d1552030",
+        "fea8ef27-e5a0-4500-b99a-e3a9a19effff": {
+            "id": "fea8ef27-e5a0-4500-b99a-e3a9a19effff",
             "type": "p",
             "content": "\u25cf\u200b 1 taza de garbanzos secos ",
             "page": 6,
@@ -9167,8 +9167,8 @@
                 "y1": 705.39794921875
             }
         },
-        "7d9e6d47-af07-4a9a-85e0-2d11c3be4fb2": {
-            "id": "7d9e6d47-af07-4a9a-85e0-2d11c3be4fb2",
+        "d5c51381-026e-4691-8f0a-1c89c397da07": {
+            "id": "d5c51381-026e-4691-8f0a-1c89c397da07",
             "type": "p",
             "content": "\u25cf\u200b 3 tazas de agua ",
             "page": 6,
@@ -9191,10 +9191,10 @@
                 "y1": 719.9443359375
             }
         },
-        "218aec74-67b7-4dd6-881b-83ed9d499573": {
-            "id": "218aec74-67b7-4dd6-881b-83ed9d499573",
+        "3f7f0e3a-db2e-4b58-b280-69b30b677855": {
+            "id": "3f7f0e3a-db2e-4b58-b280-69b30b677855",
             "type": "p",
-            "content": "Preparaci\u00f3n: ",
+            "content": "**Preparaci\u00f3n:** ",
             "page": 6,
             "style": {
                 "font_size": 11.0,
@@ -9215,8 +9215,8 @@
                 "y1": 746.49072265625
             }
         },
-        "88d49ef5-f3f2-48b9-bae7-8827e68686ad": {
-            "id": "88d49ef5-f3f2-48b9-bae7-8827e68686ad",
+        "0491548a-dad1-407f-90f9-c593dc261f66": {
+            "id": "0491548a-dad1-407f-90f9-c593dc261f66",
             "type": "p",
             "content": "1.\u200b Remoja los garbanzos toda la noche. ",
             "page": 7,
@@ -9239,8 +9239,8 @@
                 "y1": 84.64892578125
             }
         },
-        "d79a2b01-a896-4d2f-ae0f-a826bc643ff7": {
-            "id": "d79a2b01-a896-4d2f-ae0f-a826bc643ff7",
+        "b1b4bcd2-c4d8-4a61-9b7d-7977bdd48d7c": {
+            "id": "b1b4bcd2-c4d8-4a61-9b7d-7977bdd48d7c",
             "type": "p",
             "content": "2.\u200b Cocina 25 minutos en olla de presi\u00f3n. ",
             "page": 7,
@@ -9263,8 +9263,8 @@
                 "y1": 99.1953125
             }
         },
-        "ea1cd26e-2934-4055-90d4-d8efbe7eb12b": {
-            "id": "ea1cd26e-2934-4055-90d4-d8efbe7eb12b",
+        "2ced302a-7502-4c7b-b7d5-c6512e6da394": {
+            "id": "2ced302a-7502-4c7b-b7d5-c6512e6da394",
             "type": "p",
             "content": "3.\u200b Cuela y reduce el l\u00edquido hasta que espese. ",
             "page": 7,
@@ -9287,10 +9287,10 @@
                 "y1": 113.74169921875
             }
         },
-        "c14d91c0-c813-48b4-98f2-b6bb026cf16b": {
-            "id": "c14d91c0-c813-48b4-98f2-b6bb026cf16b",
+        "ce62a04a-0bb5-4e20-9002-b67d26fe8fce": {
+            "id": "ce62a04a-0bb5-4e20-9002-b67d26fe8fce",
             "type": "p",
-            "content": "\ud83d\udca1Tip: Cong\u00e9lala en cubetas para tener siempre a mano. ",
+            "content": "\ud83d\udca1**Tip:** Cong\u00e9lala en cubetas para tener siempre a mano. ",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -9311,10 +9311,10 @@
                 "y1": 140.68505859375
             }
         },
-        "009daab1-1bb1-4ac5-9142-7681d323f2ab": {
-            "id": "009daab1-1bb1-4ac5-9142-7681d323f2ab",
+        "7b7edd90-5896-422d-bfa8-7d940279bdd9": {
+            "id": "7b7edd90-5896-422d-bfa8-7d940279bdd9",
             "type": "h2",
-            "content": "\ud83e\udd5a REEMPLAZOS DE HUEVO ",
+            "content": "\ud83e\udd5a **REEMPLAZOS DE HUEVO** ",
             "page": 7,
             "style": {
                 "font_size": 13.0,
@@ -9335,8 +9335,8 @@
                 "y1": 198.14990234375
             }
         },
-        "4c6abb1a-1e60-4e5f-bd35-f6cbe9fe9bdd": {
-            "id": "4c6abb1a-1e60-4e5f-bd35-f6cbe9fe9bdd",
+        "5eef353c-620a-4465-a2b3-566caa20c633": {
+            "id": "5eef353c-620a-4465-a2b3-566caa20c633",
             "type": "p",
             "content": "Saber reemplazar el huevo abre un mundo de posibilidades en la cocina vegetal. Aqu\u00ed te ",
             "page": 7,
@@ -9359,8 +9359,8 @@
                 "y1": 224.5712890625
             }
         },
-        "9b157473-0378-40b9-82b8-485d01cc418a": {
-            "id": "9b157473-0378-40b9-82b8-485d01cc418a",
+        "c274f62d-0122-4ecc-be8c-5f23870600ed": {
+            "id": "c274f62d-0122-4ecc-be8c-5f23870600ed",
             "type": "p",
             "content": "dejo mis combinaciones favoritas, todas equivalentes a 1 huevo. ",
             "page": 7,
@@ -9383,10 +9383,10 @@
                 "y1": 239.11767578125
             }
         },
-        "75207896-aa2d-40ef-80cf-286884223bd5": {
-            "id": "75207896-aa2d-40ef-80cf-286884223bd5",
+        "f5669a3f-dc0e-423d-b436-fb7109a1ee63": {
+            "id": "f5669a3f-dc0e-423d-b436-fb7109a1ee63",
             "type": "p",
-            "content": "1. Mezcla Casera:\u200b",
+            "content": "**1. Mezcla Casera:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -9407,8 +9407,8 @@
                 "y1": 265.66357421875
             }
         },
-        "00b375a6-3737-4605-86fd-8d2172652835": {
-            "id": "00b375a6-3737-4605-86fd-8d2172652835",
+        "da40f994-f980-44f8-ba20-e40c72ae5a78": {
+            "id": "da40f994-f980-44f8-ba20-e40c72ae5a78",
             "type": "p",
             "content": "1 cda maicena + 2 cdta aceite + \u00bd cdta polvo de hornear + 1 cda agua fr\u00eda.\u200b",
             "page": 7,
@@ -9431,8 +9431,8 @@
                 "y1": 280.2099609375
             }
         },
-        "4f8d4fe3-5a01-4bdd-804a-3685a6cc8fb4": {
-            "id": "4f8d4fe3-5a01-4bdd-804a-3685a6cc8fb4",
+        "575bbcf4-c7b6-4880-89b4-87ecf675549e": {
+            "id": "575bbcf4-c7b6-4880-89b4-87ecf675549e",
             "type": "p",
             "content": "\ud83d\udc49 Perfecta para masas y panes. ",
             "page": 7,
@@ -9455,10 +9455,10 @@
                 "y1": 295.15380859375
             }
         },
-        "d3c97596-3652-4774-8bea-e844ae669551": {
-            "id": "d3c97596-3652-4774-8bea-e844ae669551",
+        "51ad7b73-9d49-41e8-bcd5-9ef3c6f9cae8": {
+            "id": "51ad7b73-9d49-41e8-bcd5-9ef3c6f9cae8",
             "type": "p",
-            "content": "2. Linaza:\u200b",
+            "content": "**2. Linaza:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -9479,8 +9479,8 @@
                 "y1": 321.30224609375
             }
         },
-        "f5a5db92-6b15-45d9-bafd-cbb6ad716c78": {
-            "id": "f5a5db92-6b15-45d9-bafd-cbb6ad716c78",
+        "1ae550b7-7452-4175-a96b-32bb99bb76d4": {
+            "id": "1ae550b7-7452-4175-a96b-32bb99bb76d4",
             "type": "p",
             "content": "1 cda linaza molida + 3 cda agua caliente (reposar 5 min).\u200b",
             "page": 7,
@@ -9503,8 +9503,8 @@
                 "y1": 335.8486328125
             }
         },
-        "4a82200e-4311-45d6-a1a6-4df00b819f00": {
-            "id": "4a82200e-4311-45d6-a1a6-4df00b819f00",
+        "7ab78416-d2c6-451c-8ce4-621c91395f9d": {
+            "id": "7ab78416-d2c6-451c-8ce4-621c91395f9d",
             "type": "p",
             "content": "\ud83d\udc49 Ideal para waffles o muffins. ",
             "page": 7,
@@ -9527,10 +9527,10 @@
                 "y1": 350.79248046875
             }
         },
-        "1115200c-c7c9-492e-b407-94177a775316": {
-            "id": "1115200c-c7c9-492e-b407-94177a775316",
+        "666bfd80-b841-4557-a697-2a3435569eac": {
+            "id": "666bfd80-b841-4557-a697-2a3435569eac",
             "type": "p",
-            "content": "3. Ch\u00eda:\u200b",
+            "content": "**3. Ch\u00eda:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -9551,8 +9551,8 @@
                 "y1": 376.94140625
             }
         },
-        "bbb87759-9d08-435a-a80b-9fe4e901373f": {
-            "id": "bbb87759-9d08-435a-a80b-9fe4e901373f",
+        "9dc34209-012c-4d50-9a18-c0bd7de2f31e": {
+            "id": "9dc34209-012c-4d50-9a18-c0bd7de2f31e",
             "type": "p",
             "content": "1 cda ch\u00eda molida + 3 cda agua caliente (reposar 5 min).\u200b",
             "page": 7,
@@ -9575,8 +9575,8 @@
                 "y1": 391.48779296875
             }
         },
-        "4b0664bb-e7f6-4a9b-af7a-5e7181d6b355": {
-            "id": "4b0664bb-e7f6-4a9b-af7a-5e7181d6b355",
+        "e5645976-7461-4bf7-9e27-98c46bd9b228": {
+            "id": "e5645976-7461-4bf7-9e27-98c46bd9b228",
             "type": "p",
             "content": "\ud83d\udc49 Da una textura h\u00fameda a los bizcochos. ",
             "page": 7,
@@ -9599,10 +9599,10 @@
                 "y1": 406.43115234375
             }
         },
-        "4b15ee6d-f314-492d-80df-bf9026254e2e": {
-            "id": "4b15ee6d-f314-492d-80df-bf9026254e2e",
+        "9dcb1e7f-3dd0-45dd-ad72-2ef02e4a4319": {
+            "id": "9dcb1e7f-3dd0-45dd-ad72-2ef02e4a4319",
             "type": "p",
-            "content": "4. Pur\u00e9 de Pl\u00e1tano:\u200b",
+            "content": "**4. Pur\u00e9 de Pl\u00e1tano:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -9623,8 +9623,8 @@
                 "y1": 432.580078125
             }
         },
-        "8071c571-c196-448b-ae4b-1cd2618937c4": {
-            "id": "8071c571-c196-448b-ae4b-1cd2618937c4",
+        "a55a4c37-8c0d-4be9-bfdf-1d482339a7b3": {
+            "id": "a55a4c37-8c0d-4be9-bfdf-1d482339a7b3",
             "type": "p",
             "content": "\u00bc taza pl\u00e1tano maduro triturado.\u200b",
             "page": 7,
@@ -9647,8 +9647,8 @@
                 "y1": 447.12646484375
             }
         },
-        "09691529-f0e7-492d-9db9-a416ad4e3f86": {
-            "id": "09691529-f0e7-492d-9db9-a416ad4e3f86",
+        "e6f21d1e-d9b1-481f-8313-86cbbe1af887": {
+            "id": "e6f21d1e-d9b1-481f-8313-86cbbe1af887",
             "type": "p",
             "content": "\ud83d\udc49 Aporta dulzura natural y humedad. ",
             "page": 7,
@@ -9671,10 +9671,10 @@
                 "y1": 462.06982421875
             }
         },
-        "a9b0e6bb-7978-473d-921d-bbc5884e4e33": {
-            "id": "a9b0e6bb-7978-473d-921d-bbc5884e4e33",
+        "a22d015d-0f80-4d14-aea8-43b6f78f7551": {
+            "id": "a22d015d-0f80-4d14-aea8-43b6f78f7551",
             "type": "p",
-            "content": "5. Pur\u00e9 de Manzana:\u200b",
+            "content": "**5. Pur\u00e9 de Manzana:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -9695,8 +9695,8 @@
                 "y1": 488.21875
             }
         },
-        "2e21b140-13e4-4b37-a851-3d6ff962f97e": {
-            "id": "2e21b140-13e4-4b37-a851-3d6ff962f97e",
+        "88da9fd0-a96c-4ba8-91cd-36e9cf49c1c0": {
+            "id": "88da9fd0-a96c-4ba8-91cd-36e9cf49c1c0",
             "type": "p",
             "content": "\u00bc taza pur\u00e9 de manzana cocida y licuada.\u200b",
             "page": 7,
@@ -9719,8 +9719,8 @@
                 "y1": 502.76513671875
             }
         },
-        "d83abed6-86c7-414f-aeed-a457ae332c4e": {
-            "id": "d83abed6-86c7-414f-aeed-a457ae332c4e",
+        "751e7a2b-35a5-4d0f-b25a-ba81817f6e68": {
+            "id": "751e7a2b-35a5-4d0f-b25a-ba81817f6e68",
             "type": "p",
             "content": "\ud83d\udc49 Perfecto para postres suaves. ",
             "page": 7,
@@ -9743,10 +9743,10 @@
                 "y1": 517.708984375
             }
         },
-        "d9090867-8fe5-4495-80c0-e9155ddd396d": {
-            "id": "d9090867-8fe5-4495-80c0-e9155ddd396d",
+        "968b791a-7d24-4199-8366-f4b2316e5989": {
+            "id": "968b791a-7d24-4199-8366-f4b2316e5989",
             "type": "p",
-            "content": "6. Aquafaba:\u200b",
+            "content": "**6. Aquafaba:\u200b**",
             "page": 7,
             "style": {
                 "font_size": 11.0,
@@ -9767,8 +9767,8 @@
                 "y1": 543.85791015625
             }
         },
-        "a23929a7-403a-41d6-b0a5-beba80a7913f": {
-            "id": "a23929a7-403a-41d6-b0a5-beba80a7913f",
+        "655ea2bb-9633-45c6-a096-f69ad3dee1d6": {
+            "id": "655ea2bb-9633-45c6-a096-f69ad3dee1d6",
             "type": "p",
             "content": "3 cda de agua de garbanzos o legumbres.\u200b",
             "page": 7,
@@ -9791,8 +9791,8 @@
                 "y1": 558.40380859375
             }
         },
-        "76325d3a-4ac0-484e-ae7f-512bc87f7835": {
-            "id": "76325d3a-4ac0-484e-ae7f-512bc87f7835",
+        "5f02107e-cfc1-4b30-ad35-e181afcc36b9": {
+            "id": "5f02107e-cfc1-4b30-ad35-e181afcc36b9",
             "type": "p",
             "content": "\ud83d\udc49 La mejor opci\u00f3n para merengues y panes esponjosos. ",
             "page": 7,
@@ -9815,10 +9815,10 @@
                 "y1": 573.34765625
             }
         },
-        "c25d7d46-3405-455c-a36a-8f35ecdc7451": {
-            "id": "c25d7d46-3405-455c-a36a-8f35ecdc7451",
+        "18e4c8aa-f1ca-41ab-9a58-99afb7483a01": {
+            "id": "18e4c8aa-f1ca-41ab-9a58-99afb7483a01",
             "type": "p",
-            "content": "\u2728Recuerda: cada receta es una oportunidad para cuidar el cuerpo, el planeta y el alma. ",
+            "content": "\u2728*Recuerda: cada receta es una oportunidad para cuidar el cuerpo, el planeta y el alma.* ",
             "page": 7,
             "style": {
                 "font_size": 11.0,
