@@ -140,7 +140,9 @@ vite.config.ts.timestamp-*
 
 # Other files
 /.gemini
-/_old_dev_files/
+/_old_dev_files
+/.agent
+/.vscode
 
 # Python
 __pycache__/

@@ -1,4 +1,4 @@
-import 'dart:io';
+import 'dart:typed_data';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../models/book.dart';
@@ -23,9 +23,7 @@ class BookRepository {
     return (response as List).map((json) => Book.fromJson(json)).toList();
   }
 
-  Future<Book> createBook(String filePath) async {
-    final file = File(filePath);
-    final fileName = filePath.split('/').last;
+  Future<Book> createBook(String fileName, Uint8List fileBytes) async {
     final user = _supabase.auth.currentUser;
     if (user == null) throw Exception('User not authenticated');
 
@@ -37,9 +35,9 @@ class BookRepository {
 
     // 1. Upload PDF to storage with error handling
     try {
-      await _supabase.storage.from('raw_pdfs').upload(
+      await _supabase.storage.from('raw_pdfs').uploadBinary(
             storagePath,
-            file,
+            fileBytes,
             fileOptions: const FileOptions(cacheControl: '3600', upsert: false),
           );
     } catch (e) {
