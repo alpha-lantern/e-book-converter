@@ -1,10 +1,11 @@
-import 'package:flutter/foundation.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/config.dart';
 import 'screens/editor_screen.dart';
 import 'screens/login_screen.dart';
+import 'services/book_repository.dart';
 import 'widgets/book_list_view.dart';
 import 'widgets/file_upload_zone.dart';
 
@@ -54,25 +55,77 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends ConsumerStatefulWidget {
   const DashboardScreen({super.key});
+
+  @override
+  ConsumerState<DashboardScreen> createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends ConsumerState<DashboardScreen> {
+  bool _isUploading = false;
+
+  Future<void> _uploadFile(PlatformFile file) async {
+    if (file.bytes == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Failed to read file bytes. Only web upload from memory is supported.')),
+      );
+      return;
+    }
+
+    setState(() => _isUploading = true);
+
+    try {
+      await ref.read(bookRepositoryProvider).createBook(file.name, file.bytes!);
+      
+      // Refresh the book list provider
+      ref.invalidate(bookListProvider);
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Uploaded ${file.name} successfully!')),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Upload failed: $e')),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isUploading = false);
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Dashboard')),
-      body: Column(
+      body: Stack(
         children: [
-          FileUploadZone(
-            onFileSelected: (file) {
-              if (kDebugMode && file != null) {
-                debugPrint('Selected file: ${file.path}');
-              }
-            },
+          Column(
+            children: [
+              FileUploadZone(
+                onFileSelected: (file) {
+                  if (file != null) {
+                    _uploadFile(file);
+                  }
+                },
+              ),
+              const Expanded(
+                child: BookListView(),
+              ),
+            ],
           ),
-          const Expanded(
-            child: BookListView(),
-          ),
+          if (_isUploading)
+            Container(
+              color: Colors.black.withValues(alpha: 0.3),
+              child: const Center(
+                child: CircularProgressIndicator(),
+              ),
+            ),
         ],
       ),
     );

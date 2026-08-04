@@ -1,2 +1,2 @@
-# e-book-converter
+# ebookconverter
 Convert pdfs into interactive web pages.
