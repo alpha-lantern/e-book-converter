@@ -198,3 +198,10 @@ dmypy.json
 scripts/*.pdf
 test.pdf
 book_export.zip
+ebook-test.pdf
+receta-test.pdf
+manifest.json
+
+# AI
+.agents/
+AGENTS.md

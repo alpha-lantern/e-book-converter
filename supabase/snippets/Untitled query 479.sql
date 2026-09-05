@@ -1,0 +1,1 @@
+SELECT pg_read_file('/workspace/package.json', 0, 1000);

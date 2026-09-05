@@ -8,6 +8,9 @@ import 'screens/login_screen.dart';
 import 'services/book_repository.dart';
 import 'widgets/book_list_view.dart';
 import 'widgets/file_upload_zone.dart';
+import 'dart:ui';
+import 'screens/debug_logs_screen.dart';
+import 'services/debug_logger.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,9 +30,34 @@ Future<void> main() async {
     anonKey: AppConfig.supabaseAnonKey,
   );
 
+  final container = ProviderContainer();
+
+  FlutterError.onError = (details) {
+    FlutterError.presentError(details);
+    if (AppConfig.enableDebugLogs) {
+      container.read(debugLoggerProvider.notifier).logError(
+            'Flutter Error: ${details.exceptionAsString()}',
+            error: details.exception,
+            stackTrace: details.stack,
+          );
+    }
+  };
+
+  PlatformDispatcher.instance.onError = (error, stack) {
+    if (AppConfig.enableDebugLogs) {
+      container.read(debugLoggerProvider.notifier).logError(
+            'Platform Error: $error',
+            error: error,
+            stackTrace: stack,
+          );
+    }
+    return true;
+  };
+
   runApp(
-    const ProviderScope(
-      child: MyApp(),
+    UncontrolledProviderScope(
+      container: container,
+      child: const MyApp(),
     ),
   );
 }
@@ -50,6 +78,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginScreen(),
         '/dashboard': (context) => const DashboardScreen(),
         '/editor': (context) => const EditorScreen(),
+        '/debug-logs': (context) => const DebugLogsScreen(),
       },
     );
   }
@@ -102,7 +131,17 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dashboard')),
+      appBar: AppBar(
+        title: const Text('Dashboard'),
+        actions: [
+          if (AppConfig.enableDebugLogs)
+            IconButton(
+              icon: const Icon(Icons.bug_report),
+              onPressed: () => Navigator.pushNamed(context, '/debug-logs'),
+              tooltip: 'View Debug Logs',
+            ),
+        ],
+      ),
       body: Stack(
         children: [
           Column(

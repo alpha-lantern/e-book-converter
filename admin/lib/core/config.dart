@@ -11,4 +11,10 @@ class AppConfig {
     'NEXT_PUBLIC_SUPABASE_ANON_KEY',
     defaultValue: '',
   );
+
+  /// Feature flag to enable debug logs storage and interception.
+  static const bool enableDebugLogs = bool.fromEnvironment(
+    'ENABLE_DEBUG_LOGS',
+    defaultValue: true,
+  );
 }
