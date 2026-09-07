@@ -77,13 +77,14 @@ def test_stream_text_with_metadata(sample_pdf):
         else:
             assert "page" in chunk["data"]
 
-def test_stream_text_page_breaks(sample_pdf):
-    # Update sample_pdf to have two pages
-    pdf_path = sample_pdf
-    doc = fitz.open(pdf_path)
-    page = doc.new_page()
-    page.insert_text(fitz.Point(50, 50), "Page 2 Text", fontsize=12)
-    doc.save(pdf_path, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP)
+def test_stream_text_page_breaks(tmp_path):
+    pdf_path = str(tmp_path / "two_page.pdf")
+    doc = fitz.open()
+    p1 = doc.new_page()
+    p1.insert_text(fitz.Point(50, 50), "Page 1 Text", fontsize=12)
+    p2 = doc.new_page()
+    p2.insert_text(fitz.Point(50, 50), "Page 2 Text", fontsize=12)
+    doc.save(pdf_path)
     doc.close()
 
     stream = stream_text_with_metadata(pdf_path)
