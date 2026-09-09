@@ -7,6 +7,7 @@ class CodexBlockType(str, Enum):
     """Enum for the different types of blocks in a codex."""
     H1 = "h1"
     H2 = "h2"
+    H3 = "h3"
     P = "p"
     IMAGE = "image"
     WIDGET = "widget"

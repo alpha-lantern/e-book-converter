@@ -40,8 +40,10 @@ def parse(
     if not all_spans:
         console.print("[yellow]Warning:[/yellow] No text content found in PDF.")
         base_size = 12.0
+        global_max_size = 12.0
     else:
         base_size = calculate_base_size(all_spans)
+        global_max_size = max((float(span.get("size", 0)) for span in all_spans), default=base_size)
     
     console.print(f"[green]Base font size detected:[/green] {base_size}pt")
 
@@ -56,11 +58,11 @@ def parse(
                 # thanks to our update to cluster_spans_by_y
                 page_number = line[0].get("page", 1) + 1 # fitz uses 0-based indexing
                 
-                block = classify_block(line, base_size, page_number=page_number)
+                block = classify_block(line, base_size, page_number=page_number, global_max_size=global_max_size)
                 blocks.append(block)
 
-                # Automatic TOC detection: Detect chapters from H1 and H2 blocks
-                if block.type in [CodexBlockType.H1, CodexBlockType.H2]:
+                # Automatic TOC detection: Detect chapters from H1, H2, and H3 blocks
+                if block.type in [CodexBlockType.H1, CodexBlockType.H2, CodexBlockType.H3]:
                     import re
                     clean_title = re.sub(r'\*+', '', block.content).strip()
                     chapters.append(CodexChapter(title=clean_title, page=block.page))

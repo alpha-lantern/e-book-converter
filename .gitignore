@@ -205,3 +205,4 @@ manifest.json
 # AI
 .agents/
 AGENTS.md
+graphify-out/

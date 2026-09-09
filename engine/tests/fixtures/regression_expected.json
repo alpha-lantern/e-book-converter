@@ -1,0 +1,323 @@
+{
+    "version": "0.1.0",
+    "meta": {
+        "title": "Regression",
+        "author": "Unknown Author",
+        "description": null,
+        "base_size": 12.0,
+        "chapters": [
+            {
+                "title": "Regression Test Document",
+                "page": 1
+            },
+            {
+                "title": "Chapter 1: The Beginning",
+                "page": 1
+            },
+            {
+                "title": "Chapter 2: The Continuation",
+                "page": 2
+            }
+        ],
+        "seo": {
+            "title": "",
+            "description": "Digitized version of regression.pdf",
+            "keywords": [],
+            "canonical_url": null,
+            "og_image": null
+        }
+    },
+    "blocks": [
+        {
+            "id": "18a75766-0b2a-48ef-8cbf-bec715b29ad0",
+            "type": "h1",
+            "content": "Regression Test Document",
+            "page": 1,
+            "style": {
+                "font_size": 24.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 24.19999885559082,
+                "x1": 340.7599792480469,
+                "y1": 57.17599868774414
+            }
+        },
+        {
+            "id": "613ba238-5366-484a-a9f9-15f76af8cc1f",
+            "type": "h2",
+            "content": "Chapter 1: The Beginning",
+            "page": 1,
+            "style": {
+                "font_size": 18.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 80.6500015258789,
+                "x1": 255.10997009277344,
+                "y1": 105.38200378417969
+            }
+        },
+        {
+            "id": "1b6af7ac-0352-4163-bc21-cd5d5a4b6213",
+            "type": "p",
+            "content": "This is a normal paragraph to test basic text extraction.",
+            "page": 1,
+            "style": {
+                "font_size": 12.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 137.10000610351562,
+                "x1": 341.4559326171875,
+                "y1": 153.58799743652344
+            }
+        },
+        {
+            "id": "47bc0676-b766-4738-9b69-161299a1cb38",
+            "type": "p",
+            "content": "This sentence is **bold** to test semantic thresholds.",
+            "page": 1,
+            "style": {
+                "font_size": 12.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 51.0,
+                "y0": 208.37600708007812,
+                "x1": 312.1526184082031,
+                "y1": 226.33999633789062
+            }
+        },
+        {
+            "id": "8113fc18-049d-4558-8456-d9ddd0d73905",
+            "type": "h2",
+            "content": "Chapter 2: The Continuation",
+            "page": 2,
+            "style": {
+                "font_size": 18.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 30.649999618530273,
+                "x1": 276.115966796875,
+                "y1": 55.38199996948242
+            }
+        },
+        {
+            "id": "c8e59432-ac8f-4f73-ae9c-b9966f53e2c6",
+            "type": "p",
+            "content": "Here is another paragraph on a second page to ensure page break logic works correctly.",
+            "page": 2,
+            "style": {
+                "font_size": 12.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 87.0999984741211,
+                "x1": 520.2199096679688,
+                "y1": 103.58799743652344
+            }
+        }
+    ],
+    "assets": {},
+    "block_map": {
+        "18a75766-0b2a-48ef-8cbf-bec715b29ad0": {
+            "id": "18a75766-0b2a-48ef-8cbf-bec715b29ad0",
+            "type": "h1",
+            "content": "Regression Test Document",
+            "page": 1,
+            "style": {
+                "font_size": 24.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 24.19999885559082,
+                "x1": 340.7599792480469,
+                "y1": 57.17599868774414
+            }
+        },
+        "613ba238-5366-484a-a9f9-15f76af8cc1f": {
+            "id": "613ba238-5366-484a-a9f9-15f76af8cc1f",
+            "type": "h2",
+            "content": "Chapter 1: The Beginning",
+            "page": 1,
+            "style": {
+                "font_size": 18.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 80.6500015258789,
+                "x1": 255.10997009277344,
+                "y1": 105.38200378417969
+            }
+        },
+        "1b6af7ac-0352-4163-bc21-cd5d5a4b6213": {
+            "id": "1b6af7ac-0352-4163-bc21-cd5d5a4b6213",
+            "type": "p",
+            "content": "This is a normal paragraph to test basic text extraction.",
+            "page": 1,
+            "style": {
+                "font_size": 12.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 137.10000610351562,
+                "x1": 341.4559326171875,
+                "y1": 153.58799743652344
+            }
+        },
+        "47bc0676-b766-4738-9b69-161299a1cb38": {
+            "id": "47bc0676-b766-4738-9b69-161299a1cb38",
+            "type": "p",
+            "content": "This sentence is **bold** to test semantic thresholds.",
+            "page": 1,
+            "style": {
+                "font_size": 12.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 51.0,
+                "y0": 208.37600708007812,
+                "x1": 312.1526184082031,
+                "y1": 226.33999633789062
+            }
+        },
+        "8113fc18-049d-4558-8456-d9ddd0d73905": {
+            "id": "8113fc18-049d-4558-8456-d9ddd0d73905",
+            "type": "h2",
+            "content": "Chapter 2: The Continuation",
+            "page": 2,
+            "style": {
+                "font_size": 18.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 30.649999618530273,
+                "x1": 276.115966796875,
+                "y1": 55.38199996948242
+            }
+        },
+        "c8e59432-ac8f-4f73-ae9c-b9966f53e2c6": {
+            "id": "c8e59432-ac8f-4f73-ae9c-b9966f53e2c6",
+            "type": "p",
+            "content": "Here is another paragraph on a second page to ensure page break logic works correctly.",
+            "page": 2,
+            "style": {
+                "font_size": 12.0,
+                "font_weight": null,
+                "line_height": null,
+                "color": null,
+                "text_align": null,
+                "margin_top": null,
+                "margin_bottom": null,
+                "font_family": null,
+                "text_decoration": null,
+                "font_style": null
+            },
+            "bbox": {
+                "x0": 50.0,
+                "y0": 87.0999984741211,
+                "x1": 520.2199096679688,
+                "y1": 103.58799743652344
+            }
+        }
+    }
+}

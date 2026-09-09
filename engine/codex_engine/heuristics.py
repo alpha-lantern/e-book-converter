@@ -38,7 +38,7 @@ def _format_span_text(span: dict[str, Any]) -> str:
     return (" " * l_space) + wrapped + (" " * r_space)
 
 
-def classify_block(line: list[dict[str, Any]], base_size: float, page_number: int = 1) -> CodexBlock:
+def classify_block(line: list[dict[str, Any]], base_size: float, page_number: int = 1, global_max_size: float = None) -> CodexBlock:
     """
     Classifies a line of spans into a CodexBlock (H1, H2, or P) based on font size.
 
@@ -47,6 +47,7 @@ def classify_block(line: list[dict[str, Any]], base_size: float, page_number: in
               {"text": str, "size": float, "bbox": [x0, y0, x1, y1]}
         base_size: The document's base font size (rounded to 1 decimal place).
         page_number: The physical page number in the PDF.
+        global_max_size: The absolute largest font size in the document.
 
     Returns:
         A CodexBlock object with assigned semantic type and page reference.
@@ -62,6 +63,9 @@ def classify_block(line: list[dict[str, Any]], base_size: float, page_number: in
 
     # Determine the maximum font size in the line to represent the block's style
     max_size = round(max(float(span["size"]) for span in line), 1)
+    
+    if global_max_size is None:
+        global_max_size = base_size * 1.5
 
     # Concatenate text from all spans, preserving formatting through markdown.
     content = "".join(_format_span_text(span) for span in line)
@@ -73,14 +77,28 @@ def classify_block(line: list[dict[str, Any]], base_size: float, page_number: in
     y1 = max(span["bbox"][3] for span in line)
     bbox = CodexBBox(x0=x0, y0=y0, x1=x1, y1=y1)
 
-    # Assign semantic type based on size thresholds
-    # Calibrated for Major Third scale (1.25x)
-    if max_size >= 1.4 * base_size:
-        block_type = CodexBlockType.H1
-    elif max_size >= 1.1 * base_size:
-        block_type = CodexBlockType.H2
-    else:
+    # Assign semantic type based on dynamic size thresholds
+    diff = global_max_size - base_size
+    
+    # TODO: Review the 0.1 tolerance. We should evaluate if there is a more robust way 
+    # to differentiate between a truly intentional 12pt vs 11pt header versus a 
+    # copy-paste error where a user forgot to clean the formatting. We could potentially
+    # evaluate alignment, spacing, or if it's consistently 3-4 words like most headers are.
+
+    # If the largest font is exactly the same as the base font (or within rounding error),
+    # the document has no size-based headings at all.
+    if diff <= 0.1:
         block_type = CodexBlockType.P
+    else:
+        # Tight tolerance for H1 to prevent 12pt from bleeding into 11pt
+        if max_size >= global_max_size - 0.1:
+            block_type = CodexBlockType.H1
+        elif max_size >= base_size + (diff * 0.5):
+            block_type = CodexBlockType.H2
+        elif max_size >= base_size + (diff * 0.2):
+            block_type = CodexBlockType.H3
+        else:
+            block_type = CodexBlockType.P
 
     # TODO: Enrich CodexStyle with weight and alignment metrics once OCR layer is ready.
     return CodexBlock(
