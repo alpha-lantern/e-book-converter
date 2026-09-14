@@ -1,7 +1,22 @@
-feat: implement modular editor state architecture & SEO settings metadata management
+feat: implement dynamic live reader preview, standalone export actions & zero-dollar deployment pipeline
 
-Implement unified Riverpod AsyncNotifier state management for the editor, extract modular SEO settings tab, and enforce client-side validation and security guardrails.
+Implement dynamic Supabase-driven Astro reader preview, add web editor preview/export action buttons, and establish end-to-end zero-cost Cloudflare Pages + Supabase + GitHub Actions deployment infrastructure.
 
-- What: Refactored EditorScreen into a modular layout orchestrator, created BookEditorNotifier family state with deep value comparison and dirty tracking, extracted SeoSettingsTab widget, and integrated PopScope confirmation dialogs for unsaved changes.
-- How: Implemented `BookEditorNotifier` with code generation in `admin/lib/providers/book_editor_state.dart`, created `admin/lib/widgets/editor/seo_settings_tab.dart` with character limits and input validation, resolved `use_build_context_synchronously` and `use_null_aware_elements` lints, added comprehensive unit and widget tests (15/15 passing), and updated graphify AST knowledge graph.
-- Why: To establish a scalable, testable foundation for editor state transitions (preparing for Interactive Islands and block tagging) while preventing data loss and masking internal database errors.
+- What: Added `DynamicReader` React component and `/preview` route in Astro to dynamically render any book manifest from Supabase on demand; added "Preview in Reader" and "Download PWA Manifest" actions in the Flutter `EditorScreen` with cross-platform `WebHelpers`; created `trigger-parser` Supabase Edge Function to bridge uploads to GitHub Actions `repository_dispatch`; fixed private storage download in `run_parser.py`; and configured Cloudflare SPA rewrites.
+- How: Implemented `DynamicReader.tsx` and `preview.astro` in `reader/` with client hydration; added `getManifest` and `readerBaseUrl` to `admin/lib/services/book_repository.dart` and `AppConfig`; created `supabase/functions/trigger-parser/index.ts`; resolved web/VM testing platform constraints using conditional imports in `admin/lib/utils/web_helpers/`; verified all 15 Flutter tests and Astro production build.
+- Why: To provide author-only hosted live previews in the editor while enabling standalone offline PWA distribution for end-users.
+
+Changes in Scope:
+* **Astro Reader (`reader/`)**:
+  * `reader/src/components/DynamicReader.tsx`: Client-hydrated dynamic preview component that fetches and renders manifests on-the-fly from Supabase PostgREST when given `?book_id=`.
+  * `reader/src/pages/preview.astro` & `reader/src/pages/index.astro`: Routes supporting both live dynamic preview and fallback rendering.
+* **Flutter Admin Dashboard (`admin/`)**:
+  * `admin/lib/screens/editor_screen.dart`: Added "Preview in Reader" and "Download PWA Manifest" actions to the AppBar.
+  * `admin/lib/services/book_repository.dart`: Added `getManifest` query and automatic Edge Function trigger.
+  * `admin/lib/core/config.dart`: Added `readerBaseUrl` configuration.
+  * `admin/lib/utils/web_helpers/`: Created cross-platform web interop abstraction (`web_helpers.dart`, `web_helpers_web.dart`, `web_helpers_stub.dart`) ensuring VM test runner compatibility.
+  * `admin/web/_redirects` & `admin/web/vercel.json`: SPA rewrite rules to prevent 404s on page refresh.
+  * `admin/test/providers/book_editor_state_test.dart` & `admin/test/screens/editor_screen_test.dart`: Synchronized test mocks (all 15 tests pass).
+* **Backend & DevOps (`supabase/`, `scripts/`, Docs)**:
+  * `scripts/run_parser.py`: Fixed private Supabase Storage downloads using service credentials and removed duplicated lines.
+  * `supabase/functions/trigger-parser/index.ts`: Deno Edge Function bridge dispatching GitHub Actions `repository_dispatch: [parse-pdf]`.

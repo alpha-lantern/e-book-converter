@@ -17,4 +17,10 @@ class AppConfig {
     'ENABLE_DEBUG_LOGS',
     defaultValue: true,
   );
+
+  /// The base URL for the deployed Reader app (for author preview).
+  static const String readerBaseUrl = String.fromEnvironment(
+    'READER_BASE_URL',
+    defaultValue: 'https://codex-reader.pages.dev',
+  );
 }

@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DynamicReader from '../components/DynamicReader';
+import mockManifest from '../fixtures/mock_manifest.json';
+import { loadManifest } from '../utils/manifestLoader';
+
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL || 'https://nlucbgajcftcnzjqcavn.supabase.co';
+const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY || 'sb_publishable_ONmVzK26KPvSfs8pAny2cQ_RyT6rofG';
+
+const fallbackManifest = await loadManifest(mockManifest);
+---
+
+<Layout title="Codex Reader - Live Preview" description="Interactive E-Book Live Preview">
+  <DynamicReader
+    client:only="react"
+    initialManifest={fallbackManifest}
+    supabaseUrl={supabaseUrl}
+    supabaseAnonKey={supabaseAnonKey}
+  />
+</Layout>

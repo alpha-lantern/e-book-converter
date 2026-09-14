@@ -28,6 +28,9 @@ class FakeBookRepository implements BookRepository {
     lastUpdatedBook = book;
     return book;
   }
+
+  @override
+  Future<Map<String, dynamic>?> getManifest(String bookId) async => null;
 }
 
 void main() {

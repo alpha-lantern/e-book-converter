@@ -73,7 +73,19 @@ class BookRepository {
           'status': BookStatus.processing.name,
         }).select().single();
 
-        return Book.fromJson(response);
+        final book = Book.fromJson(response);
+
+        // 3. Trigger parser edge function (non-blocking for creation)
+        try {
+          await _supabase.functions.invoke('trigger-parser', body: {
+            'book_id': book.id,
+            'storage_path': storagePath,
+          });
+        } catch (fnError, fnSt) {
+          _logger.logError('Parser edge function trigger warning', error: fnError, stackTrace: fnSt);
+        }
+
+        return book;
       } catch (e) {
         await _supabase.storage.from('raw_pdfs').remove([storagePath]);
         rethrow;
@@ -96,6 +108,24 @@ class BookRepository {
       return Book.fromJson(response);
     } catch (e, st) {
       _logger.logError('BookRepository updateBookMetadata failed', error: e, stackTrace: st);
+      rethrow;
+    }
+  }
+
+  Future<Map<String, dynamic>?> getManifest(String bookId) async {
+    try {
+      final response = await _supabase
+          .from('codex_manifests')
+          .select('manifest_data')
+          .eq('book_id', bookId)
+          .maybeSingle();
+
+      if (response == null || response['manifest_data'] == null) {
+        return null;
+      }
+      return response['manifest_data'] as Map<String, dynamic>;
+    } catch (e, st) {
+      _logger.logError('BookRepository getManifest failed', error: e, stackTrace: st);
       rethrow;
     }
   }

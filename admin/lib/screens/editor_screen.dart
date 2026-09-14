@@ -1,8 +1,12 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:multi_split_view/multi_split_view.dart';
+import '../core/config.dart';
 import '../models/book.dart';
 import '../providers/book_editor_state.dart';
+import '../services/book_repository.dart';
+import '../utils/web_helpers/web_helpers.dart';
 import '../widgets/editor/seo_settings_tab.dart';
 import '../widgets/pdf_panel.dart';
 
@@ -33,6 +37,61 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  void _openReaderPreview(String bookId) {
+    final url = '${AppConfig.readerBaseUrl}/preview?book_id=$bookId';
+    WebHelpers.openUrl(url);
+  }
+
+  Future<void> _downloadPwaManifest(BuildContext context, Book book) async {
+    if (book.status != BookStatus.completed) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Book is still processing. Please wait for parsing to complete before downloading.'),
+          backgroundColor: Colors.orange,
+        ),
+      );
+      return;
+    }
+
+    try {
+      final repo = ref.read(bookRepositoryProvider);
+      final manifest = await repo.getManifest(book.id);
+
+      if (manifest == null) {
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Manifest not found in database for this book.'),
+              backgroundColor: Colors.red,
+            ),
+          );
+        }
+        return;
+      }
+
+      final jsonString = const JsonEncoder.withIndent('  ').convert(manifest);
+      WebHelpers.downloadJson('${book.slug}_manifest.json', jsonString);
+
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Downloaded ${book.slug}_manifest.json. Run "./dev export" to package into standalone PWA zip.'),
+            backgroundColor: Colors.green,
+          ),
+        );
+      }
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Failed to download manifest: $e'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
   }
 
   Future<bool?> _showDiscardConfirmationDialog() {
@@ -85,6 +144,19 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(editorState.book.title),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.chrome_reader_mode_outlined),
+              tooltip: 'Preview in Reader',
+              onPressed: () => _openReaderPreview(editorState.book.id),
+            ),
+            IconButton(
+              icon: const Icon(Icons.download_for_offline_outlined),
+              tooltip: 'Download PWA Manifest',
+              onPressed: () => _downloadPwaManifest(context, editorState.book),
+            ),
+            const SizedBox(width: 8),
+          ],
         ),
         body: MultiSplitViewTheme(
           data: MultiSplitViewThemeData(

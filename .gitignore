@@ -206,3 +206,26 @@ manifest.json
 .agents/
 AGENTS.md
 graphify-out/
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+admin/.dart_tool/
+admin/build/
+admin/.flutter-plugins
+admin/.flutter-plugins-dependencies
+admin/.packages
+admin/.pub/
+
+# Astro & Frontend Builds
+reader/dist/
+reader/.astro/
+dist/
+
+# Supabase Local / Temp
+supabase/.temp/
+supabase/.branches/

@@ -11,17 +11,38 @@ from codex_engine.models import CodexManifest, CodexMeta, CodexSEO
 
 app = typer.Typer()
 
-def download_pdf(url: str, dest_path: str):
-    """Downloads a PDF from a URL to a local destination."""
-    response = requests.get(url, stream=True, timeout=30)
-    response.raise_for_status()
-    with open(dest_path, "wb") as f:
-        for chunk in response.iter_content(chunk_size=8192):
-            f.write(chunk)
+def download_pdf(supabase: Client, input_source: str, dest_path: str):
+    """
+    Downloads a PDF either from Supabase Storage (authenticated) or an external HTTP URL.
+    Supports direct storage paths (e.g. 'uid/filename.pdf') or Supabase Storage URLs.
+    """
+    storage_path = None
+    if "raw_pdfs/" in input_source:
+        storage_path = input_source.split("raw_pdfs/", 1)[1].split("?")[0]
+    elif not input_source.startswith("http://") and not input_source.startswith("https://"):
+        storage_path = input_source
+
+    if storage_path:
+        typer.echo(f"Downloading from Supabase private storage: raw_pdfs/{storage_path}")
+        res = supabase.storage.from_("raw_pdfs").download(storage_path)
+        with open(dest_path, "wb") as f:
+            f.write(res)
+    else:
+        typer.echo(f"Downloading from public URL: {input_source}")
+        headers = {}
+        supabase_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+        if supabase_key:
+            headers["Authorization"] = f"Bearer {supabase_key}"
+            headers["apikey"] = supabase_key
+        response = requests.get(input_source, headers=headers, stream=True, timeout=30)
+        response.raise_for_status()
+        with open(dest_path, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
 
 @app.command()
 def main(
-    input_url: str = typer.Argument(..., help="Public URL of the PDF to parse."),
+    input_url: str = typer.Argument(..., help="Public URL or Storage Path of the PDF to parse."),
     book_id: str = typer.Argument(..., help="UUID of the book in the database.")
 ):
     """
@@ -42,7 +63,6 @@ def main(
         supabase.table("books").update({"status": "processing", "error_log": None}).eq("id", book_id).execute()
     except Exception as e:
         typer.echo(f"Failed to update book status to processing: {e}", err=True)
-        # We continue anyway, or exit? Better exit if we can't even talk to DB.
         raise typer.Exit(code=1)
 
     # Use delete=False for cross-platform compatibility with functions that open the file by path
@@ -51,8 +71,7 @@ def main(
 
     try:
         # 2. Download PDF
-        typer.echo(f"Downloading PDF from {input_url}...")
-        download_pdf(input_url, temp_path)
+        download_pdf(supabase, input_url, temp_path)
 
         # 3. Parse PDF (Two-Pass)
         typer.echo("Parsing PDF...")
@@ -121,40 +140,6 @@ def main(
             ),
             blocks=blocks
         )
-
-        # 5. Upsert Manifest and Update Status
-        typer.echo("Saving manifest to database...")
-        manifest_dict = manifest.model_dump(mode="json")
-
-        supabase.table("codex_manifests").upsert({
-            "book_id": book_id,
-            "manifest_data": manifest_dict,
-            "parser_version": "0.1.0"
-        }).execute()
-
-        supabase.table("books").update({
-            "status": "completed"
-        }).eq("id", book_id).execute()
-
-        typer.echo("Parsing completed successfully.")
-
-    except Exception as e:
-        error_msg = f"Error during parsing: {e}\n{traceback.format_exc()}"
-        typer.echo(error_msg, err=True)
-        try:
-            supabase.table("books").update({
-                "status": "failed",
-                "error_log": error_msg
-            }).eq("id", book_id).execute()
-        except Exception as db_e:
-            typer.echo(f"Failed to log error to database: {db_e}", err=True)
-        raise typer.Exit(code=1)
-    finally:
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-
-if __name__ == "__main__":
-    app()
 
         # 5. Upsert Manifest and Update Status
         typer.echo("Saving manifest to database...")
