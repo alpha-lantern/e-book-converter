@@ -49,8 +49,8 @@ class AuthRepository {
         email: email,
         password: password,
         data: {
-          if (fullName != null) 'full_name': fullName,
-          if (organizationName != null) 'organization_name': organizationName,
+          'full_name': ?fullName,
+          'organization_name': ?organizationName,
         },
       );
     } catch (e, st) {

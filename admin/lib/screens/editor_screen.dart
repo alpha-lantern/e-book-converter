@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:multi_split_view/multi_split_view.dart';
 import '../models/book.dart';
+import '../providers/book_editor_state.dart';
+import '../widgets/editor/seo_settings_tab.dart';
 import '../widgets/pdf_panel.dart';
 
-class EditorScreen extends StatefulWidget {
-  const EditorScreen({super.key});
+class EditorScreen extends ConsumerStatefulWidget {
+  final Book? initialBook;
+
+  const EditorScreen({super.key, this.initialBook});
 
   @override
-  State<EditorScreen> createState() => _EditorScreenState();
+  ConsumerState<EditorScreen> createState() => _EditorScreenState();
 }
 
-class _EditorScreenState extends State<EditorScreen> {
+class _EditorScreenState extends ConsumerState<EditorScreen> {
   late final MultiSplitViewController _controller;
 
   @override
@@ -30,40 +35,80 @@ class _EditorScreenState extends State<EditorScreen> {
     super.dispose();
   }
 
+  Future<bool?> _showDiscardConfirmationDialog() {
+    return showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Unsaved Changes'),
+        content: const Text(
+          'You have unsaved changes in SEO Settings. Are you sure you want to discard them and leave?',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Stay'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Discard & Leave'),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final book = ModalRoute.of(context)!.settings.arguments as Book?;
+    final book = widget.initialBook ?? (ModalRoute.of(context)?.settings.arguments as Book?);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(book?.title ?? 'Editor'),
-      ),
-      body: MultiSplitViewTheme(
-        data: MultiSplitViewThemeData(
-          dividerPainter: DividerPainters.background(
-            color: Colors.grey[400]!,
-            highlightedColor: Colors.blue,
-          ),
+    if (book == null) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Editor')),
+        body: const Center(
+          child: Text('No active book selected to edit.'),
         ),
-        child: MultiSplitView(
-          controller: _controller,
-          builder: (context, area) {
-            if (area.index == 0) {
-              return _buildMainContent(book);
-            } else {
-              return _buildSettingsSidebar();
-            }
-          },
+      );
+    }
+
+    final editorState = ref.watch(bookEditorNotifierProvider(book));
+
+    return PopScope(
+      canPop: !editorState.isDirty || editorState.isSaving,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+        final shouldLeave = await _showDiscardConfirmationDialog();
+        if (shouldLeave == true && context.mounted) {
+          ref.read(bookEditorNotifierProvider(book).notifier).resetDraft();
+          Navigator.of(context).pop();
+        }
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(editorState.book.title),
+        ),
+        body: MultiSplitViewTheme(
+          data: MultiSplitViewThemeData(
+            dividerPainter: DividerPainters.background(
+              color: Colors.grey[400]!,
+              highlightedColor: Colors.blue,
+            ),
+          ),
+          child: MultiSplitView(
+            controller: _controller,
+            builder: (context, area) {
+              if (area.index == 0) {
+                return PdfPanel(pdfUrl: editorState.book.originalPdfUrl);
+              } else {
+                return _buildSettingsSidebar(book);
+              }
+            },
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildMainContent(Book? book) {
-    return PdfPanel(pdfUrl: book?.originalPdfUrl);
-  }
-
-  Widget _buildSettingsSidebar() {
+  Widget _buildSettingsSidebar(Book book) {
     return DefaultTabController(
       length: 1,
       child: Column(
@@ -76,7 +121,7 @@ class _EditorScreenState extends State<EditorScreen> {
           Expanded(
             child: TabBarView(
               children: [
-                _buildSeoSettingsTab(),
+                SeoSettingsTab(initialBook: book),
               ],
             ),
           ),
@@ -84,50 +129,5 @@ class _EditorScreenState extends State<EditorScreen> {
       ),
     );
   }
-
-  Widget _buildSeoSettingsTab() {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: 'Author',
-              hintText: 'Enter author name',
-            ),
-          ),
-          const SizedBox(height: 16),
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: 'SEO Title',
-              hintText: 'Enter SEO title',
-            ),
-          ),
-          const SizedBox(height: 16),
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: 'SEO Description',
-              hintText: 'Enter SEO description',
-            ),
-            maxLines: 3,
-          ),
-          const SizedBox(height: 16),
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: 'SEO Tags',
-              hintText: 'Enter tags separated by commas',
-            ),
-          ),
-          const SizedBox(height: 24),
-          ElevatedButton(
-            onPressed: () {
-              // TODO: Implement save logic
-            },
-            child: const Text('Save Settings'),
-          ),
-        ],
-      ),
-    );
-  }
 }
+

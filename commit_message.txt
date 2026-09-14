@@ -1,7 +1,7 @@
-feat: implement toggleable sign-up flow & auto-profile DB trigger
+feat: implement modular editor state architecture & SEO settings metadata management
 
-Add user registration capability to the admin dashboard UI and database layers using Supabase.
+Implement unified Riverpod AsyncNotifier state management for the editor, extract modular SEO settings tab, and enforce client-side validation and security guardrails.
 
-- What: Refactored the login screen to support toggleable Login/Sign-Up modes, implemented a PostgreSQL trigger for automatic profile generation, added widget test coverage, and placed TODO comments for production security hardening.
-- How: Added a trigger function on auth.users in a new migration, added `signUp` method to `AuthRepository`, added new validated form fields to `LoginScreen`, updated `widget_test.dart` with toggle behavior validation, and injected security TODO comments in input validators and registration endpoints.
-- Why: To enable administrators to self-register locally with secure database consistency (satisfying foreign key constraints on owner_id), verify layout interactions, and track production security requirements.
+- What: Refactored EditorScreen into a modular layout orchestrator, created BookEditorNotifier family state with deep value comparison and dirty tracking, extracted SeoSettingsTab widget, and integrated PopScope confirmation dialogs for unsaved changes.
+- How: Implemented `BookEditorNotifier` with code generation in `admin/lib/providers/book_editor_state.dart`, created `admin/lib/widgets/editor/seo_settings_tab.dart` with character limits and input validation, resolved `use_build_context_synchronously` and `use_null_aware_elements` lints, added comprehensive unit and widget tests (15/15 passing), and updated graphify AST knowledge graph.
+- Why: To establish a scalable, testable foundation for editor state transitions (preparing for Interactive Islands and block tagging) while preventing data loss and masking internal database errors.
